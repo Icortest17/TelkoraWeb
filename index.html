@@ -1,0 +1,2343 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="favicon.png" type="image/png">
+<title>Telkora — Automatización con IA para empresas</title>
+<meta name="description" content="Automatizamos procesos, captamos leads, respondemos clientes y conectamos sistemas usando IA. Solicita tu diagnóstico gratuito.">
+<meta name="keywords" content="automatización IA, inteligencia artificial empresas, chatbots, CRM automatizado, WhatsApp automation">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://telkora.com/">
+<meta property="og:title" content="Telkora — Automatización con IA para empresas">
+<meta property="og:description" content="Automatizamos procesos, captamos leads, respondemos clientes y conectamos sistemas usando IA. Solicita tu diagnóstico gratuito.">
+<meta property="og:image" content="https://telkora.com/logo.png">
+<meta property="og:image:alt" content="Telkora — Automatización con IA">
+<meta property="og:locale" content="es_ES">
+<meta property="og:site_name" content="Telkora">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Telkora — Automatización con IA para empresas">
+<meta name="twitter:description" content="Automatizamos procesos, captamos leads, respondemos clientes y conectamos sistemas usando IA.">
+<meta name="twitter:image" content="https://telkora.com/logo.png">
+
+<!-- Canonical -->
+<link rel="canonical" href="https://telkora.com/">
+<link rel="sitemap" type="application/xml" href="/sitemap.xml">
+
+<!-- Schema: Organization + FAQPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://telkora.com/#organization",
+      "name": "Telkora",
+      "url": "https://telkora.com",
+      "logo": "https://telkora.com/logo.png",
+      "description": "Automatización con IA para empresas. Chatbots, CRM automatizado, WhatsApp automation e integraciones a medida.",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "email": "contacto@telkora.com",
+        "telephone": "+34654152831",
+        "availableLanguage": "Spanish"
+      },
+      "sameAs": [
+        "https://www.instagram.com/telkora.ai/",
+        "https://www.tiktok.com/@telkora0"
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Cuánto tiempo tarda en implementarse el sistema?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Los proyectos Starter suelen estar activos en 7–10 días hábiles. Los proyectos Growth, entre 2 y 4 semanas. Todo depende de la complejidad de integraciones y la velocidad de respuesta en las fases de revisión."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Necesito cambiar las herramientas que ya uso?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Diseñamos los sistemas para integrarse con lo que ya tienes: HubSpot, Notion, Calendly, Stripe, WooCommerce, Shopify, Google Workspace... Si lo usas, probablemente podemos conectarlo."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué pasa si el sistema no funciona como esperaba?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Incluimos un periodo de ajuste post-lanzamiento en todos los planes. Monitoreamos el sistema activamente y hacemos los ajustes necesarios hasta que el rendimiento sea el que definimos juntos en el diseño."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Puedo personalizar los mensajes y el tono del chatbot?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "100%. El chatbot habla con la voz de tu marca. Trabajamos contigo en los scripts, el tono y los flujos. Además, el sistema aprende de las conversaciones reales para mejorar con el tiempo."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Los datos de mis clientes están seguros?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí. Trabajamos con infraestructura GDPR-compliant. Los datos de tus clientes se almacenan en plataformas certificadas y nunca son compartidos con terceros. Podemos firmar NDA si es necesario."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Puedo cancelar en cualquier momento?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí. No hay permanencia mínima obligatoria. Los planes de mantenimiento mensual se pueden cancelar con 30 días de antelación."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+<meta name="robots" content="index, follow">
+
+<!-- Font preload: preconnect to eliminate FOIT -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Space+Mono:wght@400;700&display=swap">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"></noscript>
+<style>
+  :root {
+    --black: #000000;
+    --dark-green: #1e3624;
+    --vivid-green: #70b62c;
+    --teal: #84c3be;
+    --white: #ffffff;
+    --white-dim: rgba(255,255,255,0.6);
+    --white-faint: rgba(255,255,255,0.08);
+    --green-glow: rgba(112,182,44,0.25);
+    --green-glow-strong: rgba(112,182,44,0.5);
+    --teal-glow: rgba(132,195,190,0.2);
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Space Grotesk', sans-serif;
+    background: #000;
+    color: #fff;
+    overflow-x: hidden;
+    line-height: 1.6;
+  }
+
+  /* ── SCROLLBAR ── */
+  ::-webkit-scrollbar { width: 4px; }
+  ::-webkit-scrollbar-track { background: #000; }
+  ::-webkit-scrollbar-thumb { background: var(--vivid-green); border-radius: 2px; }
+
+  /* ── CANVAS BG ── */
+  #network-canvas {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    pointer-events: none; z-index: 0; opacity: 0.35;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 5vw; height: 68px;
+    background: rgba(0,0,0,0.7);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(112,182,44,0.15);
+    transition: background 0.3s;
+  }
+  .nav-logo {
+    display: flex; align-items: center;
+    text-decoration: none;
+  }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a {
+    color: var(--white-dim); font-size: 0.875rem; font-weight: 500;
+    text-decoration: none; letter-spacing: 0.02em;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--teal); }
+  .nav-cta {
+    padding: 9px 22px; border-radius: 6px;
+    background: var(--vivid-green); color: #000;
+    font-size: 0.85rem; font-weight: 700;
+    text-decoration: none; letter-spacing: 0.02em;
+    transition: all 0.2s;
+    box-shadow: 0 0 20px var(--green-glow);
+    white-space: nowrap;
+  }
+  .nav-cta:hover {
+    background: #84c3be; color: #000;
+    box-shadow: 0 0 30px var(--teal-glow);
+    transform: translateY(-1px);
+  }
+
+  /* ── FLOATING MOBILE CTA ── */
+  .mobile-float-cta {
+    display: none;
+    position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%);
+    z-index: 200;
+    padding: 14px 28px; border-radius: 100px;
+    background: var(--vivid-green); color: #000;
+    font-size: 0.9rem; font-weight: 700;
+    text-decoration: none; letter-spacing: 0.02em;
+    box-shadow: 0 8px 40px rgba(112,182,44,0.5);
+    animation: floatBounce 3s ease-in-out infinite;
+    white-space: nowrap;
+  }
+  @keyframes floatBounce {
+    0%,100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(-4px); }
+  }
+
+  /* ── INLINE CTA STRIP ── */
+  .cta-strip {
+    text-align: center; padding: 50px 5vw;
+    position: relative; z-index: 1;
+  }
+  .cta-strip-inner {
+    display: inline-flex; flex-direction: column; align-items: center; gap: 1rem;
+  }
+  .cta-strip-label {
+    font-size: 0.8rem; color: var(--white-dim); letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  /* ── AGENDA SECTION ── */
+  #agenda { background: linear-gradient(180deg, #000 0%, #1e3624 50%, #000 100%); }
+  .agenda-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 4rem; align-items: start; margin-top: 3rem; }
+  .agenda-bullets { display: flex; flex-direction: column; gap: 1rem; margin: 1.5rem 0 2rem; }
+  .agenda-bullet { display: flex; align-items: flex-start; gap: 0.75rem; font-size: 0.925rem; }
+  .agenda-bullet::before {
+    content: '→'; color: var(--vivid-green); font-weight: 700; flex-shrink: 0; font-family: 'Space Mono', monospace;
+  }
+  .agenda-bullet span { color: var(--white-dim); }
+  .calendly-wrap {
+    border-radius: 16px; border: 1px solid rgba(112,182,44,0.2);
+    background: rgba(255,255,255,0.03);
+    overflow: hidden; min-height: 620px;
+  }
+  .calendly-wrap iframe { display: block; width: 100%; min-height: 620px; border: none; background: transparent; }
+  .exclusivity-box {
+    margin-top: 2rem; padding: 1.25rem 1.5rem;
+    border-radius: 10px;
+    border-left: 3px solid var(--vivid-green);
+    background: rgba(112,182,44,0.06);
+  }
+  .exclusivity-box p { font-size: 0.875rem; color: var(--white-dim); line-height: 1.6; }
+  .exclusivity-box strong { color: var(--vivid-green); }
+
+  @media (max-width: 900px) {
+    .agenda-grid { grid-template-columns: 1fr; }
+    .calendly-wrap { min-height: 560px; }
+    .calendly-wrap iframe { min-height: 560px; }
+  }
+  @media (max-width: 768px) {
+    .mobile-float-cta { display: flex; }
+  }
+  .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+  .hamburger span { display: block; width: 24px; height: 2px; background: #fff; transition: 0.3s; }
+
+  /* ── SECTIONS ── */
+  section { position: relative; z-index: 1; }
+
+  /* ── HERO ── */
+  #hero {
+    min-height: 100vh;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    padding: 120px 5vw 80px;
+    text-align: center;
+    overflow: hidden;
+  }
+  .hero-eyebrow {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 6px 16px; border-radius: 100px;
+    border: 1px solid rgba(112,182,44,0.4);
+    background: rgba(112,182,44,0.08);
+    font-size: 0.78rem; font-weight: 600; letter-spacing: 0.1em;
+    color: var(--vivid-green); text-transform: uppercase;
+    margin-bottom: 2rem;
+    animation: fadeUp 0.8s 0.1s both;
+  }
+  .hero-eyebrow::before {
+    content: ''; width: 6px; height: 6px; border-radius: 50%;
+    background: var(--vivid-green);
+    box-shadow: 0 0 8px var(--vivid-green);
+    animation: pulse 2s infinite;
+  }
+  @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
+
+  .hero-h1 {
+    font-size: clamp(2.4rem, 6vw, 5rem);
+    font-weight: 700; line-height: 1.08; letter-spacing: -0.03em;
+    max-width: 900px; margin: 0 auto 1.5rem;
+    animation: fadeUp 0.8s 0.2s both;
+  }
+  .hero-h1 .accent { color: var(--vivid-green); }
+  .hero-sub {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    color: var(--white-dim); max-width: 540px; margin: 0 auto 2.5rem;
+    font-weight: 400;
+    animation: fadeUp 0.8s 0.35s both;
+  }
+  .hero-ctas {
+    display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;
+    animation: fadeUp 0.8s 0.5s both;
+    margin-bottom: 4rem;
+  }
+  .btn-primary {
+    padding: 14px 32px; border-radius: 8px;
+    background: var(--vivid-green); color: #000;
+    font-size: 0.95rem; font-weight: 700; letter-spacing: 0.02em;
+    text-decoration: none; border: none; cursor: pointer;
+    transition: all 0.25s;
+    box-shadow: 0 0 40px var(--green-glow-strong);
+    position: relative; overflow: hidden;
+  }
+  .btn-primary::after {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(135deg, rgba(255,255,255,0.2), transparent);
+    opacity: 0; transition: opacity 0.2s;
+  }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 0 60px var(--green-glow-strong); }
+  .btn-primary:hover::after { opacity: 1; }
+  .btn-secondary {
+    padding: 14px 32px; border-radius: 8px;
+    background: transparent; color: var(--white);
+    font-size: 0.95rem; font-weight: 600;
+    text-decoration: none; border: 1px solid rgba(255,255,255,0.2); cursor: pointer;
+    transition: all 0.25s;
+  }
+  .btn-secondary:hover { border-color: var(--teal); color: var(--teal); background: rgba(132,195,190,0.05); }
+
+  /* ── HERO DASHBOARD ── */
+  .hero-dashboard {
+    width: min(820px, 90vw);
+    border-radius: 16px;
+    border: 1px solid rgba(112,182,44,0.2);
+    background: rgba(255,255,255,0.03);
+    backdrop-filter: blur(12px);
+    overflow: hidden;
+    animation: fadeUp 0.8s 0.6s both, dashboardGlow 4s 1s ease-in-out infinite;
+    box-shadow: 0 0 80px rgba(112,182,44,0.12), 0 40px 80px rgba(0,0,0,0.5);
+  }
+  @keyframes dashboardGlow {
+    0%,100% { box-shadow: 0 0 80px rgba(112,182,44,0.12), 0 40px 80px rgba(0,0,0,0.5); }
+    50% { box-shadow: 0 0 120px rgba(112,182,44,0.25), 0 40px 80px rgba(0,0,0,0.5); }
+  }
+  .dashboard-bar {
+    display: flex; align-items: center; gap: 8px;
+    padding: 12px 16px;
+    background: rgba(30,54,36,0.6);
+    border-bottom: 1px solid rgba(112,182,44,0.15);
+  }
+  .dash-dot { width: 10px; height: 10px; border-radius: 50%; }
+  .dash-dot.r { background: #ff5f57; } .dash-dot.y { background: #ffbd2e; } .dash-dot.g { background: #28c840; }
+  .dash-title { font-family: 'Space Mono', monospace; font-size: 0.72rem; color: var(--white-dim); margin-left: 8px; }
+  .dashboard-body { display: flex; height: 240px; }
+  .dash-sidebar {
+    width: 160px; border-right: 1px solid rgba(255,255,255,0.06);
+    padding: 16px 12px; display: flex; flex-direction: column; gap: 4px;
+  }
+  .dash-nav-item {
+    padding: 8px 10px; border-radius: 6px; font-size: 0.75rem;
+    color: var(--white-dim); cursor: pointer; transition: 0.2s;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .dash-nav-item.active { background: rgba(112,182,44,0.15); color: var(--vivid-green); }
+  .dash-nav-item .icon { width: 14px; height: 14px; opacity: 0.7; }
+  .dash-main { flex: 1; padding: 16px; display: flex; flex-direction: column; gap: 10px; }
+  .dash-metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+  .dash-metric {
+    background: rgba(255,255,255,0.04); border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.06);
+    padding: 10px 12px;
+  }
+  .dash-metric-val { font-size: 1.3rem; font-weight: 700; color: var(--vivid-green); font-family: 'Space Mono', monospace; }
+  .dash-metric-lbl { font-size: 0.65rem; color: var(--white-dim); margin-top: 2px; }
+  .dash-chart { flex: 1; background: rgba(255,255,255,0.03); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05); padding: 10px; display: flex; align-items: flex-end; gap: 4px; overflow: hidden; }
+  .dash-bar-wrap { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 3px; height: 100%; justify-content: flex-end; }
+  .dash-bar-inner { width: 100%; border-radius: 3px 3px 0 0; background: var(--vivid-green); opacity: 0.6; transition: opacity 0.3s; }
+  .dash-bar-wrap:hover .dash-bar-inner { opacity: 1; }
+  .dash-bar-label { font-size: 0.55rem; color: var(--white-dim); font-family: 'Space Mono', monospace; }
+
+  /* ── REVEAL ANIMATION ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .reveal {
+    opacity: 0; transform: translateY(40px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+  .reveal-delay-1 { transition-delay: 0.1s; }
+  .reveal-delay-2 { transition-delay: 0.2s; }
+  .reveal-delay-3 { transition-delay: 0.3s; }
+  .reveal-delay-4 { transition-delay: 0.4s; }
+  .reveal-delay-5 { transition-delay: 0.5s; }
+
+  /* ── SECTION BASE ── */
+  .section-wrap {
+    max-width: 1200px; margin: 0 auto; padding: 100px 5vw;
+  }
+  .section-eyebrow {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--vivid-green);
+    margin-bottom: 1rem;
+  }
+  .section-eyebrow::before { content: '//'; font-family: 'Space Mono', monospace; opacity: 0.5; }
+  .section-title {
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    font-weight: 700; letter-spacing: -0.025em; line-height: 1.1;
+    margin-bottom: 1.5rem;
+  }
+  .section-sub { font-size: 1.05rem; color: var(--white-dim); max-width: 580px; line-height: 1.7; }
+
+  /* ── DIVIDER LINE ── */
+  .divider {
+    width: 100%; height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(112,182,44,0.3), transparent);
+  }
+
+  /* ── PROBLEMA ── */
+  #problema {
+    background: linear-gradient(180deg, #000 0%, #1e3624 50%, #000 100%);
+  }
+  .problema-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; margin-top: 3rem; }
+  .problema-list { display: flex; flex-direction: column; gap: 0; }
+  .problema-item {
+    display: flex; align-items: flex-start; gap: 1rem;
+    padding: 1.2rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    transition: 0.3s;
+  }
+  .problema-item:hover { padding-left: 8px; }
+  .problema-item:last-child { border-bottom: none; }
+  .problema-icon {
+    width: 36px; height: 36px; border-radius: 8px;
+    background: rgba(255,60,60,0.1); border: 1px solid rgba(255,60,60,0.2);
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0; font-size: 1rem;
+  }
+  .problema-text { font-size: 0.95rem; color: var(--white-dim); padding-top: 6px; }
+  .problema-text strong { color: #fff; }
+  .problema-visual {
+    border-radius: 16px;
+    border: 1px solid rgba(255,60,60,0.2);
+    background: rgba(255,30,30,0.04);
+    padding: 2rem;
+    display: flex; flex-direction: column; gap: 1rem;
+  }
+  .waste-bar { display: flex; flex-direction: column; gap: 6px; }
+  .waste-label { font-size: 0.75rem; color: var(--white-dim); display: flex; justify-content: space-between; }
+  .waste-track { height: 6px; background: rgba(255,255,255,0.07); border-radius: 3px; overflow: hidden; }
+  .waste-fill { height: 100%; border-radius: 3px; background: linear-gradient(90deg, rgba(255,60,60,0.6), rgba(255,60,60,0.9)); animation: growBar 1.5s ease both; }
+  @keyframes growBar { from { width: 0 !important; } }
+
+  /* ── SOLUCIÓN ── */
+  .sol-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 3rem; }
+  .sol-card {
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.08);
+    background: rgba(255,255,255,0.03);
+    padding: 1.75rem;
+    cursor: default;
+    transition: all 0.35s cubic-bezier(0.23, 1, 0.32, 1);
+    position: relative; overflow: hidden;
+  }
+  .sol-card::before {
+    content: ''; position: absolute;
+    top: -60%; left: -60%; width: 220%; height: 220%;
+    background: radial-gradient(circle, var(--green-glow) 0%, transparent 60%);
+    opacity: 0; transition: opacity 0.4s;
+  }
+  .sol-card:hover { border-color: rgba(112,182,44,0.35); transform: translateY(-6px) rotateX(2deg); background: rgba(112,182,44,0.06); box-shadow: 0 20px 60px rgba(112,182,44,0.12); }
+  .sol-card:hover::before { opacity: 1; }
+  .sol-icon {
+    width: 48px; height: 48px; border-radius: 10px;
+    background: rgba(112,182,44,0.1); border: 1px solid rgba(112,182,44,0.25);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.4rem; margin-bottom: 1rem;
+    transition: 0.3s;
+  }
+  .sol-card:hover .sol-icon { background: rgba(112,182,44,0.2); box-shadow: 0 0 20px var(--green-glow); }
+  .sol-title { font-size: 1.05rem; font-weight: 600; margin-bottom: 0.5rem; }
+  .sol-desc { font-size: 0.875rem; color: var(--white-dim); line-height: 1.6; }
+
+  /* ── CÓMO FUNCIONA ── */
+  #como { background: linear-gradient(180deg, #000 0%, #1e3624 60%, #000 100%); }
+  .timeline { position: relative; margin-top: 4rem; display: flex; flex-direction: column; gap: 0; }
+  .timeline::before {
+    content: ''; position: absolute; left: 32px; top: 0; bottom: 0; width: 1px;
+    background: linear-gradient(180deg, transparent, var(--vivid-green), var(--teal), transparent);
+  }
+  .tl-step {
+    display: flex; gap: 2rem; align-items: flex-start;
+    padding: 2rem 0;
+    position: relative;
+  }
+  .tl-step:not(:last-child) { border-bottom: 1px solid rgba(255,255,255,0.04); }
+  .tl-num {
+    width: 64px; height: 64px; border-radius: 50%;
+    background: #000; border: 2px solid var(--vivid-green);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Space Mono', monospace; font-size: 1.2rem; font-weight: 700;
+    color: var(--vivid-green); flex-shrink: 0;
+    box-shadow: 0 0 20px var(--green-glow);
+    z-index: 1;
+    transition: 0.3s;
+  }
+  .tl-step:hover .tl-num { background: var(--vivid-green); color: #000; box-shadow: 0 0 40px var(--green-glow-strong); }
+  .tl-content { padding-top: 12px; }
+  .tl-title { font-size: 1.15rem; font-weight: 600; margin-bottom: 0.4rem; }
+  .tl-desc { font-size: 0.9rem; color: var(--white-dim); max-width: 520px; }
+  .tl-tag {
+    display: inline-block; margin-top: 0.75rem;
+    padding: 4px 12px; border-radius: 100px;
+    background: rgba(132,195,190,0.1); border: 1px solid rgba(132,195,190,0.25);
+    font-size: 0.72rem; color: var(--teal); letter-spacing: 0.06em;
+  }
+
+  /* ── INTEGRACIONES ── */
+  #integraciones { background: linear-gradient(180deg, #000 0%, rgba(30,54,36,0.25) 50%, #000 100%); }
+  .integrations-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem; margin-top: 3rem;
+  }
+  @media (max-width: 900px) { .integrations-grid { grid-template-columns: repeat(4, 1fr); } }
+  @media (max-width: 560px) { .integrations-grid { grid-template-columns: repeat(3, 1fr); } }
+  .integration-card {
+    border-radius: 14px;
+    border: 1px solid rgba(255,255,255,0.07);
+    background: rgba(255,255,255,0.025);
+    padding: 1.4rem 0.75rem 1.1rem;
+    display: flex; flex-direction: column; align-items: center; gap: 0.75rem;
+    transition: all 0.3s cubic-bezier(0.23,1,0.32,1);
+    cursor: default;
+  }
+  .integration-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255,255,255,0.05);
+    border-color: rgba(112,182,44,0.3);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.3);
+  }
+  .integration-logo-wrap {
+    width: 48px; height: 48px; border-radius: 12px;
+    display: flex; align-items: center; justify-content: center;
+    background: var(--brand-bg, rgba(255,255,255,0.07));
+    flex-shrink: 0;
+    transition: background 0.3s;
+  }
+  .integration-card:hover .integration-logo-wrap {
+    background: var(--brand-bg-hover, rgba(255,255,255,0.12));
+  }
+  .integration-card img {
+    width: 26px; height: 26px; object-fit: contain; display: block;
+  }
+  .integration-name {
+    font-size: 0.7rem; font-weight: 600;
+    color: var(--white-dim); text-align: center;
+    letter-spacing: 0.02em; line-height: 1.3;
+  }
+  .integrations-footer {
+    margin-top: 2rem; text-align: center;
+    font-size: 0.85rem; color: rgba(255,255,255,0.35);
+  }
+  .integrations-footer span { color: var(--vivid-green); font-weight: 600; }
+
+  /* ── CASOS ── */
+  .casos-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 3rem; }
+  @media (max-width: 760px) { .casos-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 480px) { .casos-grid { grid-template-columns: 1fr; } }
+  .caso-card {
+    border-radius: 12px; border: 1px solid rgba(255,255,255,0.08);
+    background: rgba(255,255,255,0.03); padding: 1.75rem 1.5rem;
+    transition: all 0.3s cubic-bezier(0.23,1,0.32,1);
+    cursor: default; text-align: center;
+    position: relative; overflow: hidden;
+  }
+  .caso-card::after {
+    content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 2px;
+    background: linear-gradient(90deg, var(--vivid-green), var(--teal));
+    transform: scaleX(0); transform-origin: left; transition: transform 0.4s;
+  }
+  .caso-card:hover { border-color: rgba(112,182,44,0.3); background: rgba(30,54,36,0.4); transform: translateY(-4px); }
+  .caso-card:hover::after { transform: scaleX(1); }
+  .caso-emoji { font-size: 2rem; margin-bottom: 0.75rem; display: block; }
+  .caso-name { font-size: 1rem; font-weight: 600; margin-bottom: 0.4rem; }
+  .caso-desc { font-size: 0.8rem; color: var(--white-dim); }
+
+  /* ── BENEFICIOS ── */
+  #beneficios { background: linear-gradient(180deg, #000 0%, rgba(30,54,36,0.4) 50%, #000 100%); }
+  .beneficios-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; margin-top: 3rem; }
+  .beneficio-card {
+    text-align: center; padding: 2.5rem 2rem;
+    border-radius: 16px; border: 1px solid rgba(112,182,44,0.15);
+    background: rgba(112,182,44,0.04);
+    transition: 0.3s;
+  }
+  .beneficio-card:hover { border-color: rgba(112,182,44,0.4); background: rgba(112,182,44,0.08); box-shadow: 0 0 40px rgba(112,182,44,0.1); }
+  .beneficio-num {
+    font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 700;
+    font-family: 'Space Mono', monospace; line-height: 1;
+    color: var(--vivid-green); margin-bottom: 0.5rem;
+    text-shadow: 0 0 40px var(--green-glow-strong);
+    display: block; text-align: center; width: 100%;
+    overflow: hidden; white-space: nowrap;
+  }
+  .beneficio-label { font-size: 0.95rem; font-weight: 500; color: var(--white-dim); margin-top: 0.5rem; }
+
+  /* ── DIFERENCIAL ── */
+  .diferencial-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; margin-top: 3rem; }
+  .dif-list { display: flex; flex-direction: column; gap: 1.5rem; }
+  .dif-item { display: flex; gap: 1rem; align-items: flex-start; }
+  .dif-check {
+    width: 28px; height: 28px; border-radius: 50%;
+    background: rgba(112,182,44,0.15); border: 1px solid var(--vivid-green);
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0; margin-top: 2px;
+    font-size: 0.75rem; color: var(--vivid-green);
+  }
+  .dif-text strong { display: block; font-size: 0.95rem; margin-bottom: 0.25rem; }
+  .dif-text span { font-size: 0.85rem; color: var(--white-dim); }
+  .dif-visual {
+    border-radius: 16px; border: 1px solid rgba(112,182,44,0.2);
+    background: rgba(30,54,36,0.3); padding: 2.5rem;
+    position: relative; overflow: hidden;
+  }
+  .dif-visual::before {
+    content: ''; position: absolute; top: 0; right: 0;
+    width: 200px; height: 200px;
+    background: radial-gradient(circle, rgba(112,182,44,0.15), transparent 70%);
+  }
+  .dif-quote {
+    font-size: 1.5rem; font-weight: 700; line-height: 1.3;
+    color: #fff; margin-bottom: 1rem; position: relative; z-index: 1;
+  }
+  .dif-quote span { color: var(--vivid-green); }
+  .dif-sub { font-size: 0.875rem; color: var(--white-dim); position: relative; z-index: 1; }
+
+  /* ── DEMO COCKPIT ── */
+  #demo { background: linear-gradient(180deg, #000 0%, #1e3624 50%, #000 100%); }
+  .cockpit {
+    margin-top: 3rem; border-radius: 20px;
+    border: 1px solid rgba(112,182,44,0.2);
+    background: rgba(0,0,0,0.8);
+    overflow: hidden;
+    box-shadow: 0 0 80px rgba(112,182,44,0.1);
+  }
+  .cockpit-header {
+    background: rgba(30,54,36,0.5);
+    border-bottom: 1px solid rgba(112,182,44,0.15);
+    padding: 1rem 1.5rem;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .cockpit-title { font-family: 'Space Mono', monospace; font-size: 0.8rem; color: var(--teal); letter-spacing: 0.08em; }
+  .cockpit-status { display: flex; align-items: center; gap: 6px; font-size: 0.72rem; color: var(--vivid-green); }
+  .cockpit-status::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--vivid-green); animation: pulse 1.5s infinite; }
+  .cockpit-body { padding: 2rem; display: flex; flex-direction: column; gap: 1.5rem; }
+  .flow-stages { display: flex; align-items: center; gap: 0; flex-wrap: wrap; justify-content: center; }
+  .flow-node {
+    display: flex; flex-direction: column; align-items: center; gap: 0.5rem;
+    padding: 1rem;
+  }
+  .flow-circle {
+    width: 64px; height: 64px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.5rem; border: 2px solid rgba(112,182,44,0.3);
+    background: rgba(112,182,44,0.08);
+    transition: 0.3s;
+    cursor: default;
+  }
+  .flow-circle.active {
+    border-color: var(--vivid-green);
+    background: rgba(112,182,44,0.15);
+    box-shadow: 0 0 25px var(--green-glow);
+    animation: nodePulse 2s ease-in-out infinite;
+  }
+  @keyframes nodePulse {
+    0%,100% { box-shadow: 0 0 25px var(--green-glow); }
+    50% { box-shadow: 0 0 50px var(--green-glow-strong); }
+  }
+  .flow-label { font-size: 0.7rem; color: var(--white-dim); text-align: center; font-weight: 500; }
+  .flow-arrow { color: rgba(112,182,44,0.4); font-size: 1.2rem; padding: 0 0.25rem; margin-top: -1.5rem; }
+  .flow-log {
+    background: rgba(0,0,0,0.6); border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.06); padding: 1rem 1.25rem;
+    font-family: 'Space Mono', monospace; font-size: 0.75rem;
+    max-height: 140px; overflow: hidden;
+  }
+  .log-line { display: flex; gap: 1rem; padding: 3px 0; }
+  .log-time { color: var(--teal); min-width: 60px; }
+  .log-event { color: var(--vivid-green); }
+  .log-detail { color: rgba(255,255,255,0.4); }
+
+  /* ── TESTIMONIOS ── */
+  .testi-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-top: 3rem; }
+  @media (max-width: 680px) { .testi-grid { grid-template-columns: 1fr; } }
+  .testi-card {
+    border-radius: 14px; border: 1px solid rgba(255,255,255,0.08);
+    background: rgba(255,255,255,0.03); padding: 1.75rem;
+    transition: 0.3s;
+  }
+  .testi-card:hover { border-color: rgba(132,195,190,0.3); background: rgba(132,195,190,0.04); }
+  .testi-stars { color: var(--vivid-green); font-size: 0.85rem; margin-bottom: 1rem; letter-spacing: 2px; }
+  .testi-quote { font-size: 0.925rem; color: var(--white-dim); line-height: 1.7; margin-bottom: 1.25rem; font-style: italic; }
+  .testi-author { display: flex; align-items: center; gap: 0.75rem; }
+  .testi-avatar {
+    width: 40px; height: 40px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--dark-green), var(--vivid-green));
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.95rem; font-weight: 700; color: #fff; flex-shrink: 0;
+  }
+  .testi-name { font-size: 0.9rem; font-weight: 600; }
+  .testi-role { font-size: 0.78rem; color: var(--teal); }
+
+  /* ── PLANES ── */
+  #planes { background: linear-gradient(180deg, #000 0%, rgba(30,54,36,0.3) 50%, #000 100%); }
+  .planes-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 3rem; align-items: start; }
+  .plan-card {
+    border-radius: 16px; border: 1px solid rgba(255,255,255,0.1);
+    background: rgba(255,255,255,0.03); padding: 2rem;
+    transition: all 0.35s cubic-bezier(0.23,1,0.32,1);
+    position: relative; overflow: hidden;
+  }
+  .plan-card.featured {
+    border-color: var(--vivid-green);
+    background: rgba(112,182,44,0.06);
+    box-shadow: 0 0 60px rgba(112,182,44,0.15);
+  }
+  .plan-card:hover { transform: translateY(-6px); box-shadow: 0 20px 60px rgba(0,0,0,0.4); }
+  .plan-card.featured:hover { box-shadow: 0 20px 60px rgba(112,182,44,0.25); }
+  .plan-badge {
+    position: absolute; top: 1rem; right: 1rem;
+    padding: 4px 12px; border-radius: 100px;
+    background: var(--vivid-green); color: #000;
+    font-size: 0.68rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+  }
+  .plan-name { font-size: 0.8rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--teal); margin-bottom: 0.5rem; }
+  .plan-price { font-family: 'Space Mono', monospace; font-size: 2.5rem; font-weight: 700; line-height: 1; margin-bottom: 0.25rem; }
+  .plan-period { font-size: 0.8rem; color: var(--white-dim); margin-bottom: 1.25rem; }
+  .plan-desc { font-size: 0.875rem; color: var(--white-dim); margin-bottom: 1.5rem; line-height: 1.6; }
+  .plan-features { display: flex; flex-direction: column; gap: 0.6rem; margin-bottom: 2rem; }
+  .plan-feature { display: flex; gap: 0.6rem; font-size: 0.85rem; align-items: flex-start; }
+  .plan-feature::before { content: '✓'; color: var(--vivid-green); font-weight: 700; flex-shrink: 0; }
+  .plan-feature.muted { color: var(--white-dim); }
+  .plan-feature.muted::before { content: '–'; color: rgba(255,255,255,0.2); }
+
+  /* ── FAQ ── */
+  .faq-list { margin-top: 3rem; display: flex; flex-direction: column; gap: 0; max-width: 780px; }
+  .faq-item { border-bottom: 1px solid rgba(255,255,255,0.07); }
+  .faq-q {
+    width: 100%; background: none; border: none; text-align: left;
+    padding: 1.25rem 0; font-family: inherit; font-size: 0.975rem; font-weight: 600;
+    color: #fff; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+    transition: color 0.2s;
+  }
+  .faq-q:hover { color: var(--teal); }
+  .faq-chevron { flex-shrink: 0; width: 20px; height: 20px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.2); display: flex; align-items: center; justify-content: center; font-size: 0.7rem; transition: 0.3s; }
+  .faq-item.open .faq-chevron { background: var(--vivid-green); border-color: var(--vivid-green); color: #000; transform: rotate(180deg); }
+  .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.3s; }
+  .faq-item.open .faq-a { max-height: 300px; }
+  .faq-a p { font-size: 0.9rem; color: var(--white-dim); line-height: 1.7; padding-bottom: 1.25rem; }
+
+  /* ── CONTACTO / CTA ── */
+  #cta { background: linear-gradient(180deg, #000 0%, #1e3624 50%, #000 100%); }
+  .cta-inner { text-align: center; max-width: 680px; margin: 0 auto; padding: 100px 5vw; }
+  .cta-title { font-size: clamp(2rem, 4.5vw, 3.5rem); font-weight: 700; letter-spacing: -0.025em; line-height: 1.1; margin-bottom: 1.25rem; }
+  .cta-sub { font-size: 1.05rem; color: var(--white-dim); margin-bottom: 2.5rem; }
+
+  /* ── FORM ── */
+  .contact-form {
+    background: rgba(255,255,255,0.03); border: 1px solid rgba(112,182,44,0.2);
+    border-radius: 16px; padding: 2.5rem; text-align: left;
+    max-width: 640px; margin: 0 auto;
+  }
+  .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
+  .form-group.full { grid-column: 1 / -1; }
+  .form-label { font-size: 0.78rem; font-weight: 600; color: var(--white-dim); letter-spacing: 0.05em; }
+  .form-input, .form-select, .form-textarea {
+    background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 8px; padding: 10px 14px;
+    color: #fff; font-family: inherit; font-size: 0.9rem;
+    transition: border-color 0.2s, box-shadow 0.2s; outline: none; width: 100%;
+  }
+  .form-input:focus, .form-select:focus, .form-textarea:focus {
+    border-color: var(--vivid-green); box-shadow: 0 0 0 3px rgba(112,182,44,0.15);
+  }
+  .form-textarea { resize: vertical; min-height: 100px; }
+  .form-select option { background: #1e3624; }
+  .form-submit { width: 100%; margin-top: 0.5rem; }
+
+  /* ── FOOTER ── */
+  footer {
+    background: #000; border-top: 1px solid rgba(255,255,255,0.06);
+    padding: 60px 5vw 30px;
+  }
+  .footer-top { display: grid; grid-template-columns: 1.5fr repeat(3, 1fr); gap: 3rem; margin-bottom: 3rem; }
+  .footer-brand-name { font-family: 'Space Mono', monospace; font-size: 1.2rem; font-weight: 700; margin-bottom: 0.75rem; }
+  .footer-brand-name span { color: var(--vivid-green); }
+  .footer-brand-desc { font-size: 0.85rem; color: var(--white-dim); line-height: 1.7; margin-bottom: 1rem; }
+  .footer-col-title { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--teal); margin-bottom: 1rem; }
+  .footer-links { display: flex; flex-direction: column; gap: 0.6rem; }
+  .footer-links a { font-size: 0.85rem; color: var(--white-dim); text-decoration: none; transition: color 0.2s; }
+  .footer-links a:hover { color: #fff; }
+  .footer-bottom { display: flex; justify-content: space-between; align-items: center; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.06); flex-wrap: wrap; gap: 1rem; }
+  .footer-copy { font-size: 0.8rem; color: rgba(255,255,255,0.3); }
+  .footer-social { display: flex; gap: 1rem; }
+  .footer-social a { width: 36px; height: 36px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; font-size: 0.8rem; color: var(--white-dim); text-decoration: none; transition: 0.2s; }
+  .footer-social a:hover { border-color: var(--vivid-green); }
+  .footer-social a:hover img { filter: opacity(1); }
+
+  /* ── COOKIE BANNER ── */
+  #cookie-banner {
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    z-index: 10000;
+    background: rgba(10,10,10,0.97);
+    border-top: 1px solid rgba(112,182,44,0.2);
+    padding: 1.25rem 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    backdrop-filter: blur(12px);
+    transform: translateY(100%);
+    transition: transform 0.35s ease;
+  }
+  #cookie-banner.show { transform: translateY(0); }
+  #cookie-banner p { font-size: 0.82rem; color: rgba(255,255,255,0.6); margin: 0; max-width: 680px; line-height: 1.5; }
+  #cookie-banner p a { color: var(--vivid-green); text-decoration: none; }
+  #cookie-banner p a:hover { text-decoration: underline; }
+  .cookie-actions { display: flex; gap: 0.75rem; flex-shrink: 0; }
+  .cookie-btn-accept {
+    background: var(--vivid-green);
+    color: #000;
+    border: none;
+    border-radius: 8px;
+    padding: 0.55rem 1.25rem;
+    font-family: inherit;
+    font-size: 0.82rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: opacity 0.2s;
+  }
+  .cookie-btn-accept:hover { opacity: 0.85; }
+  .cookie-btn-reject {
+    background: transparent;
+    color: rgba(255,255,255,0.45);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 8px;
+    padding: 0.55rem 1.25rem;
+    font-family: inherit;
+    font-size: 0.82rem;
+    cursor: pointer;
+    transition: border-color 0.2s, color 0.2s;
+  }
+  .cookie-btn-reject:hover { border-color: rgba(255,255,255,0.3); color: rgba(255,255,255,0.7); }
+  @media (max-width: 600px) {
+    #cookie-banner { padding-bottom: 5.5rem; }
+    .cookie-actions { width: 100%; }
+    .cookie-btn-accept, .cookie-btn-reject { flex: 1; text-align: center; }
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    .nav-links { display: none; }
+    .hamburger { display: flex; }
+    .nav-links.open { display: flex; flex-direction: column; position: fixed; top: 68px; left: 0; right: 0; background: rgba(0,0,0,0.98); padding: 2rem 5vw; border-bottom: 1px solid rgba(112,182,44,0.15); z-index: 99; gap: 1.5rem; }
+    .nav-links.open a { font-size: 1rem; }
+    .nav-cta { display: none; }
+    .problema-grid, .diferencial-grid { grid-template-columns: 1fr; }
+    .footer-top { grid-template-columns: 1fr 1fr; }
+    .form-grid { grid-template-columns: 1fr; }
+    .flow-stages { gap: 0; }
+    .flow-arrow { display: none; }
+    .dashboard-body { flex-direction: column; height: auto; }
+    .dash-sidebar { width: 100%; flex-direction: row; overflow-x: auto; }
+  }
+  @media (max-width: 480px) {
+    .footer-top { grid-template-columns: 1fr; }
+  }
+
+  /* ── SCROLL PROGRESS BAR ── */
+  #scroll-progress {
+    position: fixed; top: 0; left: 0; height: 3px; width: 0%;
+    background: linear-gradient(90deg, var(--vivid-green), var(--teal));
+    z-index: 200; transition: width 0.1s linear;
+    box-shadow: 0 0 8px rgba(112,182,44,0.6);
+  }
+
+  /* ── MOBILE STICKY BOTTOM BAR ── */
+  #mobile-bottom-bar {
+    display: none;
+    position: fixed; bottom: 0; left: 0; right: 0; z-index: 250;
+    background: rgba(5,10,5,0.97);
+    border-top: 1px solid rgba(112,182,44,0.2);
+    backdrop-filter: blur(16px);
+    padding: 10px 16px 12px;
+    gap: 10px;
+    flex-direction: row;
+    align-items: center;
+  }
+  #mobile-bottom-bar a {
+    flex: 1; display: flex; align-items: center; justify-content: center;
+    gap: 7px; padding: 12px 10px; border-radius: 10px;
+    font-size: 0.82rem; font-weight: 700; text-decoration: none;
+    letter-spacing: 0.01em; transition: all 0.2s;
+  }
+  #mobile-bottom-bar .mob-calendly {
+    background: var(--vivid-green); color: #000;
+    box-shadow: 0 0 20px rgba(112,182,44,0.4);
+  }
+  #mobile-bottom-bar .mob-wa {
+    background: rgba(37,211,102,0.12);
+    border: 1px solid rgba(37,211,102,0.35);
+    color: #25d366;
+  }
+  #mobile-bottom-bar svg { flex-shrink: 0; }
+  @media (max-width: 768px) {
+    #mobile-bottom-bar { display: flex; }
+    .mobile-float-cta { display: none !important; }
+    .whatsapp-float { display: none; }
+    body { padding-bottom: 72px; }
+  }
+
+  /* ── EXIT-INTENT POPUP ── */
+  #exit-overlay {
+    display: none; position: fixed; inset: 0; z-index: 1000;
+    background: rgba(0,0,0,0.75); backdrop-filter: blur(6px);
+    align-items: center; justify-content: center; padding: 1rem;
+  }
+  #exit-overlay.show { display: flex; animation: fadeOverlay 0.25s ease both; }
+  @keyframes fadeOverlay { from { opacity: 0; } to { opacity: 1; } }
+  #exit-modal {
+    background: #080e08;
+    border: 1px solid rgba(112,182,44,0.35);
+    border-radius: 20px;
+    padding: 2.5rem 2rem;
+    max-width: 480px; width: 100%;
+    position: relative;
+    box-shadow: 0 0 80px rgba(112,182,44,0.18), 0 40px 80px rgba(0,0,0,0.6);
+    animation: popModal 0.3s cubic-bezier(0.23,1,0.32,1) both;
+    text-align: center;
+  }
+  @keyframes popModal {
+    from { opacity: 0; transform: scale(0.9) translateY(20px); }
+    to   { opacity: 1; transform: scale(1) translateY(0); }
+  }
+  #exit-modal .exit-eyebrow {
+    font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--vivid-green);
+    margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; gap: 6px;
+  }
+  #exit-modal .exit-eyebrow::before {
+    content: ''; width: 6px; height: 6px; border-radius: 50%;
+    background: var(--vivid-green); box-shadow: 0 0 8px var(--vivid-green);
+    animation: pulse 2s infinite;
+  }
+  #exit-modal h2 {
+    font-size: clamp(1.35rem, 4vw, 1.7rem); font-weight: 700;
+    line-height: 1.2; letter-spacing: -0.02em; margin-bottom: 0.75rem;
+  }
+  #exit-modal h2 span { color: var(--vivid-green); }
+  #exit-modal p {
+    font-size: 0.9rem; color: var(--white-dim); line-height: 1.6; margin-bottom: 1.75rem;
+  }
+  #exit-modal .exit-badges {
+    display: flex; justify-content: center; gap: 1.25rem; flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+  }
+  #exit-modal .exit-badge {
+    font-size: 0.78rem; color: var(--vivid-green);
+    display: flex; align-items: center; gap: 0.35rem;
+  }
+  #exit-modal .exit-cta {
+    display: flex; align-items: center; justify-content: center; gap: 0.5rem;
+    width: 100%; padding: 15px 28px; border-radius: 8px;
+    background: var(--vivid-green); color: #000;
+    font-size: 1rem; font-weight: 700; letter-spacing: 0.02em;
+    text-decoration: none; border: none; cursor: pointer;
+    box-shadow: 0 0 40px var(--green-glow-strong);
+    transition: all 0.2s; margin-bottom: 0.75rem;
+  }
+  #exit-modal .exit-cta:hover { transform: translateY(-2px); box-shadow: 0 0 60px var(--green-glow-strong); }
+  #exit-modal .exit-dismiss {
+    display: block; margin-top: 0.5rem;
+    font-size: 0.78rem; color: rgba(255,255,255,0.3);
+    cursor: pointer; transition: color 0.2s; background: none; border: none;
+    width: 100%; text-align: center; padding: 0.25rem;
+  }
+  #exit-modal .exit-dismiss:hover { color: rgba(255,255,255,0.6); }
+  #exit-close {
+    position: absolute; top: 1rem; right: 1rem;
+    width: 32px; height: 32px; border-radius: 50%;
+    background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1);
+    color: var(--white-dim); font-size: 1rem; cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    transition: 0.2s; line-height: 1;
+  }
+  #exit-close:hover { background: rgba(255,255,255,0.12); color: #fff; }
+
+  /* ── WHATSAPP FLOAT ── */
+  .whatsapp-float {
+    position: fixed; bottom: 24px; right: 24px; z-index: 300;
+    width: 58px; height: 58px; border-radius: 50%;
+    background: #25d366;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 4px 28px rgba(37,211,102,0.5);
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .whatsapp-float:hover { transform: scale(1.1); box-shadow: 0 8px 36px rgba(37,211,102,0.65); }
+  .whatsapp-float svg { width: 28px; height: 28px; fill: #fff; flex-shrink: 0; }
+  .wa-tooltip {
+    position: absolute; right: 68px; top: 50%; transform: translateY(-50%);
+    background: rgba(10,10,10,0.88); color: #fff;
+    font-size: 0.78rem; font-weight: 500; font-family: 'Space Grotesk', sans-serif;
+    padding: 7px 13px; border-radius: 7px; white-space: nowrap;
+    opacity: 0; pointer-events: none; transition: opacity 0.2s;
+    border: 1px solid rgba(37,211,102,0.25);
+  }
+  .wa-tooltip::after {
+    content: ''; position: absolute; left: 100%; top: 50%; transform: translateY(-50%);
+    border: 6px solid transparent; border-left-color: rgba(10,10,10,0.88);
+  }
+  .whatsapp-float:hover .wa-tooltip { opacity: 1; }
+  @media (max-width: 768px) {
+    .whatsapp-float { bottom: 80px; }
+  }
+</style>
+</head>
+<body>
+
+<div id="scroll-progress"></div>
+
+<!-- MOBILE STICKY BOTTOM BAR -->
+<div id="mobile-bottom-bar">
+  <a
+    href="https://calendly.com/isaac-cortes-telkora/consultoria-gratuita"
+    target="_blank" rel="noopener"
+    class="mob-calendly"
+  >
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+    Reservar diagnóstico
+  </a>
+  <a
+    href="https://wa.me/34654152831?text=Hola%2C%20me%20gustar%C3%ADa%20hablar%20con%20un%20agente%20de%20Telkora%20para%20obtener%20m%C3%A1s%20informaci%C3%B3n%20sobre%20vuestros%20servicios%20de%20automatizaci%C3%B3n%20con%20IA."
+    target="_blank" rel="noopener"
+    class="mob-wa"
+  >
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="#25d366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    WhatsApp
+  </a>
+</div>
+
+<canvas id="network-canvas"></canvas>
+
+<!-- NAV -->
+<nav id="main-nav">
+  <a href="#" class="nav-logo"><img src="logo.png" alt="Telkora" style="height:42px;display:block;"></a>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#soluciones">Soluciones</a></li>
+    <li><a href="#integraciones">Integraciones</a></li>
+    <li><a href="#como">Proceso</a></li>
+    <li><a href="#beneficios">Resultados</a></li>
+    <li><a href="#agenda">Agenda</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+  </ul>
+  <a href="#agenda" class="nav-cta">Reservar llamada →</a>
+  <div class="hamburger" id="hamburger" aria-label="Menú" role="button" tabindex="0">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-eyebrow">Solo trabajamos con un número limitado de empresas</div>
+  <h1 class="hero-h1">Automatiza tu empresa con <span class="accent">IA</span> y gana tiempo, clientes y ventas</h1>
+  <p class="hero-sub">Hablamos contigo antes de construir nada. Primero entendemos tu caso, luego diseñamos el sistema.</p>
+  <div class="hero-ctas">
+    <a href="#agenda" class="btn-primary">Reservar diagnóstico gratuito →</a>
+    <a href="#demo" class="btn-secondary">Ver cómo funciona ↓</a>
+  </div>
+  <!-- Mini dashboard -->
+  <div class="hero-dashboard">
+    <div class="dashboard-bar">
+      <div class="dash-dot r"></div><div class="dash-dot y"></div><div class="dash-dot g"></div>
+      <span class="dash-title">telkora — AI Operations Center</span>
+    </div>
+    <div class="dashboard-body">
+      <div class="dash-sidebar">
+        <div class="dash-nav-item active"><span class="icon">◈</span> Overview</div>
+        <div class="dash-nav-item"><span class="icon">◉</span> Leads</div>
+        <div class="dash-nav-item"><span class="icon">◎</span> Chatbots</div>
+        <div class="dash-nav-item"><span class="icon">⊕</span> Flujos</div>
+        <div class="dash-nav-item"><span class="icon">⊙</span> CRM</div>
+      </div>
+      <div class="dash-main">
+        <div class="dash-metrics">
+          <div class="dash-metric">
+            <div class="dash-metric-val" id="m1">847</div>
+            <div class="dash-metric-lbl">Leads captados</div>
+          </div>
+          <div class="dash-metric">
+            <div class="dash-metric-val" id="m2">99.2%</div>
+            <div class="dash-metric-lbl">Uptime IA</div>
+          </div>
+          <div class="dash-metric">
+            <div class="dash-metric-val" id="m3">3.4s</div>
+            <div class="dash-metric-lbl">Resp. media</div>
+          </div>
+        </div>
+        <div class="dash-chart" id="dash-chart">
+          <!-- bars injected by JS -->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOCIAL PROOF STRIP -->
+<div style="position:relative;z-index:1;border-top:1px solid rgba(112,182,44,0.1);border-bottom:1px solid rgba(112,182,44,0.1);background:rgba(30,54,36,0.25);padding:1.5rem 5vw;">
+  <div style="max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1.5rem;">
+    <div style="display:flex;align-items:center;gap:0.6rem;">
+      <span style="font-size:1.4rem;font-weight:700;color:var(--vivid-green);font-family:'Space Mono',monospace;">+50</span>
+      <span style="font-size:0.82rem;color:var(--white-dim);">empresas<br>automatizadas</span>
+    </div>
+    <div style="width:1px;height:36px;background:rgba(255,255,255,0.1);flex-shrink:0;"></div>
+    <div style="display:flex;align-items:center;gap:0.6rem;">
+      <span style="font-size:1.4rem;font-weight:700;color:var(--vivid-green);font-family:'Space Mono',monospace;">4.2M+</span>
+      <span style="font-size:0.82rem;color:var(--white-dim);">mensajes<br>procesados con IA</span>
+    </div>
+    <div style="width:1px;height:36px;background:rgba(255,255,255,0.1);flex-shrink:0;"></div>
+    <div style="display:flex;align-items:center;gap:0.6rem;">
+      <span style="font-size:1.4rem;font-weight:700;color:var(--teal);font-family:'Space Mono',monospace;">98%</span>
+      <span style="font-size:0.82rem;color:var(--white-dim);">clientes<br>satisfechos</span>
+    </div>
+    <div style="width:1px;height:36px;background:rgba(255,255,255,0.1);flex-shrink:0;"></div>
+    <div style="display:flex;align-items:center;gap:0.6rem;">
+      <span style="font-size:1.4rem;font-weight:700;color:var(--vivid-green);font-family:'Space Mono',monospace;">3x</span>
+      <span style="font-size:0.82rem;color:var(--white-dim);">ROI medio<br>en 6 meses</span>
+    </div>
+    <div style="width:1px;height:36px;background:rgba(255,255,255,0.1);flex-shrink:0;"></div>
+    <div style="display:flex;align-items:center;">
+      <span style="display:inline-flex;align-items:center;gap:5px;font-size:0.78rem;color:var(--vivid-green);background:rgba(112,182,44,0.1);border:1px solid rgba(112,182,44,0.25);padding:5px 12px;border-radius:100px;">
+        <span style="width:6px;height:6px;border-radius:50%;background:var(--vivid-green);animation:pulse 1.5s infinite;"></span>
+        Sistemas activos 24/7
+      </span>
+    </div>
+  </div>
+</div>
+
+<!-- MOBILE FLOAT CTA -->
+<a href="#agenda" class="mobile-float-cta">Reservar llamada gratis →</a>
+
+<!-- WHATSAPP FLOAT -->
+<a
+  href="https://wa.me/34654152831?text=Hola%2C%20me%20gustar%C3%ADa%20hablar%20con%20un%20agente%20de%20Telkora%20para%20obtener%20m%C3%A1s%20informaci%C3%B3n%20sobre%20vuestros%20servicios%20de%20automatizaci%C3%B3n%20con%20IA."
+  class="whatsapp-float"
+  target="_blank"
+  rel="noopener"
+  aria-label="Contactar por WhatsApp"
+>
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+  <span class="wa-tooltip">Hablar con un agente</span>
+</a>
+
+<div class="divider"></div>
+
+<!-- PROBLEMA -->
+<section id="problema">
+  <div class="section-wrap">
+    <div class="reveal">
+      <p class="section-eyebrow">El problema</p>
+      <h2 class="section-title">Tu empresa pierde tiempo en tareas que<br>una IA puede hacer por ti</h2>
+      <p class="section-sub">Cada hora de trabajo manual en procesos repetitivos es dinero que tu competencia ya está ahorrando con IA.</p>
+    </div>
+    <div class="problema-grid">
+      <div class="problema-list reveal reveal-delay-1">
+        <div class="problema-item">
+          <div class="problema-icon">💬</div>
+          <div class="problema-text"><strong>Responder clientes manualmente</strong><br>Horas perdidas en chats, emails y llamadas que una IA resuelve en segundos.</div>
+        </div>
+        <div class="problema-item">
+          <div class="problema-icon">⚡</div>
+          <div class="problema-text"><strong>Perder leads por tardar en contestar</strong><br>El 78% de los clientes elige al primero que responde. ¿Eres tú?</div>
+        </div>
+        <div class="problema-item">
+          <div class="problema-icon">🔄</div>
+          <div class="problema-text"><strong>Procesos repetitivos sin automatizar</strong><br>Tu equipo hace lo mismo todos los días. Es tiempo que podrían usar en lo que importa.</div>
+        </div>
+        <div class="problema-item">
+          <div class="problema-icon">📉</div>
+          <div class="problema-text"><strong>Falta de seguimiento sistemático</strong><br>Los leads se enfrían. Sin seguimiento automatizado, las ventas se pierden solas.</div>
+        </div>
+        <div class="problema-item">
+          <div class="problema-icon">🔌</div>
+          <div class="problema-text"><strong>Sistemas desconectados entre sí</strong><br>Tu CRM no habla con WhatsApp. WhatsApp no habla con email. Todo manual.</div>
+        </div>
+      </div>
+      <div class="problema-visual reveal reveal-delay-2">
+        <div style="font-size:0.75rem;color:var(--teal);letter-spacing:0.08em;margin-bottom:1.5rem;font-family:'Space Mono',monospace;">// TIEMPO PERDIDO SIN IA</div>
+        <div class="waste-bar"><div class="waste-label"><span>Atención al cliente</span><span>68%</span></div><div class="waste-track"><div class="waste-fill" style="width:68%"></div></div></div>
+        <div class="waste-bar" style="margin-top:.75rem"><div class="waste-label"><span>Gestión de leads</span><span>54%</span></div><div class="waste-track"><div class="waste-fill" style="width:54%"></div></div></div>
+        <div class="waste-bar" style="margin-top:.75rem"><div class="waste-label"><span>Seguimientos</span><span>72%</span></div><div class="waste-track"><div class="waste-fill" style="width:72%"></div></div></div>
+        <div class="waste-bar" style="margin-top:.75rem"><div class="waste-label"><span>Reportes / admin</span><span>61%</span></div><div class="waste-track"><div class="waste-fill" style="width:61%"></div></div></div>
+        <div class="waste-bar" style="margin-top:.75rem"><div class="waste-label"><span>Integraciones manuales</span><span>45%</span></div><div class="waste-track"><div class="waste-fill" style="width:45%"></div></div></div>
+        <div style="margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,0.07);font-size:0.8rem;color:var(--white-dim);">
+          → Con Telkora, estas horas se convierten en <span style="color:var(--vivid-green);font-weight:600;">crecimiento automático</span>.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MINI CTA AFTER PROBLEMA -->
+<div class="cta-strip">
+  <div class="cta-strip-inner">
+    <span class="cta-strip-label">¿Te identificas con alguno de estos problemas?</span>
+    <a href="#agenda" class="btn-primary">Analizar mi caso gratis →</a>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- SOLUCIÓN -->
+<section id="soluciones">
+  <div class="section-wrap">
+    <div class="reveal">
+      <p class="section-eyebrow">La solución</p>
+      <h2 class="section-title">Sistemas inteligentes que trabajan por tu negocio</h2>
+      <p class="section-sub">No vendemos software. Construimos sistemas a medida que automatizan tus procesos críticos de principio a fin.</p>
+    </div>
+    <div class="sol-grid">
+      <div class="sol-card reveal reveal-delay-1">
+        <div class="sol-icon">🤖</div>
+        <div class="sol-title">Chatbots con IA</div>
+        <div class="sol-desc">Asistentes conversacionales entrenados con el contexto de tu negocio. Responden, cualifican y cierran 24/7.</div>
+      </div>
+      <div class="sol-card reveal reveal-delay-2">
+        <div class="sol-icon">📱</div>
+        <div class="sol-title">Automatización WhatsApp</div>
+        <div class="sol-desc">Flujos inteligentes en el canal con más apertura del mundo. Captación, seguimiento y cierre automático.</div>
+      </div>
+      <div class="sol-card reveal reveal-delay-3">
+        <div class="sol-icon">🗂️</div>
+        <div class="sol-title">CRM automatizado</div>
+        <div class="sol-desc">Tu pipeline de ventas se actualiza solo. Cada lead en el estado correcto, con la acción correcta activada.</div>
+      </div>
+      <div class="sol-card reveal reveal-delay-4">
+        <div class="sol-icon">✉️</div>
+        <div class="sol-title">Emails inteligentes</div>
+        <div class="sol-desc">Secuencias de email personalizadas por comportamiento. El mensaje correcto, al cliente correcto, en el momento exacto.</div>
+      </div>
+      <div class="sol-card reveal reveal-delay-5">
+        <div class="sol-icon">🔗</div>
+        <div class="sol-title">Integraciones nativas</div>
+        <div class="sol-desc">Conectamos tus herramientas existentes: CRM, ERP, e-commerce, calendarios, pasarelas de pago y más de 500 apps.</div>
+      </div>
+      <div class="sol-card reveal reveal-delay-1">
+        <div class="sol-icon">📊</div>
+        <div class="sol-title">Dashboards en tiempo real</div>
+        <div class="sol-desc">Visualiza el rendimiento de tus sistemas de IA. KPIs, conversiones y oportunidades de mejora en un solo panel.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DEMO COCKPIT -->
+<section id="demo">
+  <div class="section-wrap">
+    <div class="reveal" style="text-align:center;max-width:600px;margin:0 auto 3rem;">
+      <p class="section-eyebrow">Demo en vivo</p>
+      <h2 class="section-title">El AI Cockpit de Telkora</h2>
+      <p class="section-sub">Así es como tu sistema de IA capta, cualifica y convierte leads en piloto automático.</p>
+    </div>
+    <div class="cockpit reveal">
+      <div class="cockpit-header">
+        <span class="cockpit-title">TELKORA // AI LEAD PIPELINE</span>
+        <span class="cockpit-status">Sistema activo</span>
+      </div>
+      <div class="cockpit-body">
+        <div class="flow-stages">
+          <div class="flow-node">
+            <div class="flow-circle active" id="fn1">📥</div>
+            <div class="flow-label">Lead entra</div>
+          </div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-node">
+            <div class="flow-circle" id="fn2">🤖</div>
+            <div class="flow-label">IA responde</div>
+          </div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-node">
+            <div class="flow-circle" id="fn3">🎯</div>
+            <div class="flow-label">Cualifica</div>
+          </div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-node">
+            <div class="flow-circle" id="fn4">📋</div>
+            <div class="flow-label">Entra al CRM</div>
+          </div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-node">
+            <div class="flow-circle" id="fn5">📩</div>
+            <div class="flow-label">Seguimiento</div>
+          </div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-node">
+            <div class="flow-circle" id="fn6">✅</div>
+            <div class="flow-label">Conversión</div>
+          </div>
+        </div>
+        <div class="flow-log" id="flow-log">
+          <div class="log-line"><span class="log-time">09:41:02</span><span class="log-event">LEAD_IN</span><span class="log-detail">WhatsApp · María García · Clínica dental</span></div>
+          <div class="log-line"><span class="log-time">09:41:02</span><span class="log-event">AI_RESPONSE</span><span class="log-detail">Mensaje enviado en 1.2s · Contexto: primera consulta</span></div>
+          <div class="log-line"><span class="log-time">09:41:18</span><span class="log-event">QUALIFY</span><span class="log-detail">Score: 87/100 · Presupuesto OK · Urgencia: alta</span></div>
+          <div class="log-line"><span class="log-time">09:41:18</span><span class="log-event">CRM_UPDATE</span><span class="log-detail">Contacto creado · Pipeline: "Caliente" · Asignado a Ventas</span></div>
+          <div class="log-line"><span class="log-time">09:41:19</span><span class="log-event">SEQUENCE_ON</span><span class="log-detail">Email de bienvenida enviado · Follow-up: 24h</span></div>
+          <div class="log-line"><span class="log-time">10:41:19</span><span class="log-event">FOLLOWUP</span><span class="log-detail">Recordatorio enviado · Cita agendada automáticamente</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- MINI CTA AFTER SOLUCIÓN -->
+<div class="cta-strip">
+  <div class="cta-strip-inner">
+    <span class="cta-strip-label">Cada negocio necesita una solución distinta</span>
+    <a href="#agenda" class="btn-primary">Ver si esto encaja conmigo →</a>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- CÓMO FUNCIONA -->
+<section id="como">
+  <div class="section-wrap">
+    <div class="reveal">
+      <p class="section-eyebrow">El proceso</p>
+      <h2 class="section-title">De idea a sistema<br>en funcionamiento</h2>
+      <p class="section-sub">Un proceso claro, predecible y sin sorpresas. Primero entendemos tu negocio — luego diseñamos el sistema exacto que necesitas.</p>
+    </div>
+    <div class="timeline">
+      <div class="tl-step reveal">
+        <div class="tl-num">01</div>
+        <div class="tl-content">
+          <div class="tl-title">Diagnóstico gratuito</div>
+          <div class="tl-desc">Analizamos tu empresa, procesos actuales y oportunidades de automatización. Identificamos qué IA puede hacer por ti con el mayor retorno posible.</div>
+          <span class="tl-tag">1–2 días</span>
+        </div>
+      </div>
+      <div class="tl-step reveal reveal-delay-1">
+        <div class="tl-num">02</div>
+        <div class="tl-content">
+          <div class="tl-title">Diseño del sistema</div>
+          <div class="tl-desc">Arquitectura de la solución a medida: flujos, integraciones, mensajes, lógica de cualificación. Todo diseñado específicamente para tu negocio.</div>
+          <span class="tl-tag">3–5 días</span>
+        </div>
+      </div>
+      <div class="tl-step reveal reveal-delay-2">
+        <div class="tl-num">03</div>
+        <div class="tl-content">
+          <div class="tl-title">Implementación y pruebas</div>
+          <div class="tl-desc">Construimos, integramos y probamos en profundidad. No lanzamos hasta que el sistema funciona exactamente como diseñamos.</div>
+          <span class="tl-tag">1–3 semanas</span>
+        </div>
+      </div>
+      <div class="tl-step reveal reveal-delay-3">
+        <div class="tl-num">04</div>
+        <div class="tl-content">
+          <div class="tl-title">Lanzamiento y optimización</div>
+          <div class="tl-desc">Go live con monitoreo activo. Las primeras semanas son clave para ajustar flujos, mensajes y lógica según datos reales.</div>
+          <span class="tl-tag">Mes 1</span>
+        </div>
+      </div>
+      <div class="tl-step reveal reveal-delay-4">
+        <div class="tl-num">05</div>
+        <div class="tl-content">
+          <div class="tl-title">Escalado continuo</div>
+          <div class="tl-desc">Revisiones mensuales de rendimiento. Ampliamos y mejoramos el sistema conforme tu empresa crece. La IA crece contigo.</div>
+          <span class="tl-tag">Ongoing</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- INTEGRACIONES -->
+<section id="integraciones">
+  <div class="section-wrap">
+    <div class="reveal" style="text-align:center;max-width:640px;margin:0 auto;">
+      <p class="section-eyebrow">Integraciones</p>
+      <h2 class="section-title">Conectamos con lo que ya usas</h2>
+      <p class="section-sub" style="margin:0 auto;">No tienes que cambiar ninguna herramienta. Integramos Telkora con más de 500 apps de forma nativa.</p>
+    </div>
+    <div class="integrations-grid">
+
+      <div class="integration-card reveal reveal-delay-1">
+        <div class="integration-logo-wrap" style="--brand-bg:rgba(109,0,204,0.15);--brand-bg-hover:rgba(109,0,204,0.28);">
+          <img src="https://cdn.simpleicons.org/make/6D00CC" alt="Make" loading="lazy" width="26" height="26">
+        </div>
+        <span class="integration-name">Make</span>
+      </div>
+
+      <div class="integration-card reveal reveal-delay-2">
+        <div class="integration-logo-wrap" style="--brand-bg:rgba(234,75,113,0.15);--brand-bg-hover:rgba(234,75,113,0.28);">
+          <img src="https://cdn.simpleicons.org/n8n/EA4B71" alt="n8n" loading="lazy" width="26" height="26">
+        </div>
+        <span class="integration-name">n8n</span>
+      </div>
+
+      <div class="integration-card reveal reveal-delay-3">
+        <div class="integration-logo-wrap" style="--brand-bg:rgba(255,74,0,0.15);--brand-bg-hover:rgba(255,74,0,0.28);">
+          <img src="https://cdn.simpleicons.org/zapier/FF4A00" alt="Zapier" loading="lazy" width="26" height="26">
+        </div>
+        <span class="integration-name">Zapier</span>
+      </div>
+
+      <div class="integration-card reveal reveal-delay-4">
+        <div class="integration-logo-wrap" style="--brand-bg:rgba(255,122,89,0.15);--brand-bg-hover:rgba(255,122,89,0.28);">
+          <img src="https://cdn.simpleicons.org/hubspot/FF7A59" alt="HubSpot" loading="lazy" width="26" height="26">
+        </div>
+        <span class="integration-name">HubSpot</span>
+      </div>
+
+      <div class="integration-card reveal reveal-delay-5">
+        <div class="integration-logo-wrap" style="--brand-bg:rgba(37,211,102,0.15);--brand-bg-hover:rgba(37,211,102,0.28);">
+          <img src="https://cdn.simpleicons.org/whatsapp/25D366" alt="WhatsApp" loading="lazy" width="26" height="26">
+        </div>
+        <span class="integration-name">WhatsApp</span>
+      </div>
+
+      <div class="integration-card reveal reveal-delay-1">
+        <div class="integration-logo-wrap" style="--brand-bg:rgba(150,191,72,0.15);--brand-bg-hover:rgba(150,191,72,0.28);">
+          <img src="https://cdn.simpleicons.org/shopify/96BF48" alt="Shopify" loading="lazy" width="26" height="26">
+        </div>
+        <span class="integration-name">Shopify</span>
+      </div>
+
+      <div class="integration-card reveal reveal-delay-2">
+        <div class="integration-logo-wrap" style="--brand-bg:rgba(103,114,229,0.15);--brand-bg-hover:rgba(103,114,229,0.28);">
+          <img src="https://cdn.simpleicons.org/stripe/6772E5" alt="Stripe" loading="lazy" width="26" height="26">
+        </div>
+        <span class="integration-name">Stripe</span>
+      </div>
+
+      <div class="integration-card reveal reveal-delay-3">
+        <div class="integration-logo-wrap" style="--brand-bg:rgba(38,165,228,0.15);--brand-bg-hover:rgba(38,165,228,0.28);">
+          <img src="https://cdn.simpleicons.org/telegram/26A5E4" alt="Telegram" loading="lazy" width="26" height="26">
+        </div>
+        <span class="integration-name">Telegram</span>
+      </div>
+
+      <div class="integration-card reveal reveal-delay-4">
+        <div class="integration-logo-wrap" style="--brand-bg:rgba(0,107,255,0.15);--brand-bg-hover:rgba(0,107,255,0.28);">
+          <img src="https://cdn.simpleicons.org/calendly/006BFF" alt="Calendly" loading="lazy" width="26" height="26">
+        </div>
+        <span class="integration-name">Calendly</span>
+      </div>
+
+      <div class="integration-card reveal reveal-delay-5">
+        <div class="integration-logo-wrap" style="--brand-bg:rgba(255,255,255,0.08);--brand-bg-hover:rgba(255,255,255,0.15);">
+          <img src="https://cdn.simpleicons.org/notion/ffffff" alt="Notion" loading="lazy" width="26" height="26">
+        </div>
+        <span class="integration-name">Notion</span>
+      </div>
+
+      <div class="integration-card reveal reveal-delay-1">
+        <div class="integration-logo-wrap" style="--brand-bg:rgba(127,84,179,0.15);--brand-bg-hover:rgba(127,84,179,0.28);">
+          <img src="https://cdn.simpleicons.org/woocommerce/7F54B3" alt="WooCommerce" loading="lazy" width="26" height="26">
+        </div>
+        <span class="integration-name">WooCommerce</span>
+      </div>
+
+      <div class="integration-card reveal reveal-delay-2">
+        <div class="integration-logo-wrap" style="--brand-bg:rgba(24,191,255,0.12);--brand-bg-hover:rgba(24,191,255,0.25);">
+          <img src="https://cdn.simpleicons.org/airtable/18BFFF" alt="Airtable" loading="lazy" width="26" height="26">
+        </div>
+        <span class="integration-name">Airtable</span>
+      </div>
+
+    </div>
+    <p class="integrations-footer reveal">Y más de <span>500 integraciones</span> adicionales vía Make, n8n y Zapier.</p>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- CASOS DE USO -->
+<section id="casos">
+  <div class="section-wrap">
+    <div class="reveal">
+      <p class="section-eyebrow">Casos de uso</p>
+      <h2 class="section-title">IA para cada sector</h2>
+      <p class="section-sub">Adaptamos nuestros sistemas a las particularidades de tu industria. No hay solución única.</p>
+    </div>
+    <div class="casos-grid">
+      <div class="caso-card reveal reveal-delay-1">
+        <span class="caso-emoji">🏥</span>
+        <div class="caso-name">Clínicas y salud</div>
+        <div class="caso-desc">Citas automáticas, recordatorios, cualificación de pacientes y seguimiento post-consulta.</div>
+      </div>
+      <div class="caso-card reveal reveal-delay-2">
+        <span class="caso-emoji">🏠</span>
+        <div class="caso-name">Inmobiliarias</div>
+        <div class="caso-desc">Captación de compradores, cualificación por presupuesto y zona, visitas automatizadas.</div>
+      </div>
+      <div class="caso-card reveal reveal-delay-3">
+        <span class="caso-emoji">🛒</span>
+        <div class="caso-name">E-commerce</div>
+        <div class="caso-desc">Recuperación de carritos, soporte post-venta, upselling inteligente y recomendaciones.</div>
+      </div>
+      <div class="caso-card reveal reveal-delay-4">
+        <span class="caso-emoji">🎓</span>
+        <div class="caso-name">Academias</div>
+        <div class="caso-desc">Captación de alumnos, seguimiento de interesados, matriculación y soporte durante el curso.</div>
+      </div>
+      <div class="caso-card reveal reveal-delay-5">
+        <span class="caso-emoji">⚙️</span>
+        <div class="caso-name">Servicios B2B</div>
+        <div class="caso-desc">Cualificación de leads empresariales, agendado de demos y nurturing de ciclos de venta largo.</div>
+      </div>
+      <div class="caso-card reveal reveal-delay-1">
+        <span class="caso-emoji">🍽️</span>
+        <div class="caso-name">Hostelería</div>
+        <div class="caso-desc">Reservas automáticas, gestión de mesas, reseñas post-visita y fidelización de clientes recurrentes.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- BENEFICIOS -->
+<section id="beneficios">
+  <div class="section-wrap">
+    <div class="reveal" style="text-align:center">
+      <p class="section-eyebrow">Resultados</p>
+      <h2 class="section-title">Números que importan</h2>
+    </div>
+    <div class="beneficios-grid">
+      <div class="beneficio-card reveal reveal-delay-1">
+        <div class="beneficio-num" data-target="340" data-prefix="+" data-suffix="%">0%</div>
+        <div class="beneficio-label">Más leads cualificados</div>
+      </div>
+      <div class="beneficio-card reveal reveal-delay-2">
+        <div class="beneficio-num" data-target="80" data-prefix="-" data-suffix="%">0%</div>
+        <div class="beneficio-label">Menos tiempo en gestión manual</div>
+      </div>
+      <div class="beneficio-card reveal reveal-delay-3">
+        <div class="beneficio-num" data-target="24" data-suffix="/7">0/7</div>
+        <div class="beneficio-label">Sistemas operando sin parar</div>
+      </div>
+      <div class="beneficio-card reveal reveal-delay-4">
+        <div class="beneficio-num" data-target="3" data-suffix="x">0x</div>
+        <div class="beneficio-label">ROI medio en 6 meses</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- DIFERENCIAL -->
+<section id="diferencial">
+  <div class="section-wrap">
+    <div class="diferencial-grid">
+      <div class="reveal">
+        <p class="section-eyebrow">Por qué Telkora</p>
+        <h2 class="section-title">No hacemos bots genéricos</h2>
+        <p class="section-sub" style="margin-bottom:2.5rem;">El mercado está lleno de herramientas de IA baratas. Nosotros construimos sistemas. Hay una diferencia enorme.</p>
+        <div class="dif-list">
+          <div class="dif-item">
+            <div class="dif-check">✓</div>
+            <div class="dif-text">
+              <strong>Sistemas 100% a medida</strong>
+              <span>Diseñados alrededor de tus procesos, no al revés. Tu flujo, tu voz, tu lógica de negocio.</span>
+            </div>
+          </div>
+          <div class="dif-item">
+            <div class="dif-check">✓</div>
+            <div class="dif-text">
+              <strong>Integración real con tus herramientas</strong>
+              <span>No te pedimos que cambies todo. Conectamos la IA con lo que ya usas.</span>
+            </div>
+          </div>
+          <div class="dif-item">
+            <div class="dif-check">✓</div>
+            <div class="dif-text">
+              <strong>Estrategia + tecnología</strong>
+              <span>No somos developers. Somos estrategas que usan IA para resolver problemas de negocio reales.</span>
+            </div>
+          </div>
+          <div class="dif-item">
+            <div class="dif-check">✓</div>
+            <div class="dif-text">
+              <strong>Optimización continua</strong>
+              <span>El sistema aprende y mejora. Revisiones mensuales, ajustes basados en datos, siempre hacia más.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="dif-visual reveal reveal-delay-2">
+        <div class="dif-quote">La IA que implementamos trabaja como tu mejor empleado. <span>Sin descanso.</span></div>
+        <div class="dif-sub">No es para todo el mundo. Trabajamos con un número limitado de empresas a la vez para garantizar que cada sistema esté diseñado con la atención que merece. Si encaja contigo, construimos algo excepcional juntos.</div>
+        <div style="margin-top:1.5rem;padding:1rem 1.25rem;border-radius:8px;background:rgba(112,182,44,0.07);border:1px solid rgba(112,182,44,0.2);">
+          <p style="font-size:0.82rem;color:var(--vivid-green);font-family:'Space Mono',monospace;margin-bottom:0.4rem;">// PLAZAS DISPONIBLES</p>
+          <p style="font-size:0.85rem;color:var(--white-dim);">Actualmente tenemos <strong style="color:#fff;">3 plazas abiertas</strong> para nuevos proyectos. La consultoría inicial es gratuita y sin compromiso.</p>
+        </div>
+        <div style="margin-top:2rem;display:flex;gap:1.5rem;flex-wrap:wrap;">
+          <div style="text-align:center">
+            <div style="font-size:1.8rem;font-weight:700;color:var(--vivid-green);font-family:'Space Mono',monospace;">+50</div>
+            <div style="font-size:0.75rem;color:var(--white-dim);">Empresas automatizadas</div>
+          </div>
+          <div style="text-align:center">
+            <div style="font-size:1.8rem;font-weight:700;color:var(--teal);font-family:'Space Mono',monospace;">98%</div>
+            <div style="font-size:0.75rem;color:var(--white-dim);">Clientes satisfechos</div>
+          </div>
+          <div style="text-align:center">
+            <div style="font-size:1.8rem;font-weight:700;color:var(--vivid-green);font-family:'Space Mono',monospace;">4.2M+</div>
+            <div style="font-size:0.75rem;color:var(--white-dim);">Mensajes procesados</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- TESTIMONIOS -->
+<section id="testimonios">
+  <div class="section-wrap">
+    <div class="reveal">
+      <p class="section-eyebrow">Testimonios</p>
+      <h2 class="section-title">Lo que dicen nuestros clientes</h2>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card reveal reveal-delay-1">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-quote">"Implementamos el sistema de Telkora en nuestra clínica y en el primer mes duplicamos las citas agendadas. El bot cualifica a los pacientes mejor que nuestro equipo de recepción, y trabaja de noche sin quejarse."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">CR</div>
+          <div>
+            <div class="testi-name">Carlos Romero</div>
+            <div class="testi-role">Director, Clínica Romero Dental</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card reveal reveal-delay-2">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-quote">"Antes perdíamos el 60% de los leads por tardar en responder. Ahora el sistema responde en segundos y nuestro equipo solo habla con leads ya cualificados. Las ventas subieron un 40% en tres meses."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">LP</div>
+          <div>
+            <div class="testi-name">Laura Pérez</div>
+            <div class="testi-role">CEO, Inmobiliaria Costa Sur</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card reveal reveal-delay-3">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-quote">"Lo que más me sorprendió es que no es un bot genérico. Conoce mi academia, mis cursos, mis precios. Los alumnos preguntan y reciben respuestas perfectas. La automatización de matrículas ha sido un cambio radical."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">JM</div>
+          <div>
+            <div class="testi-name">Javier Martínez</div>
+            <div class="testi-role">Fundador, Academia Online Élite</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card reveal reveal-delay-4">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-quote">"Telkora conectó nuestro e-commerce con WhatsApp, CRM y email en una sola semana. La recuperación de carritos automática ya paga sola toda la inversión. El soporte post-venta es otro nivel."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">AN</div>
+          <div>
+            <div class="testi-name">Ana Navarro</div>
+            <div class="testi-role">Directora E-commerce, ModaÁgil</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- AGENDA / CALENDLY -->
+<section id="agenda">
+  <div class="section-wrap">
+    <div class="agenda-grid">
+      <div class="reveal">
+        <p class="section-eyebrow">Agenda tu sesión</p>
+        <h2 class="section-title">Descubre qué puedes automatizar en tu negocio<br><span style="color:var(--vivid-green)">en 30 minutos</span></h2>
+        <p class="section-sub">En esta sesión gratuita analizamos tu negocio, detectamos oportunidades de automatización y te mostramos cómo implementar sistemas con IA para ahorrar tiempo y aumentar ventas.</p>
+        <div class="agenda-bullets">
+          <div class="agenda-bullet"><span>Análisis de tus procesos actuales</span></div>
+          <div class="agenda-bullet"><span>Identificación de cuellos de botella</span></div>
+          <div class="agenda-bullet"><span>Ideas de automatización personalizadas</span></div>
+          <div class="agenda-bullet"><span>Recomendaciones prácticas sin rodeos</span></div>
+        </div>
+        <div class="exclusivity-box">
+          <p><strong>Solo si encaja contigo.</strong> Trabajamos con un número limitado de clientes para garantizar resultados reales. Esta llamada es para entender si somos la solución correcta para tu negocio — no para venderte nada.</p>
+        </div>
+        <div style="margin-top:2rem;display:flex;flex-direction:column;gap:0.6rem;">
+          <div style="display:flex;align-items:center;gap:0.6rem;font-size:0.875rem;color:var(--white-dim);">
+            <span style="color:var(--vivid-green);font-size:1rem;">✓</span> 100% gratuita y sin compromiso
+          </div>
+          <div style="display:flex;align-items:center;gap:0.6rem;font-size:0.875rem;color:var(--white-dim);">
+            <span style="color:var(--vivid-green);font-size:1rem;">✓</span> 30 minutos por videollamada
+          </div>
+          <div style="display:flex;align-items:center;gap:0.6rem;font-size:0.875rem;color:var(--white-dim);">
+            <span style="color:var(--vivid-green);font-size:1rem;">✓</span> Te llevas un plan de acción concreto
+          </div>
+        </div>
+      </div>
+      <div class="reveal reveal-delay-2">
+        <div class="calendly-wrap">
+          <iframe
+            src="https://calendly.com/isaac-cortes-telkora/consultoria-gratuita?embed_domain=telkora.com&embed_type=Inline&hide_gdpr_banner=1&background_color=0a0a0a&text_color=ffffff&primary_color=70b62c"
+            title="Reservar diagnóstico gratuito con Telkora"
+            loading="lazy"
+          ></iframe>
+        </div>
+        <p style="text-align:center;margin-top:1rem;font-size:0.78rem;color:rgba(255,255,255,0.3);">¿Problemas con el calendario? <a href="https://calendly.com/isaac-cortes-telkora/consultoria-gratuita" target="_blank" style="color:var(--teal);text-decoration:none;">Ábrelo en nueva pestaña →</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="section-wrap" style="max-width:900px">
+    <div class="reveal">
+      <p class="section-eyebrow">FAQ</p>
+      <h2 class="section-title">Preguntas frecuentes</h2>
+    </div>
+    <div class="faq-list reveal reveal-delay-1">
+      <div class="faq-item">
+        <button class="faq-q">¿Cuánto tiempo tarda en implementarse el sistema? <span class="faq-chevron">▾</span></button>
+        <div class="faq-a"><p>Los proyectos Starter suelen estar activos en 7–10 días hábiles. Los proyectos Growth, entre 2 y 4 semanas. Todo depende de la complejidad de integraciones y la velocidad de respuesta en las fases de revisión.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">¿Necesito cambiar las herramientas que ya uso? <span class="faq-chevron">▾</span></button>
+        <div class="faq-a"><p>No. Diseñamos los sistemas para integrarse con lo que ya tienes: HubSpot, Notion, Calendly, Stripe, WooCommerce, Shopify, Google Workspace... Si lo usas, probablemente podemos conectarlo.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">¿Qué pasa si el sistema no funciona como esperaba? <span class="faq-chevron">▾</span></button>
+        <div class="faq-a"><p>Incluimos un periodo de ajuste post-lanzamiento en todos los planes. Monitoreamos el sistema activamente y hacemos los ajustes necesarios hasta que el rendimiento sea el que definimos juntos en el diseño.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">¿Puedo personalizar los mensajes y el tono del chatbot? <span class="faq-chevron">▾</span></button>
+        <div class="faq-a"><p>100%. El chatbot habla con la voz de tu marca. Trabajamos contigo en los scripts, el tono y los flujos. Además, el sistema aprende de las conversaciones reales para mejorar con el tiempo.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">¿Los datos de mis clientes están seguros? <span class="faq-chevron">▾</span></button>
+        <div class="faq-a"><p>Sí. Trabajamos con infraestructura GDPR-compliant. Los datos de tus clientes se almacenan en plataformas certificadas y nunca son compartidos con terceros. Podemos firmar NDA si es necesario.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">¿Puedo cancelar en cualquier momento? <span class="faq-chevron">▾</span></button>
+        <div class="faq-a"><p>Sí. No hay permanencia mínima obligatoria. Los planes de mantenimiento mensual se pueden cancelar con 30 días de antelación. Creemos en que te quedas porque los resultados lo justifican, no porque estés atrapado.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- CTA FINAL -->
+<section id="cta">
+  <div class="cta-inner">
+    <div class="reveal">
+      <p class="section-eyebrow" style="justify-content:center">Empieza hoy</p>
+      <h2 class="cta-title">Convierte tu negocio en una <span style="color:var(--vivid-green)">máquina automatizada</span></h2>
+      <p class="cta-sub">No necesitas más herramientas. Necesitas un sistema bien diseñado.</p>
+      <div style="margin-top:2rem;display:flex;flex-direction:column;align-items:center;gap:1rem;">
+        <a href="#agenda" class="btn-primary" style="font-size:1.05rem;padding:16px 40px;">Reservar diagnóstico gratuito →</a>
+        <span style="font-size:0.8rem;color:rgba(255,255,255,0.35);">30 min · gratuita · sin compromiso</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contacto" style="padding-bottom:100px;position:relative;z-index:1;">
+  <div style="max-width:700px;margin:0 auto;padding:0 5vw;">
+    <div class="contact-form reveal">
+
+      <!-- HEADER -->
+      <div style="margin-bottom:2rem;">
+        <div style="font-size:0.75rem;color:var(--teal);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.75rem;font-family:'Space Mono',monospace;">// Alternativa al calendario</div>
+        <h3 style="font-size:1.5rem;font-weight:700;margin-bottom:0.6rem;line-height:1.2;">¿Prefieres que analicemos tu caso por ti?</h3>
+        <p style="font-size:0.9rem;color:var(--white-dim);line-height:1.65;margin-bottom:1.25rem;">Déjanos tus datos y te diremos exactamente qué puedes automatizar para <strong style="color:#fff;">ahorrar tiempo y aumentar ventas</strong>.</p>
+        <!-- Trust badges -->
+        <div style="display:flex;flex-wrap:wrap;gap:0.6rem 1.25rem;">
+          <span style="font-size:0.8rem;color:var(--vivid-green);display:flex;align-items:center;gap:0.4rem;"><span>✔</span> Respuesta en menos de 24h</span>
+          <span style="font-size:0.8rem;color:var(--vivid-green);display:flex;align-items:center;gap:0.4rem;"><span>✔</span> Sin compromiso</span>
+          <span style="font-size:0.8rem;color:var(--vivid-green);display:flex;align-items:center;gap:0.4rem;"><span>✔</span> Análisis personalizado</span>
+        </div>
+      </div>
+
+      <!-- PRIMARY CTA: CALENDLY -->
+      <a
+        href="https://calendly.com/isaac-cortes-telkora/consultoria-gratuita"
+        target="_blank"
+        rel="noopener"
+        class="btn-primary"
+        style="display:flex;align-items:center;justify-content:center;gap:0.5rem;font-size:1.05rem;padding:16px 32px;margin-bottom:0.6rem;width:100%;text-align:center;"
+      >
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        Reservar diagnóstico gratuito →
+      </a>
+      <p style="text-align:center;font-size:0.8rem;color:rgba(255,255,255,0.38);margin-bottom:1.75rem;">No necesitas preparar nada. Solo cuéntanos tu caso.</p>
+
+      <!-- DIVIDER -->
+      <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:1.5rem;">
+        <div style="flex:1;height:1px;background:rgba(255,255,255,0.08);"></div>
+        <span style="font-size:0.72rem;color:rgba(255,255,255,0.3);letter-spacing:0.06em;text-transform:uppercase;">o rellena el formulario</span>
+        <div style="flex:1;height:1px;background:rgba(255,255,255,0.08);"></div>
+      </div>
+
+      <!-- FORM -->
+      <form
+        id="contact-form"
+        action="https://formspree.io/f/xeevbraw"
+        method="POST"
+        novalidate
+      >
+        <div class="form-grid">
+          <div class="form-group">
+            <label class="form-label" for="nombre">Nombre *</label>
+            <input class="form-input" id="nombre" name="nombre" type="text" placeholder="Tu nombre" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="empresa">Empresa *</label>
+            <input class="form-input" id="empresa" name="empresa" type="text" placeholder="Nombre de tu empresa" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="email">Email *</label>
+            <input class="form-input" id="email" name="email" type="email" placeholder="tu@email.com" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="telefono">Teléfono</label>
+            <input class="form-input" id="telefono" name="telefono" type="tel" placeholder="Tu número (opcional)">
+          </div>
+          <div class="form-group full">
+            <label class="form-label" for="sector">Sector</label>
+            <select class="form-select" id="sector" name="sector">
+              <option value="">Selecciona tu sector</option>
+              <option>Clínica / Salud</option>
+              <option>Inmobiliaria</option>
+              <option>E-commerce</option>
+              <option>Academia / Formación</option>
+              <option>Servicios B2B</option>
+              <option>Otro</option>
+            </select>
+          </div>
+          <div class="form-group full">
+            <label class="form-label" for="mensaje">¿Qué quieres automatizar?</label>
+            <textarea class="form-textarea" id="mensaje" name="mensaje" placeholder="¿Qué procesos te gustaría automatizar? (ej: captar leads, responder clientes, seguimiento...)"></textarea>
+          </div>
+        </div>
+        <button type="submit" id="form-submit-btn" class="btn-secondary form-submit" style="width:100%;margin-top:0.75rem;padding:13px 24px;font-size:0.9rem;opacity:0.85;">
+          <span id="form-btn-text">Enviar formulario</span>
+          <span id="form-btn-loading" style="display:none;">Enviando…</span>
+        </button>
+        <div id="form-feedback" style="display:none;margin-top:1rem;padding:0.85rem 1rem;border-radius:8px;font-size:0.875rem;text-align:center;"></div>
+      </form>
+
+    </div>
+  </div>
+</section>
+
+<!-- EXIT-INTENT POPUP -->
+<div id="exit-overlay" role="dialog" aria-modal="true" aria-labelledby="exit-title">
+  <div id="exit-modal">
+    <button id="exit-close" aria-label="Cerrar">✕</button>
+    <div class="exit-eyebrow">Diagnóstico gratuito</div>
+    <h2 id="exit-title">Espera — ¿te vas sin tu<br><span>diagnóstico gratuito</span>?</h2>
+    <p>En 30 minutos analizamos tu negocio y te decimos exactamente qué puedes automatizar para ahorrar tiempo y aumentar ventas. Sin compromiso.</p>
+    <div class="exit-badges">
+      <span class="exit-badge"><span>✔</span> 100% gratuito</span>
+      <span class="exit-badge"><span>✔</span> Sin compromiso</span>
+      <span class="exit-badge"><span>✔</span> Plan de acción concreto</span>
+    </div>
+    <a
+      href="https://calendly.com/isaac-cortes-telkora/consultoria-gratuita"
+      target="_blank"
+      rel="noopener"
+      class="exit-cta"
+      id="exit-calendly-btn"
+    >
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      Reservar mi diagnóstico gratuito →
+    </a>
+    <button class="exit-dismiss" id="exit-dismiss-btn">No me interesa, seguir navegando</button>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <div style="margin-bottom:0.75rem;"><img src="logo.png" alt="Telkora" style="height:46px;"></div>
+      <div class="footer-brand-desc">Automatización con IA para empresas que quieren crecer más rápido. Sistemas inteligentes a medida.</div>
+      <div style="font-family:'Space Mono',monospace;font-size:0.72rem;color:var(--vivid-green);">// Siempre activo. Siempre optimizando.</div>
+    </div>
+    <div>
+      <div class="footer-col-title">Servicios</div>
+      <div class="footer-links">
+        <a href="#soluciones">Chatbots IA</a>
+        <a href="#soluciones">Automatización WhatsApp</a>
+        <a href="#soluciones">CRM automatizado</a>
+        <a href="#soluciones">Email marketing IA</a>
+        <a href="#soluciones">Integraciones</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">Empresa</div>
+      <div class="footer-links">
+        <a href="#diferencial">Sobre Telkora</a>
+        <a href="#integraciones">Integraciones</a>
+        <a href="#casos">Casos de uso</a>
+        <a href="#testimonios">Testimonios</a>
+        <a href="#agenda">Agenda</a>
+        <a href="#faq">FAQ</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">Contacto</div>
+      <div class="footer-links">
+        <a href="mailto:contacto@telkora.com">contacto@telkora.com</a>
+        <a href="#contacto">Solicitar diagnóstico</a>
+        <a href="https://www.instagram.com/telkora.ai/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.tiktok.com/@telkora0" target="_blank" rel="noopener">TikTok</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2026 Telkora. Todos los derechos reservados. · <a href="privacidad.html" style="color:inherit;text-decoration:none;">Política de privacidad</a> · <a href="aviso-legal.html" style="color:inherit;text-decoration:none;">Aviso legal</a></div>
+    <div class="footer-social">
+      <a href="https://www.instagram.com/telkora.ai/" title="Instagram" target="_blank" rel="noopener">
+        <img src="https://cdn.simpleicons.org/instagram/ffffff" alt="Instagram" width="16" height="16" style="display:block;filter:opacity(0.7);">
+      </a>
+      <a href="https://www.tiktok.com/@telkora0" title="TikTok" target="_blank" rel="noopener">
+        <img src="https://cdn.simpleicons.org/tiktok/ffffff" alt="TikTok" width="16" height="16" style="display:block;filter:opacity(0.7);">
+      </a>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ─── NETWORK CANVAS ───────────────────────────────────────────────────────────
+(function() {
+  const canvas = document.getElementById('network-canvas');
+  const ctx = canvas.getContext('2d');
+  let W, H, nodes = [], mouse = { x: 0, y: 0 };
+  const N_NODES = 55, MAX_DIST = 160;
+
+  function resize() {
+    W = canvas.width = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
+  window.addEventListener('mousemove', e => { mouse.x = e.clientX; mouse.y = e.clientY; });
+
+  for (let i = 0; i < N_NODES; i++) {
+    nodes.push({
+      x: Math.random() * window.innerWidth,
+      y: Math.random() * window.innerHeight,
+      vx: (Math.random() - 0.5) * 0.35,
+      vy: (Math.random() - 0.5) * 0.35,
+      r: Math.random() * 2 + 1
+    });
+  }
+
+  function draw() {
+    ctx.clearRect(0, 0, W, H);
+    // Draw lines
+    for (let i = 0; i < nodes.length; i++) {
+      for (let j = i + 1; j < nodes.length; j++) {
+        const dx = nodes[i].x - nodes[j].x, dy = nodes[i].y - nodes[j].y;
+        const d = Math.sqrt(dx*dx + dy*dy);
+        if (d < MAX_DIST) {
+          ctx.beginPath();
+          ctx.moveTo(nodes[i].x, nodes[i].y);
+          ctx.lineTo(nodes[j].x, nodes[j].y);
+          ctx.strokeStyle = `rgba(112,182,44,${(1 - d / MAX_DIST) * 0.35})`;
+          ctx.lineWidth = 0.6;
+          ctx.stroke();
+        }
+      }
+      // Mouse attraction
+      const mdx = mouse.x - nodes[i].x, mdy = mouse.y - nodes[i].y;
+      const md = Math.sqrt(mdx*mdx + mdy*mdy);
+      if (md < 200) {
+        ctx.beginPath();
+        ctx.moveTo(nodes[i].x, nodes[i].y);
+        ctx.lineTo(mouse.x, mouse.y);
+        ctx.strokeStyle = `rgba(132,195,190,${(1 - md / 200) * 0.4})`;
+        ctx.lineWidth = 0.8;
+        ctx.stroke();
+      }
+    }
+    // Draw nodes
+    for (let n of nodes) {
+      ctx.beginPath();
+      ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(112,182,44,0.7)';
+      ctx.fill();
+      // Move
+      n.x += n.vx; n.y += n.vy;
+      if (n.x < 0 || n.x > W) n.vx *= -1;
+      if (n.y < 0 || n.y > H) n.vy *= -1;
+    }
+    rafId = requestAnimationFrame(draw);
+  }
+  let rafId = requestAnimationFrame(draw);
+
+  // Pause when tab is hidden → saves CPU/battery
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) {
+      cancelAnimationFrame(rafId);
+    } else {
+      rafId = requestAnimationFrame(draw);
+    }
+  });
+})();
+
+// ─── HERO DASHBOARD BARS ──────────────────────────────────────────────────────
+(function() {
+  const chart = document.getElementById('dash-chart');
+  if (!chart) return;
+  const vals = [45, 62, 55, 78, 88, 72, 95, 83, 91, 76, 88, 100];
+  const months = ['E','F','M','A','M','J','J','A','S','O','N','D'];
+  vals.forEach((v, i) => {
+    const wrap = document.createElement('div');
+    wrap.className = 'dash-bar-wrap';
+    const bar = document.createElement('div');
+    bar.className = 'dash-bar-inner';
+    bar.style.height = v + '%';
+    const lbl = document.createElement('div');
+    lbl.className = 'dash-bar-label';
+    lbl.textContent = months[i];
+    wrap.appendChild(bar); wrap.appendChild(lbl);
+    chart.appendChild(wrap);
+  });
+  // Animate metrics
+  let tick = 0;
+  setInterval(() => {
+    tick++;
+    document.getElementById('m1').textContent = (847 + tick * 3);
+    if (tick % 5 === 0) {
+      const t = document.getElementById('m3');
+      t.textContent = (Math.random() * 2 + 2.5).toFixed(1) + 's';
+    }
+  }, 3000);
+})();
+
+// ─── SCROLL REVEAL ────────────────────────────────────────────────────────────
+(function() {
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+})();
+
+// ─── COUNTER ANIMATION ────────────────────────────────────────────────────────
+(function() {
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      const el = e.target;
+      const target = +el.dataset.target;
+      const prefix = el.dataset.prefix || '';
+      const suffix = el.dataset.suffix || '';
+      let start = 0, dur = 1800;
+      const step = ts => {
+        if (!start) start = ts;
+        const pct = Math.min((ts - start) / dur, 1);
+        const val = Math.floor(pct * pct * target);
+        el.textContent = prefix + val + suffix;
+        if (pct < 1) requestAnimationFrame(step);
+        else el.textContent = prefix + target + suffix;
+      };
+      requestAnimationFrame(step);
+      obs.unobserve(el);
+    });
+  }, { threshold: 0.5 });
+  document.querySelectorAll('[data-target]').forEach(el => obs.observe(el));
+})();
+
+// ─── FLOW ANIMATION ───────────────────────────────────────────────────────────
+(function() {
+  const nodes = [1,2,3,4,5,6].map(i => document.getElementById('fn'+i));
+  let active = 0;
+  function nextNode() {
+    nodes.forEach((n,i) => n && n.classList.toggle('active', i === active));
+    active = (active + 1) % nodes.length;
+  }
+  setInterval(nextNode, 1200);
+})();
+
+// ─── LOG ANIMATION ────────────────────────────────────────────────────────────
+(function() {
+  const log = document.getElementById('flow-log');
+  if (!log) return;
+  const lines = [
+    ['12:03:41','LEAD_IN','Email · Pedro Sánchez · E-commerce'],
+    ['12:03:41','AI_RESPONSE','Respuesta en 0.8s · Canal: email'],
+    ['12:03:55','QUALIFY','Score: 91/100 · Historial: cliente recurrente'],
+    ['12:03:55','CRM_UPDATE','Oportunidad creada · Valor estimado: 4.200€'],
+    ['12:03:56','SEQUENCE_ON','Secuencia de nurturing activada'],
+    ['14:03:56','CONVERSION','Reunión agendada · Propuesta enviada'],
+  ];
+  let lineIdx = 0;
+  setInterval(() => {
+    if (!log.isConnected) return;
+    const data = lines[lineIdx % lines.length];
+    const now = new Date();
+    const time = [now.getHours(), now.getMinutes(), now.getSeconds()].map(v => String(v).padStart(2,'0')).join(':');
+    const div = document.createElement('div');
+    div.className = 'log-line';
+    div.innerHTML = `<span class="log-time">${time}</span><span class="log-event">${data[1]}</span><span class="log-detail">${data[2]}</span>`;
+    log.appendChild(div);
+    if (log.children.length > 8) log.removeChild(log.children[0]);
+    lineIdx++;
+  }, 2800);
+})();
+
+// ─── FAQ ──────────────────────────────────────────────────────────────────────
+document.querySelectorAll('.faq-q').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  });
+});
+
+// ─── NAV HAMBURGER ────────────────────────────────────────────────────────────
+document.getElementById('hamburger').addEventListener('click', () => {
+  document.getElementById('nav-links').classList.toggle('open');
+});
+
+// ─── FORM (Formspree) ────────────────────────────────────────────────────────
+document.getElementById('contact-form').addEventListener('submit', async function(e) {
+  e.preventDefault();
+
+  const form     = this;
+  const btn      = document.getElementById('form-submit-btn');
+  const btnText  = document.getElementById('form-btn-text');
+  const btnLoad  = document.getElementById('form-btn-loading');
+  const feedback = document.getElementById('form-feedback');
+
+  // Validate required fields
+  const required = form.querySelectorAll('[required]');
+  let valid = true;
+  required.forEach(el => {
+    el.style.borderColor = '';
+    if (!el.value.trim()) {
+      el.style.borderColor = 'rgba(255,80,80,0.7)';
+      el.style.boxShadow   = '0 0 0 3px rgba(255,60,60,0.15)';
+      valid = false;
+    } else {
+      el.style.boxShadow = '';
+    }
+  });
+  if (!valid) {
+    feedback.style.display     = 'block';
+    feedback.style.background  = 'rgba(255,60,60,0.08)';
+    feedback.style.border      = '1px solid rgba(255,60,60,0.25)';
+    feedback.style.color       = '#ff6b6b';
+    feedback.textContent       = 'Por favor, completa los campos obligatorios.';
+    return;
+  }
+
+  // Loading state
+  btn.disabled      = true;
+  btnText.style.display  = 'none';
+  btnLoad.style.display  = 'inline';
+  feedback.style.display = 'none';
+
+  try {
+    const res = await fetch(form.action, {
+      method:  'POST',
+      body:    new FormData(form),
+      headers: { Accept: 'application/json' }
+    });
+
+    if (res.ok) {
+      feedback.style.display    = 'block';
+      feedback.style.background = 'rgba(112,182,44,0.08)';
+      feedback.style.border     = '1px solid rgba(112,182,44,0.25)';
+      feedback.style.color      = 'var(--vivid-green)';
+      feedback.textContent      = '✓ Perfecto. Te contactaremos en menos de 24h.';
+      form.reset();
+      required.forEach(el => { el.style.borderColor = ''; el.style.boxShadow = ''; });
+    } else {
+      throw new Error('server');
+    }
+  } catch {
+    feedback.style.display    = 'block';
+    feedback.style.background = 'rgba(255,60,60,0.08)';
+    feedback.style.border     = '1px solid rgba(255,60,60,0.25)';
+    feedback.style.color      = '#ff6b6b';
+    feedback.textContent      = 'Hubo un error. Inténtalo de nuevo.';
+  } finally {
+    btn.disabled           = false;
+    btnText.style.display  = 'inline';
+    btnLoad.style.display  = 'none';
+  }
+});
+
+// ─── SCROLL PROGRESS BAR ─────────────────────────────────────────────────────
+(function() {
+  const bar = document.getElementById('scroll-progress');
+  window.addEventListener('scroll', () => {
+    const h = document.documentElement;
+    const pct = (h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100;
+    bar.style.width = pct + '%';
+  }, { passive: true });
+})();
+
+// ─── EXIT-INTENT POPUP ───────────────────────────────────────────────────────
+(function() {
+  const overlay  = document.getElementById('exit-overlay');
+  const closeBtn = document.getElementById('exit-close');
+  const dismiss  = document.getElementById('exit-dismiss-btn');
+  let shown = false;
+
+  function show() {
+    if (shown || sessionStorage.getItem('exitSeen')) return;
+    shown = true;
+    sessionStorage.setItem('exitSeen', '1');
+    overlay.classList.add('show');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function hide() {
+    overlay.classList.remove('show');
+    document.body.style.overflow = '';
+  }
+
+  // Trigger: mouse leaves viewport from the top
+  document.addEventListener('mouseleave', e => {
+    if (e.clientY < 10) show();
+  });
+
+  // Mobile fallback: show after 45s of inactivity
+  let idleTimer = setTimeout(() => show(), 45000);
+  ['scroll','touchstart','click'].forEach(ev =>
+    window.addEventListener(ev, () => {
+      clearTimeout(idleTimer);
+      idleTimer = setTimeout(() => show(), 45000);
+    }, { passive: true })
+  );
+
+  closeBtn.addEventListener('click', hide);
+  dismiss.addEventListener('click', hide);
+  overlay.addEventListener('click', e => { if (e.target === overlay) hide(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') hide(); });
+
+  // Reset session flag when Calendly CTA is clicked (conversion path)
+  document.getElementById('exit-calendly-btn').addEventListener('click', hide);
+})();
+
+// ─── LOGO: ELIMINAR FONDO BLANCO VÍA CANVAS ──────────────────────────────────
+(function() {
+  function removeWhiteBg(imgEl) {
+    const tmp = new Image();
+    tmp.crossOrigin = 'anonymous';
+    tmp.onload = function() {
+      try {
+        const c = document.createElement('canvas');
+        c.width = tmp.naturalWidth; c.height = tmp.naturalHeight;
+        const ctx = c.getContext('2d');
+        ctx.drawImage(tmp, 0, 0);
+        const id = ctx.getImageData(0, 0, c.width, c.height);
+        const px = id.data;
+        for (let i = 0; i < px.length; i += 4) {
+          if (px[i] > 230 && px[i+1] > 230 && px[i+2] > 230) px[i+3] = 0;
+        }
+        ctx.putImageData(id, 0, 0);
+        imgEl.src = c.toDataURL('image/png');
+      } catch(e) {}
+    };
+    tmp.src = 'logo.png?_nc=' + Date.now();
+  }
+  window.addEventListener('load', function() {
+    document.querySelectorAll('img[src="logo.png"]').forEach(removeWhiteBg);
+  });
+})();
+
+// ─── COOKIE BANNER ───────────────────────────────────────────────────────────
+(function() {
+  if (localStorage.getItem('cookieConsent')) return;
+  const banner = document.getElementById('cookie-banner');
+  setTimeout(() => banner.classList.add('show'), 800);
+  function accept() {
+    localStorage.setItem('cookieConsent', 'accepted');
+    banner.classList.remove('show');
+  }
+  function reject() {
+    localStorage.setItem('cookieConsent', 'rejected');
+    banner.classList.remove('show');
+  }
+  document.getElementById('cookie-accept').addEventListener('click', accept);
+  document.getElementById('cookie-reject').addEventListener('click', reject);
+})();
+
+// ─── NAV SCROLL ──────────────────────────────────────────────────────────────
+window.addEventListener('scroll', () => {
+  document.getElementById('main-nav').style.background =
+    window.scrollY > 60 ? 'rgba(0,0,0,0.92)' : 'rgba(0,0,0,0.7)';
+});
+</script>
+
+<!-- COOKIE BANNER -->
+<div id="cookie-banner" role="dialog" aria-live="polite" aria-label="Aviso de cookies">
+  <p>
+    Usamos cookies técnicas necesarias para el funcionamiento del sitio. No usamos cookies de rastreo ni publicidad sin tu consentimiento.
+    Consulta nuestra <a href="privacidad.html">Política de privacidad</a>.
+  </p>
+  <div class="cookie-actions">
+    <button class="cookie-btn-reject" id="cookie-reject">Solo esenciales</button>
+    <button class="cookie-btn-accept" id="cookie-accept">Aceptar</button>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" href="favicon.png" type="image/png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Política de Privacidad — Telkora</title>
+<meta name="description" content="Política de privacidad de Telkora. Cómo recopilamos, usamos y protegemos tus datos personales conforme al RGPD.">
+<meta name="robots" content="noindex, follow">
+<link rel="canonical" href="https://telkora.com/privacidad.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --vivid-green: #70b62c;
+    --teal: #84c3be;
+    --white-dim: rgba(255,255,255,0.6);
+    --white-faint: rgba(255,255,255,0.08);
+    --green-glow: rgba(112,182,44,0.25);
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Space Grotesk', sans-serif;
+    background: #000;
+    color: #fff;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+  ::-webkit-scrollbar { width: 4px; }
+  ::-webkit-scrollbar-track { background: #000; }
+  ::-webkit-scrollbar-thumb { background: var(--vivid-green); border-radius: 2px; }
+
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 5vw; height: 68px;
+    background: rgba(0,0,0,0.92);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(112,182,44,0.15);
+  }
+  .nav-logo { display: flex; align-items: center; text-decoration: none; }
+  .nav-back {
+    display: flex; align-items: center; gap: 0.5rem;
+    color: var(--white-dim); text-decoration: none;
+    font-size: 0.875rem; font-weight: 500; transition: color 0.2s;
+  }
+  .nav-back:hover { color: var(--teal); }
+  .nav-cta {
+    padding: 9px 22px; border-radius: 6px;
+    background: var(--vivid-green); color: #000;
+    font-size: 0.85rem; font-weight: 700;
+    text-decoration: none;
+    box-shadow: 0 0 20px var(--green-glow);
+    transition: all 0.2s;
+  }
+  .nav-cta:hover { background: #84c3be; transform: translateY(-1px); }
+
+  .legal-hero {
+    padding: 80px 5vw 60px;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    background: linear-gradient(180deg, #000 0%, #0a120a 100%);
+  }
+  .legal-hero-inner { max-width: 860px; margin: 0 auto; }
+  .legal-eyebrow {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--vivid-green);
+    margin-bottom: 1rem; font-family: 'Space Mono', monospace;
+  }
+  .legal-eyebrow::before { content: '//'; opacity: 0.5; }
+  .legal-hero h1 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700; letter-spacing: -0.025em; line-height: 1.1;
+    margin-bottom: 1rem;
+  }
+  .legal-meta {
+    font-size: 0.82rem; color: var(--white-dim);
+    font-family: 'Space Mono', monospace;
+    display: flex; gap: 2rem; flex-wrap: wrap; margin-top: 1.25rem;
+  }
+
+  .legal-body { max-width: 860px; margin: 0 auto; padding: 60px 5vw 100px; }
+
+  .legal-toc {
+    background: rgba(112,182,44,0.05);
+    border: 1px solid rgba(112,182,44,0.15);
+    border-radius: 12px; padding: 1.5rem 2rem; margin-bottom: 3rem;
+  }
+  .legal-toc h3 {
+    font-size: 0.8rem; font-weight: 700; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--teal);
+    margin-bottom: 1rem; font-family: 'Space Mono', monospace;
+  }
+  .legal-toc ol { list-style: none; display: flex; flex-direction: column; gap: 0.4rem; padding: 0; }
+  .legal-toc ol li { counter-increment: toc; }
+  .legal-toc a {
+    font-size: 0.875rem; color: var(--white-dim); text-decoration: none;
+    display: flex; align-items: center; gap: 0.5rem; transition: color 0.2s;
+  }
+  .legal-toc a:hover { color: var(--vivid-green); }
+  .legal-toc a::before {
+    content: counter(toc, decimal-leading-zero) '.';
+    font-family: 'Space Mono', monospace; font-size: 0.72rem;
+    color: var(--vivid-green); min-width: 28px;
+  }
+
+  .legal-section { margin-bottom: 3rem; }
+  .legal-section h2 {
+    font-size: 1.25rem; font-weight: 700; color: #fff;
+    margin-bottom: 1rem; padding-bottom: 0.6rem;
+    border-bottom: 1px solid rgba(112,182,44,0.2);
+    display: flex; align-items: center; gap: 0.75rem;
+  }
+  .legal-section h2 .num {
+    font-family: 'Space Mono', monospace; font-size: 0.75rem;
+    color: var(--vivid-green); background: rgba(112,182,44,0.1);
+    border: 1px solid rgba(112,182,44,0.25);
+    padding: 2px 8px; border-radius: 4px; flex-shrink: 0;
+  }
+  .legal-section p { font-size: 0.925rem; color: var(--white-dim); line-height: 1.75; margin-bottom: 0.85rem; }
+  .legal-section p:last-child { margin-bottom: 0; }
+  .legal-section strong { color: #fff; font-weight: 600; }
+  .legal-section a { color: var(--teal); text-decoration: none; }
+  .legal-section a:hover { text-decoration: underline; }
+  .legal-section ul, .legal-section ol {
+    padding-left: 1.5rem; margin-bottom: 0.85rem;
+    display: flex; flex-direction: column; gap: 0.4rem;
+  }
+  .legal-section li { font-size: 0.925rem; color: var(--white-dim); line-height: 1.65; }
+
+  .info-box {
+    background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 10px; padding: 1.25rem 1.5rem; margin: 1rem 0;
+  }
+  .info-box .field { display: flex; gap: 1rem; margin-bottom: 0.4rem; flex-wrap: wrap; }
+  .info-box .field:last-child { margin-bottom: 0; }
+  .info-box .label {
+    font-size: 0.75rem; font-weight: 700; color: var(--teal);
+    letter-spacing: 0.06em; text-transform: uppercase;
+    min-width: 160px; font-family: 'Space Mono', monospace; padding-top: 2px;
+  }
+  .info-box .value { font-size: 0.9rem; color: var(--white-dim); }
+
+  .rights-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem; margin: 1.25rem 0;
+  }
+  .right-card {
+    background: rgba(112,182,44,0.05); border: 1px solid rgba(112,182,44,0.15);
+    border-radius: 10px; padding: 1.1rem 1.25rem;
+  }
+  .right-card h4 { font-size: 0.875rem; font-weight: 700; color: var(--vivid-green); margin-bottom: 0.35rem; }
+  .right-card p { font-size: 0.82rem; color: var(--white-dim); line-height: 1.55; margin: 0; }
+
+  .terceros-table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.875rem; }
+  .terceros-table th {
+    text-align: left; padding: 0.6rem 1rem;
+    background: rgba(112,182,44,0.08); color: var(--teal);
+    font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em;
+    text-transform: uppercase; font-family: 'Space Mono', monospace;
+    border-bottom: 1px solid rgba(112,182,44,0.2);
+  }
+  .terceros-table td {
+    padding: 0.75rem 1rem; color: var(--white-dim);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    vertical-align: top;
+  }
+  .terceros-table tr:hover td { background: rgba(255,255,255,0.02); }
+  .terceros-table a { color: var(--teal); text-decoration: none; }
+  .terceros-table a:hover { text-decoration: underline; }
+
+  .highlight-box {
+    background: rgba(132,195,190,0.06); border: 1px solid rgba(132,195,190,0.2);
+    border-radius: 10px; padding: 1.25rem 1.5rem; margin: 1rem 0;
+  }
+  .highlight-box p { margin: 0; color: rgba(255,255,255,0.75); }
+  .highlight-box strong { color: var(--teal); }
+
+  .placeholder {
+    background: rgba(255,200,0,0.08); border: 1px dashed rgba(255,200,0,0.3);
+    border-radius: 4px; padding: 2px 8px;
+    color: rgba(255,200,0,0.8); font-size: 0.85rem;
+    font-family: 'Space Mono', monospace;
+  }
+
+  footer {
+    background: #000; border-top: 1px solid rgba(255,255,255,0.06);
+    padding: 30px 5vw;
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 1rem;
+  }
+  .footer-copy { font-size: 0.8rem; color: rgba(255,255,255,0.3); }
+  .footer-nav { display: flex; gap: 1.5rem; }
+  .footer-nav a { font-size: 0.8rem; color: rgba(255,255,255,0.3); text-decoration: none; transition: color 0.2s; }
+  .footer-nav a:hover { color: var(--teal); }
+  .footer-nav a.active { color: var(--vivid-green); }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">
+    <img src="logo.png" alt="Telkora" style="height:38px;">
+  </a>
+  <a href="index.html" class="nav-back">← Volver a Telkora.com</a>
+  <a href="index.html#agenda" class="nav-cta">Reservar llamada →</a>
+</nav>
+
+<div class="legal-hero">
+  <div class="legal-hero-inner">
+    <div class="legal-eyebrow">Privacidad</div>
+    <h1>Política de Privacidad</h1>
+    <p style="font-size:1rem;color:var(--white-dim);max-width:620px;">En Telkora nos tomamos en serio la protección de tus datos. Esta política explica qué datos recogemos, para qué los usamos y cuáles son tus derechos conforme al RGPD.</p>
+    <div class="legal-meta">
+      <span>📅 Última actualización: 28 de abril de 2026</span>
+      <span>⚖️ Conforme al RGPD (UE) 2016/679</span>
+    </div>
+  </div>
+</div>
+
+<div class="legal-body">
+
+  <div class="legal-toc">
+    <h3>Índice de contenidos</h3>
+    <ol>
+      <li><a href="#responsable">Responsable del tratamiento</a></li>
+      <li><a href="#datos">Datos que recogemos</a></li>
+      <li><a href="#finalidad">Finalidad y base legal</a></li>
+      <li><a href="#conservacion">Conservación de los datos</a></li>
+      <li><a href="#destinatarios">Destinatarios y encargados</a></li>
+      <li><a href="#transferencias">Transferencias internacionales</a></li>
+      <li><a href="#derechos">Tus derechos</a></li>
+      <li><a href="#seguridad">Medidas de seguridad</a></li>
+      <li><a href="#menores">Menores de edad</a></li>
+      <li><a href="#modificaciones">Modificaciones</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ol>
+  </div>
+
+  <!-- 1. RESPONSABLE -->
+  <div class="legal-section" id="responsable">
+    <h2><span class="num">01</span> Responsable del tratamiento</h2>
+    <p>De conformidad con el Reglamento (UE) 2016/679 del Parlamento Europeo y del Consejo (RGPD) y la Ley Orgánica 3/2018 de Protección de Datos Personales y garantía de los derechos digitales (LOPDGDD), el responsable del tratamiento de los datos personales recabados a través de este sitio web es:</p>
+    <div class="info-box">
+      <div class="field"><span class="label">Responsable</span><span class="value"><strong>Telkora</strong></span></div>
+      <div class="field"><span class="label">NIF/CIF</span><span class="value">73443901W</span></div>
+      <div class="field"><span class="label">Domicilio</span><span class="value">C/Lupercio N1 1B, Cariñena</span></div>
+      <div class="field"><span class="label">Email</span><span class="value"><a href="mailto:contacto@telkora.com">contacto@telkora.com</a></span></div>
+      <div class="field"><span class="label">Teléfono</span><span class="value">+34 654 152 831</span></div>
+    </div>
+  </div>
+
+  <!-- 2. DATOS -->
+  <div class="legal-section" id="datos">
+    <h2><span class="num">02</span> Datos que recogemos</h2>
+    <p>Recogemos datos personales únicamente cuando el usuario los facilita de forma activa a través de los formularios o canales habilitados en el Sitio Web. En concreto, podemos recoger:</p>
+
+    <p><strong>Formulario de contacto:</strong></p>
+    <ul>
+      <li>Nombre y apellidos</li>
+      <li>Nombre de la empresa</li>
+      <li>Dirección de correo electrónico</li>
+      <li>Número de teléfono (opcional)</li>
+      <li>Sector de actividad</li>
+      <li>Consulta o mensaje libre</li>
+    </ul>
+
+    <p><strong>Reserva de diagnóstico (Calendly):</strong></p>
+    <ul>
+      <li>Nombre y apellidos</li>
+      <li>Dirección de correo electrónico</li>
+      <li>Zona horaria</li>
+      <li>Información adicional facilitada voluntariamente al reservar</li>
+    </ul>
+
+    <p><strong>Datos técnicos (navegación):</strong></p>
+    <ul>
+      <li>Dirección IP (anonimizada si se usan herramientas de analítica)</li>
+      <li>Tipo de navegador y sistema operativo</li>
+      <li>Páginas visitadas y tiempo de permanencia</li>
+    </ul>
+
+    <div class="highlight-box">
+      <p><strong>No recogemos</strong> datos especialmente sensibles (salud, origen racial, creencias religiosas, datos biométricos, etc.) a través de este sitio web. No realizamos decisiones automatizadas ni elaboración de perfiles con fines de discriminación.</p>
+    </div>
+  </div>
+
+  <!-- 3. FINALIDAD -->
+  <div class="legal-section" id="finalidad">
+    <h2><span class="num">03</span> Finalidad y base legal del tratamiento</h2>
+    <p>Tratamos tus datos personales con las siguientes finalidades y bases legales:</p>
+
+    <div class="info-box">
+      <div class="field">
+        <span class="label">Finalidad</span>
+        <span class="value"><strong>Gestión de consultas y contacto</strong><br>Responder a mensajes enviados a través del formulario de contacto.</span>
+      </div>
+      <div class="field">
+        <span class="label">Base legal</span>
+        <span class="value">Interés legítimo (art. 6.1.f RGPD) / Ejecución de medidas precontractuales (art. 6.1.b RGPD)</span>
+      </div>
+    </div>
+
+    <div class="info-box">
+      <div class="field">
+        <span class="label">Finalidad</span>
+        <span class="value"><strong>Gestión de citas y diagnósticos gratuitos</strong><br>Confirmar, gestionar y realizar las sesiones de diagnóstico reservadas a través de Calendly.</span>
+      </div>
+      <div class="field">
+        <span class="label">Base legal</span>
+        <span class="value">Ejecución de medidas precontractuales a petición del interesado (art. 6.1.b RGPD)</span>
+      </div>
+    </div>
+
+    <div class="info-box">
+      <div class="field">
+        <span class="label">Finalidad</span>
+        <span class="value"><strong>Comunicaciones comerciales</strong><br>Envío de información sobre servicios, novedades y contenido relevante, si el usuario ha prestado su consentimiento.</span>
+      </div>
+      <div class="field">
+        <span class="label">Base legal</span>
+        <span class="value">Consentimiento del interesado (art. 6.1.a RGPD). Revocable en cualquier momento.</span>
+      </div>
+    </div>
+
+    <div class="info-box">
+      <div class="field">
+        <span class="label">Finalidad</span>
+        <span class="value"><strong>Mejora del sitio web (analítica)</strong><br>Análisis del comportamiento de los usuarios para mejorar la experiencia y el rendimiento del Sitio Web.</span>
+      </div>
+      <div class="field">
+        <span class="label">Base legal</span>
+        <span class="value">Interés legítimo (art. 6.1.f RGPD) o consentimiento previo a través de cookies, según el tipo de herramienta.</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. CONSERVACIÓN -->
+  <div class="legal-section" id="conservacion">
+    <h2><span class="num">04</span> Conservación de los datos</h2>
+    <p>Los datos personales facilitados se conservarán únicamente durante el tiempo necesario para la finalidad para la que fueron recogidos:</p>
+    <ul>
+      <li><strong>Datos de contacto y consultas:</strong> se conservan durante el tiempo necesario para gestionar la solicitud y, posteriormente, durante los plazos legales de prescripción aplicables (generalmente 3 años para responsabilidades civiles).</li>
+      <li><strong>Datos de reserva de diagnóstico:</strong> se conservan mientras dure la relación de servicio y durante los plazos de prescripción legales.</li>
+      <li><strong>Datos para comunicaciones comerciales:</strong> se conservan hasta que el usuario retire su consentimiento o solicite la supresión.</li>
+      <li><strong>Datos de navegación (logs):</strong> se conservan durante el período máximo de 13 meses, conforme a las recomendaciones de la AEPD.</li>
+    </ul>
+    <p>Transcurridos estos plazos, los datos serán suprimidos o anonimizados de forma irreversible.</p>
+  </div>
+
+  <!-- 5. DESTINATARIOS -->
+  <div class="legal-section" id="destinatarios">
+    <h2><span class="num">05</span> Destinatarios y encargados del tratamiento</h2>
+    <p>Telkora no vende, alquila ni cede tus datos personales a terceros con fines comerciales. Sin embargo, para prestar sus servicios, recurre a terceros proveedores que actúan como encargados del tratamiento, con quienes ha suscrito los correspondientes contratos conforme al art. 28 RGPD:</p>
+
+    <table class="terceros-table">
+      <thead>
+        <tr>
+          <th>Proveedor</th>
+          <th>Finalidad</th>
+          <th>País</th>
+          <th>Política de privacidad</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Formspree</strong></td>
+          <td>Gestión del formulario de contacto</td>
+          <td>EE.UU.</td>
+          <td><a href="https://formspree.io/legal/privacy-policy" target="_blank" rel="noopener">Ver política</a></td>
+        </tr>
+        <tr>
+          <td><strong>Calendly</strong></td>
+          <td>Reserva y gestión de citas</td>
+          <td>EE.UU.</td>
+          <td><a href="https://calendly.com/privacy" target="_blank" rel="noopener">Ver política</a></td>
+        </tr>
+        <tr>
+          <td><strong>Google Fonts</strong></td>
+          <td>Carga de tipografías web (puede registrar IP)</td>
+          <td>EE.UU.</td>
+          <td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Ver política</a></td>
+        </tr>
+        <tr>
+          <td><strong>Proveedor de hosting</strong></td>
+          <td>Alojamiento del sitio web</td>
+          <td>EE.UU.</td>
+          <td><a href="https://vercel.com/legal/privacy-policy" target="_blank" rel="noopener">Ver política</a></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>Telkora también puede comunicar datos a las Administraciones Públicas o autoridades competentes cuando esté legalmente obligado a ello.</p>
+  </div>
+
+  <!-- 6. TRANSFERENCIAS -->
+  <div class="legal-section" id="transferencias">
+    <h2><span class="num">06</span> Transferencias internacionales</h2>
+    <p>Algunos de los proveedores mencionados (Formspree, Calendly, Google) se encuentran en los Estados Unidos. Estas transferencias se realizan con las garantías adecuadas conforme al art. 46 RGPD, principalmente mediante:</p>
+    <ul>
+      <li>Cláusulas Contractuales Tipo aprobadas por la Comisión Europea.</li>
+      <li>Certificación conforme al Marco de Privacidad de Datos UE–EE.UU. (Data Privacy Framework), cuando aplique.</li>
+    </ul>
+    <p>El usuario puede solicitar información adicional sobre las garantías aplicadas en cada caso a través de <a href="mailto:contacto@telkora.com">contacto@telkora.com</a>.</p>
+  </div>
+
+  <!-- 7. DERECHOS -->
+  <div class="legal-section" id="derechos">
+    <h2><span class="num">07</span> Tus derechos</h2>
+    <p>Conforme al RGPD y la LOPDGDD, puedes ejercer los siguientes derechos en relación con tus datos personales:</p>
+
+    <div class="rights-grid">
+      <div class="right-card">
+        <h4>Acceso</h4>
+        <p>Obtener confirmación de si tratamos tus datos y, en su caso, acceder a ellos.</p>
+      </div>
+      <div class="right-card">
+        <h4>Rectificación</h4>
+        <p>Solicitar la corrección de datos inexactos o incompletos.</p>
+      </div>
+      <div class="right-card">
+        <h4>Supresión</h4>
+        <p>Solicitar la eliminación de tus datos cuando ya no sean necesarios.</p>
+      </div>
+      <div class="right-card">
+        <h4>Oposición</h4>
+        <p>Oponerte al tratamiento basado en interés legítimo o con fines de marketing directo.</p>
+      </div>
+      <div class="right-card">
+        <h4>Limitación</h4>
+        <p>Solicitar que se limite el tratamiento mientras se verifica una impugnación.</p>
+      </div>
+      <div class="right-card">
+        <h4>Portabilidad</h4>
+        <p>Recibir tus datos en un formato estructurado y de uso común.</p>
+      </div>
+      <div class="right-card">
+        <h4>Retirar consentimiento</h4>
+        <p>En cualquier momento, sin que ello afecte a la licitud del tratamiento anterior.</p>
+      </div>
+      <div class="right-card">
+        <h4>Reclamación ante la AEPD</h4>
+        <p>Si consideras que tus derechos han sido vulnerados, puedes reclamar ante la <a href="https://www.aepd.es" target="_blank" rel="noopener">Agencia Española de Protección de Datos</a>.</p>
+      </div>
+    </div>
+
+    <p>Para ejercer cualquiera de estos derechos, envía un escrito a <a href="mailto:contacto@telkora.com">contacto@telkora.com</a> indicando el derecho que deseas ejercer y adjuntando copia de tu DNI u otro documento identificativo. Responderemos en el plazo máximo de un mes, prorrogable a tres en casos de especial complejidad.</p>
+  </div>
+
+  <!-- 8. SEGURIDAD -->
+  <div class="legal-section" id="seguridad">
+    <h2><span class="num">08</span> Medidas de seguridad</h2>
+    <p>Telkora ha adoptado las medidas técnicas y organizativas apropiadas para garantizar un nivel de seguridad adecuado al riesgo de los tratamientos realizados, conforme al art. 32 RGPD. Entre otras medidas:</p>
+    <ul>
+      <li>Transmisión de datos mediante cifrado HTTPS/TLS.</li>
+      <li>Acceso restringido a los datos solo al personal autorizado.</li>
+      <li>Uso de proveedores certificados en seguridad de la información.</li>
+      <li>Revisión periódica de las medidas de seguridad implantadas.</li>
+    </ul>
+    <p>No obstante, ningún sistema de transmisión de datos por Internet puede garantizarse como 100% seguro. En caso de producirse una brecha de seguridad que afecte a tus derechos y libertades, Telkora lo notificará a la AEPD y, en su caso, a los afectados, en los plazos establecidos por el RGPD.</p>
+  </div>
+
+  <!-- 9. MENORES -->
+  <div class="legal-section" id="menores">
+    <h2><span class="num">09</span> Menores de edad</h2>
+    <p>El Sitio Web está dirigido a profesionales y empresas. No está orientado a menores de 14 años. Telkora no recoge de forma consciente datos personales de menores de esta edad. Si tienes conocimiento de que un menor ha facilitado sus datos sin consentimiento parental, contacta con nosotros en <a href="mailto:contacto@telkora.com">contacto@telkora.com</a> para proceder a su eliminación.</p>
+  </div>
+
+  <!-- 10. MODIFICACIONES -->
+  <div class="legal-section" id="modificaciones">
+    <h2><span class="num">10</span> Modificaciones de esta política</h2>
+    <p>Telkora se reserva el derecho a actualizar esta Política de Privacidad para adaptarla a novedades legislativas, jurisprudenciales o cambios en los servicios prestados. La fecha de última actualización figura al inicio de este documento. Te recomendamos revisarla periódicamente. El uso continuado del Sitio Web tras la publicación de cambios implica la aceptación de la versión actualizada.</p>
+  </div>
+
+  <!-- 11. CONTACTO -->
+  <div class="legal-section" id="contacto">
+    <h2><span class="num">11</span> Contacto</h2>
+    <p>Para cualquier consulta, solicitud o ejercicio de derechos en materia de protección de datos, puedes contactar con Telkora a través de:</p>
+    <div class="info-box">
+      <div class="field"><span class="label">Email</span><span class="value"><a href="mailto:contacto@telkora.com">contacto@telkora.com</a></span></div>
+      <div class="field"><span class="label">Teléfono</span><span class="value">+34 654 152 831</span></div>
+      <div class="field"><span class="label">Dirección</span><span class="value">C/Lupercio N1 1B, Cariñena</span></div>
+    </div>
+    <p>Si presentas una solicitud de ejercicio de derechos, te responderemos en un plazo máximo de <strong>un mes</strong> desde la recepción de tu solicitud, prorrogable en casos justificados.</p>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-copy">© 2026 Telkora. Todos los derechos reservados.</div>
+  <nav class="footer-nav">
+    <a href="index.html">Inicio</a>
+    <a href="aviso-legal.html">Aviso legal</a>
+    <a href="privacidad.html" class="active">Política de privacidad</a>
+  </nav>
+</footer>
+
+<script>
+(function() {
+  function removeWhiteBg(imgEl) {
+    const tmp = new Image();
+    tmp.crossOrigin = 'anonymous';
+    tmp.onload = function() {
+      try {
+        const c = document.createElement('canvas');
+        c.width = tmp.naturalWidth; c.height = tmp.naturalHeight;
+        const ctx = c.getContext('2d');
+        ctx.drawImage(tmp, 0, 0);
+        const id = ctx.getImageData(0, 0, c.width, c.height);
+        const px = id.data;
+        for (let i = 0; i < px.length; i += 4) {
+          if (px[i] > 230 && px[i+1] > 230 && px[i+2] > 230) px[i+3] = 0;
+        }
+        ctx.putImageData(id, 0, 0);
+        imgEl.src = c.toDataURL('image/png');
+      } catch(e) {}
+    };
+    tmp.src = 'logo.png?_nc=' + Date.now();
+  }
+  window.addEventListener('load', function() {
+    document.querySelectorAll('img[src="logo.png"]').forEach(removeWhiteBg);
+  });
+})();
+</script>
+</body>
+</html>

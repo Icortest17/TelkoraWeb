@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" href="favicon.png" type="image/png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aviso Legal — Telkora</title>
+<meta name="description" content="Aviso legal de Telkora. Información sobre el titular del sitio web, condiciones de uso y propiedad intelectual.">
+<meta name="robots" content="noindex, follow">
+<link rel="canonical" href="https://telkora.com/aviso-legal.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --vivid-green: #70b62c;
+    --teal: #84c3be;
+    --white-dim: rgba(255,255,255,0.6);
+    --white-faint: rgba(255,255,255,0.08);
+    --green-glow: rgba(112,182,44,0.25);
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Space Grotesk', sans-serif;
+    background: #000;
+    color: #fff;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+  ::-webkit-scrollbar { width: 4px; }
+  ::-webkit-scrollbar-track { background: #000; }
+  ::-webkit-scrollbar-thumb { background: var(--vivid-green); border-radius: 2px; }
+
+  /* NAV */
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 5vw; height: 68px;
+    background: rgba(0,0,0,0.92);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(112,182,44,0.15);
+  }
+  .nav-logo { display: flex; align-items: center; text-decoration: none; }
+  .nav-back {
+    display: flex; align-items: center; gap: 0.5rem;
+    color: var(--white-dim); text-decoration: none;
+    font-size: 0.875rem; font-weight: 500;
+    transition: color 0.2s;
+  }
+  .nav-back:hover { color: var(--teal); }
+  .nav-cta {
+    padding: 9px 22px; border-radius: 6px;
+    background: var(--vivid-green); color: #000;
+    font-size: 0.85rem; font-weight: 700;
+    text-decoration: none;
+    box-shadow: 0 0 20px var(--green-glow);
+    transition: all 0.2s;
+  }
+  .nav-cta:hover { background: #84c3be; transform: translateY(-1px); }
+
+  /* HERO LEGAL */
+  .legal-hero {
+    padding: 80px 5vw 60px;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    background: linear-gradient(180deg, #000 0%, #0a120a 100%);
+  }
+  .legal-hero-inner { max-width: 860px; margin: 0 auto; }
+  .legal-eyebrow {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--vivid-green);
+    margin-bottom: 1rem; font-family: 'Space Mono', monospace;
+  }
+  .legal-eyebrow::before { content: '//'; opacity: 0.5; }
+  .legal-hero h1 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700; letter-spacing: -0.025em; line-height: 1.1;
+    margin-bottom: 1rem;
+  }
+  .legal-meta {
+    font-size: 0.82rem; color: var(--white-dim);
+    font-family: 'Space Mono', monospace;
+    display: flex; gap: 2rem; flex-wrap: wrap; margin-top: 1.25rem;
+  }
+  .legal-meta span { display: flex; align-items: center; gap: 0.4rem; }
+
+  /* CONTENT */
+  .legal-body {
+    max-width: 860px; margin: 0 auto;
+    padding: 60px 5vw 100px;
+  }
+  .legal-toc {
+    background: rgba(112,182,44,0.05);
+    border: 1px solid rgba(112,182,44,0.15);
+    border-radius: 12px; padding: 1.5rem 2rem;
+    margin-bottom: 3rem;
+  }
+  .legal-toc h3 {
+    font-size: 0.8rem; font-weight: 700; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--teal);
+    margin-bottom: 1rem; font-family: 'Space Mono', monospace;
+  }
+  .legal-toc ol {
+    list-style: none; display: flex; flex-direction: column; gap: 0.4rem; padding: 0;
+  }
+  .legal-toc ol li { counter-increment: toc; }
+  .legal-toc a {
+    font-size: 0.875rem; color: var(--white-dim); text-decoration: none;
+    display: flex; align-items: center; gap: 0.5rem; transition: color 0.2s;
+  }
+  .legal-toc a:hover { color: var(--vivid-green); }
+  .legal-toc a::before {
+    content: counter(toc, decimal-leading-zero) '.';
+    font-family: 'Space Mono', monospace; font-size: 0.72rem;
+    color: var(--vivid-green); min-width: 28px;
+  }
+
+  .legal-section { margin-bottom: 3rem; }
+  .legal-section h2 {
+    font-size: 1.25rem; font-weight: 700;
+    color: #fff; margin-bottom: 1rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 1px solid rgba(112,182,44,0.2);
+    display: flex; align-items: center; gap: 0.75rem;
+  }
+  .legal-section h2 .num {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.75rem; color: var(--vivid-green);
+    background: rgba(112,182,44,0.1); border: 1px solid rgba(112,182,44,0.25);
+    padding: 2px 8px; border-radius: 4px; flex-shrink: 0;
+  }
+  .legal-section p {
+    font-size: 0.925rem; color: var(--white-dim);
+    line-height: 1.75; margin-bottom: 0.85rem;
+  }
+  .legal-section p:last-child { margin-bottom: 0; }
+  .legal-section strong { color: #fff; font-weight: 600; }
+  .legal-section a { color: var(--teal); text-decoration: none; }
+  .legal-section a:hover { text-decoration: underline; }
+  .legal-section ul, .legal-section ol {
+    padding-left: 1.5rem; margin-bottom: 0.85rem;
+    display: flex; flex-direction: column; gap: 0.4rem;
+  }
+  .legal-section li { font-size: 0.925rem; color: var(--white-dim); line-height: 1.65; }
+
+  .info-box {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 10px; padding: 1.25rem 1.5rem;
+    margin: 1rem 0;
+  }
+  .info-box p { margin: 0; }
+  .info-box .field { display: flex; gap: 1rem; margin-bottom: 0.4rem; flex-wrap: wrap; }
+  .info-box .field:last-child { margin-bottom: 0; }
+  .info-box .label {
+    font-size: 0.75rem; font-weight: 700; color: var(--teal);
+    letter-spacing: 0.06em; text-transform: uppercase;
+    min-width: 120px; font-family: 'Space Mono', monospace; padding-top: 2px;
+  }
+  .info-box .value { font-size: 0.9rem; color: var(--white-dim); }
+
+  .placeholder {
+    background: rgba(255,200,0,0.08);
+    border: 1px dashed rgba(255,200,0,0.3);
+    border-radius: 4px; padding: 2px 8px;
+    color: rgba(255,200,0,0.8); font-size: 0.85rem;
+    font-family: 'Space Mono', monospace;
+  }
+
+  /* FOOTER */
+  footer {
+    background: #000;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    padding: 30px 5vw;
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 1rem;
+  }
+  .footer-copy { font-size: 0.8rem; color: rgba(255,255,255,0.3); }
+  .footer-copy a { color: inherit; text-decoration: none; }
+  .footer-copy a:hover { color: rgba(255,255,255,0.6); }
+  .footer-nav { display: flex; gap: 1.5rem; }
+  .footer-nav a { font-size: 0.8rem; color: rgba(255,255,255,0.3); text-decoration: none; transition: color 0.2s; }
+  .footer-nav a:hover { color: var(--teal); }
+  .footer-nav a.active { color: var(--vivid-green); }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">
+    <img src="logo.png" alt="Telkora" style="height:38px;">
+  </a>
+  <a href="index.html" class="nav-back">← Volver a Telkora.com</a>
+  <a href="index.html#agenda" class="nav-cta">Reservar llamada →</a>
+</nav>
+
+<div class="legal-hero">
+  <div class="legal-hero-inner">
+    <div class="legal-eyebrow">Aviso Legal</div>
+    <h1>Aviso Legal</h1>
+    <p style="font-size:1rem;color:var(--white-dim);max-width:600px;">Información legal sobre el titular del sitio web, condiciones de uso, propiedad intelectual y limitación de responsabilidad.</p>
+    <div class="legal-meta">
+      <span>📅 Última actualización: 28 de abril de 2026</span>
+      <span>🌐 Aplicable a: telkora.com</span>
+    </div>
+  </div>
+</div>
+
+<div class="legal-body">
+
+  <!-- ÍNDICE -->
+  <div class="legal-toc">
+    <h3>Índice de contenidos</h3>
+    <ol>
+      <li><a href="#titular">Datos del titular</a></li>
+      <li><a href="#objeto">Objeto y ámbito de aplicación</a></li>
+      <li><a href="#uso">Condiciones de uso</a></li>
+      <li><a href="#propiedad">Propiedad intelectual e industrial</a></li>
+      <li><a href="#responsabilidad">Limitación de responsabilidad</a></li>
+      <li><a href="#enlaces">Política de enlaces</a></li>
+      <li><a href="#modificaciones">Modificaciones</a></li>
+      <li><a href="#jurisdiccion">Legislación y jurisdicción</a></li>
+    </ol>
+  </div>
+
+  <!-- 1. TITULAR -->
+  <div class="legal-section" id="titular">
+    <h2><span class="num">01</span> Datos del titular</h2>
+    <p>En cumplimiento de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y de Comercio Electrónico (LSSI-CE), se facilitan a continuación los datos identificativos del titular de este sitio web:</p>
+    <div class="info-box">
+      <div class="field"><span class="label">Denominación</span><span class="value"><strong>Telkora</strong></span></div>
+      <div class="field"><span class="label">NIF/CIF</span><span class="value">73443901W</span></div>
+      <div class="field"><span class="label">Domicilio</span><span class="value">C/Lupercio N1 1B, Cariñena</span></div>
+      <div class="field"><span class="label">Email</span><span class="value"><a href="mailto:contacto@telkora.com">contacto@telkora.com</a></span></div>
+      <div class="field"><span class="label">Teléfono</span><span class="value">+34 654 152 831</span></div>
+      <div class="field"><span class="label">Web</span><span class="value"><a href="https://telkora.com">https://telkora.com</a></span></div>
+    </div>
+    <p>En el caso de que el titular esté inscrito en el Registro Mercantil, se indicarán los datos de inscripción registral: <span class="placeholder">[DATOS DE INSCRIPCIÓN REGISTRAL, SI PROCEDE]</span>.</p>
+  </div>
+
+  <!-- 2. OBJETO -->
+  <div class="legal-section" id="objeto">
+    <h2><span class="num">02</span> Objeto y ámbito de aplicación</h2>
+    <p>El presente Aviso Legal regula el acceso y la utilización del sitio web <strong>telkora.com</strong> (en adelante, "el Sitio Web"), titularidad de Telkora, mediante el cual se ofrece información sobre los servicios de automatización con inteligencia artificial prestados por la empresa.</p>
+    <p>El acceso al Sitio Web implica la aceptación plena y sin reservas de todas las disposiciones incluidas en este Aviso Legal. Si el usuario no está de acuerdo con alguna de las condiciones aquí establecidas, deberá abstenerse de acceder o utilizar el Sitio Web.</p>
+  </div>
+
+  <!-- 3. USO -->
+  <div class="legal-section" id="uso">
+    <h2><span class="num">03</span> Condiciones de uso</h2>
+    <p>El usuario se compromete a hacer un uso adecuado de los contenidos y servicios ofrecidos en el Sitio Web y, en particular, a no emplearlos para:</p>
+    <ul>
+      <li>Incurrir en actividades ilícitas, ilegales o contrarias a la buena fe y al orden público.</li>
+      <li>Difundir contenidos o propaganda de carácter racista, xenófobo, pornográfico o que atente contra los derechos humanos.</li>
+      <li>Provocar daños en los sistemas físicos o lógicos de Telkora, de sus proveedores o de terceros.</li>
+      <li>Introducir o difundir virus informáticos o cualquier otro sistema físico o lógico que cause daños.</li>
+      <li>Intentar acceder, utilizar y/o manipular los datos de Telkora, terceros proveedores u otros usuarios.</li>
+      <li>Reproducir o copiar, distribuir, transformar o modificar los contenidos sin autorización previa y expresa del titular.</li>
+    </ul>
+    <p>Telkora se reserva el derecho a denegar o retirar el acceso al Sitio Web, en cualquier momento y sin necesidad de preaviso, a aquellos usuarios que incumplan las presentes condiciones de uso.</p>
+  </div>
+
+  <!-- 4. PROPIEDAD INTELECTUAL -->
+  <div class="legal-section" id="propiedad">
+    <h2><span class="num">04</span> Propiedad intelectual e industrial</h2>
+    <p>Todos los contenidos del Sitio Web — incluyendo, sin carácter limitativo, textos, fotografías, gráficos, imágenes, iconos, logotipos, marcas, nombres comerciales, diseño gráfico, código fuente y software — son propiedad de Telkora o de terceros que han autorizado su uso, y están protegidos por las leyes de propiedad intelectual e industrial vigentes.</p>
+    <p>Queda expresamente prohibida la reproducción total o parcial, la distribución, la comunicación pública, la transformación y, en general, cualquier otra forma de explotación, comercial o no, de los contenidos del Sitio Web sin la previa autorización escrita de Telkora. El incumplimiento de esta prohibición podrá dar lugar al ejercicio de cuantas acciones civiles y penales correspondan en derecho.</p>
+    <p>Los nombres comerciales, marcas o signos distintivos de terceros que puedan aparecer en el Sitio Web son propiedad de sus respectivos titulares y se muestran únicamente con fines informativos, sin que ello implique ninguna asociación, patrocinio o recomendación por parte de sus titulares.</p>
+  </div>
+
+  <!-- 5. RESPONSABILIDAD -->
+  <div class="legal-section" id="responsabilidad">
+    <h2><span class="num">05</span> Limitación de responsabilidad</h2>
+    <p>Telkora no se hace responsable de los daños y perjuicios de cualquier naturaleza que pudieran derivarse del acceso y/o uso del Sitio Web, incluyendo los daños que pudieran ocasionarse por:</p>
+    <ul>
+      <li>La falta de disponibilidad, mantenimiento y efectivo funcionamiento del Sitio Web o de sus servicios y contenidos.</li>
+      <li>Errores, fallos, omisiones o inexactitudes en los contenidos.</li>
+      <li>La presencia de virus u otros elementos en los contenidos que puedan producir alteraciones en los sistemas informáticos, documentos electrónicos o datos de los usuarios.</li>
+      <li>El incumplimiento de las leyes, la buena fe, el orden público, los usos del tráfico y el presente Aviso Legal por parte de terceros.</li>
+    </ul>
+    <p>Telkora se reserva el derecho a interrumpir el acceso al Sitio Web en cualquier momento y sin necesidad de preaviso, por razones técnicas o de cualquier otra índole, sin que pueda imputársele ninguna responsabilidad por ello.</p>
+    <p>Los contenidos del Sitio Web tienen carácter meramente informativo y no constituyen oferta vinculante. Telkora no garantiza la exactitud, veracidad o actualización de los datos e información publicados.</p>
+  </div>
+
+  <!-- 6. ENLACES -->
+  <div class="legal-section" id="enlaces">
+    <h2><span class="num">06</span> Política de enlaces</h2>
+    <p>El Sitio Web puede contener enlaces a páginas web de terceros. Telkora no controla, respalda ni es responsable del contenido de esos sitios externos ni de las prácticas de privacidad de los mismos. La inclusión de estos enlaces no implica ninguna relación, asociación o dependencia entre Telkora y los terceros a cuyos sitios web se enlaza.</p>
+    <p>Si el usuario desea establecer un enlace desde su sitio web al Sitio Web de Telkora, deberá obtener autorización previa y por escrito. En cualquier caso, el enlace deberá dirigirse a la página principal del Sitio Web, sin que sea posible reproducir el Sitio Web o sus contenidos de forma enmarcada (<em>framing</em>).</p>
+  </div>
+
+  <!-- 7. MODIFICACIONES -->
+  <div class="legal-section" id="modificaciones">
+    <h2><span class="num">07</span> Modificaciones</h2>
+    <p>Telkora se reserva el derecho a modificar, en cualquier momento y sin previo aviso, la presentación y configuración del Sitio Web, así como el presente Aviso Legal. El usuario reconoce y acepta que es su responsabilidad revisar periódicamente el Aviso Legal vigente. La fecha de última actualización figura al inicio de este documento.</p>
+    <p>El uso del Sitio Web con posterioridad a cualquier modificación implica la aceptación de las nuevas condiciones por parte del usuario.</p>
+  </div>
+
+  <!-- 8. JURISDICCIÓN -->
+  <div class="legal-section" id="jurisdiccion">
+    <h2><span class="num">08</span> Legislación y jurisdicción</h2>
+    <p>Las presentes condiciones se rigen e interpretan de conformidad con la legislación española. Para la resolución de cualquier controversia que pudiera surgir en relación con el acceso o uso del Sitio Web, las partes se someten expresamente, con renuncia a cualquier otro fuero que pudiera corresponderles, a la jurisdicción de los Juzgados y Tribunales de <strong>Cariñena</strong>, salvo que la legislación aplicable establezca un fuero imperativo diferente.</p>
+    <p>Para consultas o reclamaciones relacionadas con el Sitio Web, el usuario puede dirigirse a: <a href="mailto:contacto@telkora.com">contacto@telkora.com</a>.</p>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-copy">© 2026 Telkora. Todos los derechos reservados.</div>
+  <nav class="footer-nav">
+    <a href="index.html">Inicio</a>
+    <a href="aviso-legal.html" class="active">Aviso legal</a>
+    <a href="privacidad.html">Política de privacidad</a>
+  </nav>
+</footer>
+
+<script>
+// Logo white-bg removal
+(function() {
+  function removeWhiteBg(imgEl) {
+    const tmp = new Image();
+    tmp.crossOrigin = 'anonymous';
+    tmp.onload = function() {
+      try {
+        const c = document.createElement('canvas');
+        c.width = tmp.naturalWidth; c.height = tmp.naturalHeight;
+        const ctx = c.getContext('2d');
+        ctx.drawImage(tmp, 0, 0);
+        const id = ctx.getImageData(0, 0, c.width, c.height);
+        const px = id.data;
+        for (let i = 0; i < px.length; i += 4) {
+          if (px[i] > 230 && px[i+1] > 230 && px[i+2] > 230) px[i+3] = 0;
+        }
+        ctx.putImageData(id, 0, 0);
+        imgEl.src = c.toDataURL('image/png');
+      } catch(e) {}
+    };
+    tmp.src = 'logo.png?_nc=' + Date.now();
+  }
+  window.addEventListener('load', function() {
+    document.querySelectorAll('img[src="logo.png"]').forEach(removeWhiteBg);
+  });
+})();
+</script>
+</body>
+</html>
