@@ -1,0 +1,10 @@
+{
+  "name": "telkora-web",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Landing page de Telkora + blog SSR (Vercel Serverless Functions)",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.45.4",
+    "marked": "^12.0.2"
+  }
+}
