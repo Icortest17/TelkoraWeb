@@ -67,6 +67,7 @@ module.exports = async (req, res) => {
       description: 'Blog de automatización con IA de Telkora.',
       canonicalPath: '/blog',
       activePath: 'blog',
+      showParticles: true,
       bodyHtml: `<div class="section-wrap"><div class="blog-empty">No se ha podido cargar el blog ahora mismo. Vuelve a intentarlo en unos minutos.</div></div>`,
     }));
     return;
@@ -138,6 +139,7 @@ module.exports = async (req, res) => {
     description: 'Ideas, casos prácticos y guías sobre automatización, chatbots e IA aplicada a negocio, escritas por el equipo de Telkora.',
     canonicalPath: '/blog',
     activePath: 'blog',
+    showParticles: true,
     bodyHtml: body,
     jsonLd: isFiltered ? undefined : jsonLd,
     robots: isFiltered ? 'noindex, follow' : 'index, follow',
