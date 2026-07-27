@@ -12,7 +12,8 @@ function notFoundPage(slug) {
     description: 'El artículo que buscas no existe o ya no está disponible.',
     canonicalPath: `/blog/${slug}`,
     activePath: 'blog',
-    bodyHtml: `<div class="blog-wrap">
+    robots: 'noindex, follow',
+    bodyHtml: `<div class="section-wrap">
       <a class="blog-back" href="/blog">← Volver al blog</a>
       <div class="blog-empty">Este artículo no existe o no está publicado todavía.</div>
     </div>`,
@@ -41,12 +42,12 @@ module.exports = async (req, res) => {
   const contentHtml = marked.parse(post.content_md || '');
 
   const body = `
-<div class="blog-wrap">
+<div class="section-wrap">
   <a class="blog-back" href="/blog">← Volver al blog</a>
   ${post.cover_image_url ? `<img class="blog-cover" src="${escapeHtml(post.cover_image_url)}" alt="${escapeHtml(post.title)}">` : ''}
-  ${post.categories?.name ? `<p class="blog-eyebrow">${escapeHtml(post.categories.name)}</p>` : ''}
-  <h1 class="blog-h1">${escapeHtml(post.title)}</h1>
-  <div class="blog-meta">
+  ${post.categories?.name ? `<p class="section-eyebrow">${escapeHtml(post.categories.name)}</p>` : ''}
+  <h1 class="section-title">${escapeHtml(post.title)}</h1>
+  <div class="blog-meta-row">
     <span>${formatDate(post.published_at)}</span>
     ${post.reading_minutes ? `<span>${post.reading_minutes} min de lectura</span>` : ''}
   </div>
