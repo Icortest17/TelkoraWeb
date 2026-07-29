@@ -94,13 +94,13 @@ module.exports = async (req, res) => {
 
   const featuredHtml = featured ? `
     <a class="blog-featured reveal" href="/blog/${encodeURIComponent(featured.slug)}">
-      ${featured.cover_image_url ? `<img src="${escapeHtml(featured.cover_image_url)}" alt="${escapeHtml(featured.title)}">` : ''}
+      ${featured.cover_image_url ? `<div><img src="${escapeHtml(featured.cover_image_url)}" alt="${escapeHtml(featured.title)}"><p class="blog-ai-caption">Imagen generada con IA</p></div>` : ''}
       <div>
         <span class="blog-featured-label">Destacado</span>
         ${featured.categories?.name ? `<div class="blog-featured-category">${escapeHtml(featured.categories.name)}</div>` : ''}
         <h2>${escapeHtml(featured.title)}</h2>
         <p>${escapeHtml(featured.excerpt)}</p>
-        <div class="blog-featured-meta">${formatDate(featured.published_at)}${featured.reading_minutes ? ` · ${featured.reading_minutes} min de lectura` : ''}</div>
+        <div class="blog-featured-meta">${formatDate(featured.published_at)}${featured.reading_minutes ? ` · ${featured.reading_minutes} min de lectura` : ''} · Redactado con ayuda de IA</div>
       </div>
     </a>` : '';
 
@@ -117,7 +117,7 @@ module.exports = async (req, res) => {
 <div class="section-wrap">
   <p class="section-eyebrow">Blog</p>
   <h1 class="section-title">Automatización con IA para empresas</h1>
-  <p class="section-sub">Ideas, casos prácticos y guías sobre automatización, chatbots e IA aplicada a negocio.</p>
+  <p class="section-sub">Ideas, casos prácticos y guías sobre automatización, chatbots e IA aplicada a negocio. Los artículos se elaboran con ayuda de IA y las imágenes de portada están generadas con IA.</p>
   ${toolbar}
   ${featuredHtml}
   ${(posts || []).length ? `<div class="blog-grid">${cards}</div>` : emptyState}

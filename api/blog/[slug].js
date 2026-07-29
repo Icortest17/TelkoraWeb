@@ -44,12 +44,13 @@ module.exports = async (req, res) => {
   const body = `
 <div class="section-wrap">
   <a class="blog-back" href="/blog">← Volver al blog</a>
-  ${post.cover_image_url ? `<img class="blog-cover" src="${escapeHtml(post.cover_image_url)}" alt="${escapeHtml(post.title)}">` : ''}
+  ${post.cover_image_url ? `<img class="blog-cover" src="${escapeHtml(post.cover_image_url)}" alt="${escapeHtml(post.title)}"><p class="blog-ai-caption">Imagen generada con IA</p>` : ''}
   ${post.categories?.name ? `<p class="section-eyebrow">${escapeHtml(post.categories.name)}</p>` : ''}
   <h1 class="section-title">${escapeHtml(post.title)}</h1>
   <div class="blog-meta-row">
     <span>${formatDate(post.published_at)}</span>
     ${post.reading_minutes ? `<span>${post.reading_minutes} min de lectura</span>` : ''}
+    <span>Redactado con ayuda de IA</span>
   </div>
   <div class="blog-content">${contentHtml}</div>
 </div>`;
