@@ -1,6 +1,9 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
+  "regions": [
+    "dub1"
+  ],
   "rewrites": [
     {
       "source": "/blog",
