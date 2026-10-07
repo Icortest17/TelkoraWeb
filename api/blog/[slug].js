@@ -63,25 +63,40 @@ module.exports = async (req, res) => {
     image: post.cover_image_url || 'https://telkora.com/logo.png',
     datePublished: post.published_at,
     dateModified: post.updated_at || post.published_at,
-    author: { '@type': 'Organization', name: 'Telkora' },
+    author: { '@type': 'Organization', '@id': 'https://telkora.com/#organization', name: 'Telkora' },
     publisher: {
       '@type': 'Organization',
+      '@id': 'https://telkora.com/#organization',
       name: 'Telkora',
       logo: { '@type': 'ImageObject', url: 'https://telkora.com/logo.png' },
     },
     mainEntityOfPage: { '@type': 'WebPage', '@id': `https://telkora.com/blog/${post.slug}` },
   };
 
+  const breadcrumb = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Inicio', item: 'https://telkora.com/' },
+      { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://telkora.com/blog' },
+      { '@type': 'ListItem', position: 3, name: post.title, item: `https://telkora.com/blog/${post.slug}` },
+    ],
+  };
+
+  // Título ≤ 60 caracteres: el sufijo de marca solo se añade si cabe
+  const baseTitle = post.seo_title || post.title;
+  const pageTitle = baseTitle.length <= 49 ? `${baseTitle} | Telkora` : baseTitle;
+
   res.statusCode = 200;
   res.setHeader('Content-Type', 'text/html; charset=utf-8');
-  res.setHeader('Cache-Control', 's-maxage=300, stale-while-revalidate=600');
+  res.setHeader('Cache-Control', 's-maxage=3600, stale-while-revalidate=86400');
   res.end(renderPage({
-    title: `${post.seo_title || post.title} | Telkora`,
+    title: pageTitle,
     description: post.seo_description || post.excerpt,
     canonicalPath: `/blog/${post.slug}`,
     ogImage: post.cover_image_url,
     activePath: 'blog',
     bodyHtml: body,
-    jsonLd,
+    jsonLd: [jsonLd, breadcrumb],
   }));
 };

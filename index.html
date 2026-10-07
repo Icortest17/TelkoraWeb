@@ -4,15 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" href="favicon.png" type="image/png">
-<title>Telkora — Automatización con IA para empresas</title>
-<meta name="description" content="Automatizamos procesos, captamos leads, respondemos clientes y conectamos sistemas usando IA. Solicita tu diagnóstico gratuito.">
+<title>Automatización con IA en Zaragoza y España | Telkora</title>
+<meta name="description" content="Chatbots, WhatsApp, CRM e integraciones con IA para empresas. Trabajamos desde Zaragoza para toda España. Diagnóstico gratuito para ver qué automatizar.">
 <meta name="keywords" content="automatización IA, inteligencia artificial empresas, chatbots, CRM automatizado, WhatsApp automation">
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://telkora.com/">
-<meta property="og:title" content="Telkora — Automatización con IA para empresas">
-<meta property="og:description" content="Automatizamos procesos, captamos leads, respondemos clientes y conectamos sistemas usando IA. Solicita tu diagnóstico gratuito.">
+<meta property="og:title" content="Automatización con IA en Zaragoza y España | Telkora">
+<meta property="og:description" content="Chatbots, WhatsApp, CRM e integraciones con IA para empresas. Trabajamos desde Zaragoza para toda España. Diagnóstico gratuito para ver qué automatizar.">
 <meta property="og:image" content="https://telkora.com/logo.png">
 <meta property="og:image:alt" content="Telkora — Automatización con IA">
 <meta property="og:locale" content="es_ES">
@@ -20,8 +20,8 @@
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Telkora — Automatización con IA para empresas">
-<meta name="twitter:description" content="Automatizamos procesos, captamos leads, respondemos clientes y conectamos sistemas usando IA.">
+<meta name="twitter:title" content="Automatización con IA en Zaragoza y España | Telkora">
+<meta name="twitter:description" content="Chatbots, WhatsApp, CRM e integraciones con IA para empresas. Trabajamos desde Zaragoza para toda España. Diagnóstico gratuito para ver qué automatizar.">
 <meta name="twitter:image" content="https://telkora.com/logo.png">
 
 <!-- Canonical -->
@@ -34,8 +34,20 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Organization",
+      "@type": ["Organization", "ProfessionalService"],
       "@id": "https://telkora.com/#organization",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Cariñena",
+        "addressRegion": "Zaragoza",
+        "addressCountry": "ES"
+      },
+      "areaServed": [
+        { "@type": "City", "name": "Zaragoza" },
+        { "@type": "City", "name": "Cariñena" },
+        { "@type": "City", "name": "Yecla" },
+        { "@type": "Country", "name": "España" }
+      ],
       "name": "Telkora",
       "url": "https://telkora.com",
       "logo": "https://telkora.com/logo.png",
@@ -51,6 +63,14 @@
         "https://www.instagram.com/telkora.ai/",
         "https://www.tiktok.com/@telkora0"
       ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://telkora.com/#website",
+      "url": "https://telkora.com",
+      "name": "Telkora",
+      "inLanguage": "es-ES",
+      "publisher": { "@id": "https://telkora.com/#organization" }
     },
     {
       "@type": "FAQPage",
@@ -608,6 +628,7 @@
     overflow: hidden; white-space: nowrap;
   }
   .beneficio-label { font-size: 0.95rem; font-weight: 500; color: var(--white-dim); margin-top: 0.5rem; }
+  .beneficio-src { font-family: 'Space Mono', monospace; font-size: 0.7rem; color: var(--teal); text-transform: uppercase; letter-spacing: 0.05em; margin-top: 0.75rem; }
 
   /* ── DIFERENCIAL ── */
   .diferencial-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; margin-top: 3rem; }
@@ -714,6 +735,11 @@
   }
   .testi-name { font-size: 0.9rem; font-weight: 600; }
   .testi-role { font-size: 0.78rem; color: var(--teal); }
+  .proyectos-grid { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+  .proyecto-card { display: block; color: inherit; text-decoration: none; }
+  .proyecto-tag { display: inline-block; font-family: 'Space Mono', monospace; font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--vivid-green); border: 1px solid rgba(112,182,44,0.3); border-radius: 100px; padding: 3px 10px; margin-bottom: 1rem; }
+  .proyecto-text { font-size: 0.9rem; color: var(--white-dim); line-height: 1.7; margin: 0.6rem 0 1.25rem; }
+  .proyecto-link { font-size: 0.82rem; color: var(--vivid-green); font-weight: 600; }
 
   /* ── PLANES ── */
   #planes { background: linear-gradient(180deg, #000 0%, rgba(30,54,36,0.3) 50%, #000 100%); }
@@ -1102,7 +1128,7 @@
     <li><a href="#soluciones">Soluciones</a></li>
     <li><a href="#como">Proceso</a></li>
     <li><a href="#integraciones">Integraciones</a></li>
-    <li><a href="#beneficios">Resultados</a></li>
+    <li><a href="#proyectos">Proyectos</a></li>
     <li><a href="#agenda">Agenda</a></li>
     <li><a href="#contacto">Contacto</a></li>
     <li><a href="/blog">Blog</a></li>
@@ -1117,7 +1143,7 @@
 <section id="hero"><span id="main-content"></span>
   <div class="hero-eyebrow">Solo trabajamos con un número limitado de empresas</div>
   <h1 class="hero-h1">Automatiza tu empresa con <span class="accent">IA</span> y gana tiempo, clientes y ventas</h1>
-  <p class="hero-sub">Hablamos contigo antes de construir nada. Primero entendemos tu caso, luego diseñamos el sistema.</p>
+  <p class="hero-sub">Automatizamos procesos, atención al cliente y captación con IA para empresas de Zaragoza, Cariñena, Yecla y el resto de España. Primero entendemos tu caso; después diseñamos el sistema.</p>
   <div class="hero-ctas">
     <a href="#agenda" class="btn-primary">Reservar diagnóstico gratuito →</a>
     <a href="#demo" class="btn-secondary">Ver cómo funciona ↓</a>
@@ -1126,7 +1152,7 @@
   <div class="hero-dashboard">
     <div class="hero-panel-label">
       <span class="hero-panel-dot" aria-hidden="true"></span>
-      telkora // ai operations
+      telkora // ai operations · datos de ejemplo
     </div>
     <div class="dash-main">
       <div class="dash-metrics">
@@ -1154,23 +1180,23 @@
 <div style="position:relative;z-index:1;border-top:1px solid rgba(112,182,44,0.1);border-bottom:1px solid rgba(112,182,44,0.1);background:rgba(30,54,36,0.25);padding:1.5rem 5vw;">
   <div style="max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1.5rem;">
     <div style="display:flex;align-items:center;gap:0.6rem;">
-      <span style="font-size:1.4rem;font-weight:700;color:var(--vivid-green);font-family:'Space Mono',monospace;">+50</span>
-      <span style="font-size:0.82rem;color:var(--white-dim);">empresas<br>automatizadas</span>
+      <span style="font-size:1.4rem;font-weight:700;color:var(--vivid-green);font-family:'Space Mono',monospace;">7–10</span>
+      <span style="font-size:0.82rem;color:var(--white-dim);">días hábiles<br>plan Starter</span>
     </div>
     <div style="width:1px;height:36px;background:rgba(255,255,255,0.1);flex-shrink:0;"></div>
     <div style="display:flex;align-items:center;gap:0.6rem;">
-      <span style="font-size:1.4rem;font-weight:700;color:var(--vivid-green);font-family:'Space Mono',monospace;">4.2M+</span>
-      <span style="font-size:0.82rem;color:var(--white-dim);">mensajes<br>procesados con IA</span>
+      <span style="font-size:1.4rem;font-weight:700;color:var(--vivid-green);font-family:'Space Mono',monospace;">2–4</span>
+      <span style="font-size:0.82rem;color:var(--white-dim);">semanas<br>plan Growth</span>
     </div>
     <div style="width:1px;height:36px;background:rgba(255,255,255,0.1);flex-shrink:0;"></div>
     <div style="display:flex;align-items:center;gap:0.6rem;">
-      <span style="font-size:1.4rem;font-weight:700;color:var(--teal);font-family:'Space Mono',monospace;">98%</span>
-      <span style="font-size:0.82rem;color:var(--white-dim);">clientes<br>satisfechos</span>
+      <span style="font-size:1.4rem;font-weight:700;color:var(--teal);font-family:'Space Mono',monospace;">30</span>
+      <span style="font-size:0.82rem;color:var(--white-dim);">días de preaviso<br>sin permanencia</span>
     </div>
     <div style="width:1px;height:36px;background:rgba(255,255,255,0.1);flex-shrink:0;"></div>
     <div style="display:flex;align-items:center;gap:0.6rem;">
-      <span style="font-size:1.4rem;font-weight:700;color:var(--vivid-green);font-family:'Space Mono',monospace;">3x</span>
-      <span style="font-size:0.82rem;color:var(--white-dim);">ROI medio<br>en 6 meses</span>
+      <span style="font-size:1.4rem;font-weight:700;color:var(--vivid-green);font-family:'Space Mono',monospace;">RGPD</span>
+      <span style="font-size:0.82rem;color:var(--white-dim);">y aviso de IA<br>incluidos</span>
     </div>
     <div style="width:1px;height:36px;background:rgba(255,255,255,0.1);flex-shrink:0;"></div>
     <div style="display:flex;align-items:center;">
@@ -1217,7 +1243,7 @@
         </div>
         <div class="problema-item">
           <div class="problema-icon"><svg class="icon-svg" width="18" height="18" aria-hidden="true"><use href="#i-bolt"></use></svg></div>
-          <div class="problema-text"><strong>Perder leads por tardar en contestar</strong><br>El 78% de los clientes elige al primero que responde. ¿Eres tú?</div>
+          <div class="problema-text"><strong>Perder leads por tardar en contestar</strong><br>Los clientes suelen quedarse con quien responde primero. ¿Eres tú?</div>
         </div>
         <div class="problema-item">
           <div class="problema-icon"><svg class="icon-svg" width="18" height="18" aria-hidden="true"><use href="#i-refresh"></use></svg></div>
@@ -1575,25 +1601,25 @@
 <section id="beneficios">
   <div class="section-wrap">
     <div class="reveal" style="text-align:center">
-      <p class="section-eyebrow">Resultados</p>
-      <h2 class="section-title">Números que importan</h2>
+      <p class="section-eyebrow">En cifras</p>
+      <h2 class="section-title">Datos de proyectos en marcha</h2>
     </div>
     <div class="beneficios-grid">
       <div class="beneficio-card reveal reveal-delay-1">
-        <div class="beneficio-num" data-target="340" data-prefix="+" data-suffix="%">0%</div>
-        <div class="beneficio-label">Más leads cualificados</div>
+        <div class="beneficio-num" data-target="51">0</div>
+        <div class="beneficio-label">informes de Google Ads generados en la primera ejecución real, sin errores</div><div class="beneficio-src">Goala · cliente</div>
       </div>
       <div class="beneficio-card reveal reveal-delay-2">
-        <div class="beneficio-num" data-target="80" data-prefix="-" data-suffix="%">0%</div>
-        <div class="beneficio-label">Menos tiempo en gestión manual</div>
+        <div class="beneficio-num" data-target="4">0</div>
+        <div class="beneficio-label">canales atendidos por un mismo asistente: WhatsApp, email, web y reservas</div><div class="beneficio-src">Indesport · proyecto propio</div>
       </div>
       <div class="beneficio-card reveal reveal-delay-3">
         <div class="beneficio-num" data-target="24" data-suffix="/7">0/7</div>
-        <div class="beneficio-label">Sistemas operando sin parar</div>
+        <div class="beneficio-label">asistente de WhatsApp disponible, con aviso a una persona cuando el caso lo requiere</div><div class="beneficio-src">Indesport · proyecto propio</div>
       </div>
       <div class="beneficio-card reveal reveal-delay-4">
-        <div class="beneficio-num" data-target="3" data-suffix="x">0x</div>
-        <div class="beneficio-label">ROI medio en 6 meses</div>
+        <div class="beneficio-num" data-target="5">0</div>
+        <div class="beneficio-label">estilos de reforma entre los que elegir, más un vídeo antes/después de unos 10 segundos</div><div class="beneficio-src">AureviaAI · demostración</div>
       </div>
     </div>
   </div>
@@ -1642,23 +1668,19 @@
       </div>
       <div class="dif-visual reveal reveal-delay-2">
         <div class="dif-quote">La IA que implementamos trabaja como tu mejor empleado. <span>Sin descanso.</span></div>
-        <div class="dif-sub">No es para todo el mundo. Trabajamos con un número limitado de empresas a la vez para garantizar que cada sistema esté diseñado con la atención que merece. Si encaja contigo, construimos algo excepcional juntos.</div>
-        <div style="margin-top:1.5rem;padding:1rem 1.25rem;border-radius:8px;background:rgba(112,182,44,0.07);border:1px solid rgba(112,182,44,0.2);">
-          <p style="font-size:0.82rem;color:var(--vivid-green);font-family:'Space Mono',monospace;margin-bottom:0.4rem;">// PLAZAS DISPONIBLES</p>
-          <p style="font-size:0.85rem;color:var(--white-dim);">Actualmente tenemos <strong style="color:#fff;">3 plazas abiertas</strong> para nuevos proyectos. La consultoría inicial es gratuita y sin compromiso.</p>
-        </div>
+        <div class="dif-sub">No es para todo el mundo. Trabajamos con un número limitado de empresas a la vez para garantizar que cada sistema esté diseñado con la atención que merece. Si encaja contigo, lo construimos juntos.</div>
         <div style="margin-top:2rem;display:flex;gap:1.5rem;flex-wrap:wrap;">
           <div style="text-align:center">
-            <div style="font-size:1.8rem;font-weight:700;color:var(--vivid-green);font-family:'Space Mono',monospace;">+50</div>
-            <div style="font-size:0.75rem;color:var(--white-dim);">Empresas automatizadas</div>
+            <div style="font-size:1.8rem;font-weight:700;color:var(--vivid-green);font-family:'Space Mono',monospace;">7–10</div>
+            <div style="font-size:0.75rem;color:var(--white-dim);">Días hábiles · Starter</div>
           </div>
           <div style="text-align:center">
-            <div style="font-size:1.8rem;font-weight:700;color:var(--teal);font-family:'Space Mono',monospace;">98%</div>
-            <div style="font-size:0.75rem;color:var(--white-dim);">Clientes satisfechos</div>
+            <div style="font-size:1.8rem;font-weight:700;color:var(--teal);font-family:'Space Mono',monospace;">2–4</div>
+            <div style="font-size:0.75rem;color:var(--white-dim);">Semanas · Growth</div>
           </div>
           <div style="text-align:center">
-            <div style="font-size:1.8rem;font-weight:700;color:var(--vivid-green);font-family:'Space Mono',monospace;">4.2M+</div>
-            <div style="font-size:0.75rem;color:var(--white-dim);">Mensajes procesados</div>
+            <div style="font-size:1.8rem;font-weight:700;color:var(--vivid-green);font-family:'Space Mono',monospace;">30</div>
+            <div style="font-size:0.75rem;color:var(--white-dim);">Días de preaviso</div>
           </div>
         </div>
       </div>
@@ -1668,58 +1690,33 @@
 
 <div class="divider"></div>
 
-<!-- TESTIMONIOS -->
-<section id="testimonios">
+<!-- PROYECTOS -->
+<section id="proyectos">
   <div class="section-wrap">
     <div class="reveal">
-      <p class="section-eyebrow">Testimonios</p>
-      <h2 class="section-title">Lo que dicen nuestros clientes</h2>
+      <p class="section-eyebrow">Proyectos</p>
+      <h2 class="section-title">Lo que tenemos funcionando hoy</h2>
+      <p class="section-sub">Tres proyectos reales y lo que hace cada uno. Sin testimonios inventados: solo lo que podemos enseñar.</p>
     </div>
-    <div class="testi-grid">
-      <div class="testi-card reveal reveal-delay-1">
-        <div class="testi-stars">★★★★★</div>
-        <p class="testi-quote">"Implementamos el sistema de Telkora en nuestra clínica y en el primer mes duplicamos las citas agendadas. El bot cualifica a los pacientes mejor que nuestro equipo de recepción, y trabaja de noche sin quejarse."</p>
-        <div class="testi-author">
-          <div class="testi-avatar">CR</div>
-          <div>
-            <div class="testi-name">Carlos Romero</div>
-            <div class="testi-role">Director, Clínica Romero Dental</div>
-          </div>
-        </div>
-      </div>
-      <div class="testi-card reveal reveal-delay-2">
-        <div class="testi-stars">★★★★★</div>
-        <p class="testi-quote">"Antes perdíamos el 60% de los leads por tardar en responder. Ahora el sistema responde en segundos y nuestro equipo solo habla con leads ya cualificados. Las ventas subieron un 40% en tres meses."</p>
-        <div class="testi-author">
-          <div class="testi-avatar">LP</div>
-          <div>
-            <div class="testi-name">Laura Pérez</div>
-            <div class="testi-role">CEO, Inmobiliaria Costa Sur</div>
-          </div>
-        </div>
-      </div>
-      <div class="testi-card reveal reveal-delay-3">
-        <div class="testi-stars">★★★★★</div>
-        <p class="testi-quote">"Lo que más me sorprendió es que no es un bot genérico. Conoce mi academia, mis cursos, mis precios. Los alumnos preguntan y reciben respuestas perfectas. La automatización de matrículas ha sido un cambio radical."</p>
-        <div class="testi-author">
-          <div class="testi-avatar">JM</div>
-          <div>
-            <div class="testi-name">Javier Martínez</div>
-            <div class="testi-role">Fundador, Academia Online Élite</div>
-          </div>
-        </div>
-      </div>
-      <div class="testi-card reveal reveal-delay-4">
-        <div class="testi-stars">★★★★★</div>
-        <p class="testi-quote">"Telkora conectó nuestro e-commerce con WhatsApp, CRM y email en una sola semana. La recuperación de carritos automática ya paga sola toda la inversión. El soporte post-venta es otro nivel."</p>
-        <div class="testi-author">
-          <div class="testi-avatar">AN</div>
-          <div>
-            <div class="testi-name">Ana Navarro</div>
-            <div class="testi-role">Directora E-commerce, ModaÁgil</div>
-          </div>
-        </div>
-      </div>
+    <div class="testi-grid proyectos-grid">
+      <a class="testi-card proyecto-card reveal reveal-delay-1" href="/blog/caso-de-exito-goala-informes-ads-ia">
+        <span class="proyecto-tag">Cliente</span>
+        <div class="testi-name">Goala · Yecla (Murcia)</div>
+        <p class="proyecto-text">Informes mensuales de Google Ads con IA: un PDF por cuenta, con el análisis comparado con el objetivo de cada cliente. La primera ejecución real generó 51 informes sin errores, y el equipo de Goala los revisa antes de reenviarlos.</p>
+        <span class="proyecto-link">Leer el caso →</span>
+      </a>
+      <a class="testi-card proyecto-card reveal reveal-delay-2" href="/blog/caso-de-exito-indesport-ia-zaragoza">
+        <span class="proyecto-tag">Proyecto propio</span>
+        <div class="testi-name">Indesport Fighting Club · Zaragoza</div>
+        <p class="proyecto-text">Asistente con IA que atiende WhatsApp, email y la web, reserva clases de prueba y avisa a una persona cuando el caso lo requiere. Se identifica como IA en el primer mensaje. Lo usamos cada día en un negocio propio.</p>
+        <span class="proyecto-link">Leer el caso →</span>
+      </a>
+      <a class="testi-card proyecto-card reveal reveal-delay-3" href="/blog/caso-de-exito-aureviaai-reformas-ia">
+        <span class="proyecto-tag">Demostración</span>
+        <div class="testi-name">AureviaAI</div>
+        <p class="proyecto-text">Asistente de reformas por Telegram: subes la foto de una habitación, eliges uno de 5 estilos y la IA genera cómo quedaría, con historial de versiones y un vídeo antes/después de unos 10 segundos.</p>
+        <span class="proyecto-link">Leer el caso →</span>
+      </a>
     </div>
   </div>
 </section>
@@ -1741,7 +1738,7 @@
           <div class="agenda-bullet"><span>Recomendaciones prácticas sin rodeos</span></div>
         </div>
         <div class="exclusivity-box">
-          <p><strong>Solo si encaja contigo.</strong> Trabajamos con un número limitado de clientes para garantizar resultados reales. Esta llamada es para entender si somos la solución correcta para tu negocio — no para venderte nada.</p>
+          <p><strong>Solo si encaja contigo.</strong> Trabajamos con un número limitado de clientes para poder dedicar a cada proyecto el tiempo que necesita. Esta llamada es para entender si somos la solución correcta para tu negocio — no para venderte nada.</p>
         </div>
         <div style="margin-top:2rem;display:flex;flex-direction:column;gap:0.6rem;">
           <div style="display:flex;align-items:center;gap:0.6rem;font-size:0.875rem;color:var(--white-dim);">
@@ -1963,7 +1960,7 @@
         <a href="#casos">Casos de uso</a>
         <a href="#integraciones">Integraciones</a>
         <a href="#diferencial">Sobre Telkora</a>
-        <a href="#testimonios">Testimonios</a>
+        <a href="#proyectos">Proyectos</a>
         <a href="/blog">Blog</a>
         <a href="#agenda">Agenda</a>
         <a href="#faq">FAQ</a>
@@ -1980,7 +1977,7 @@
     </div>
   </div>
   <div class="footer-bottom">
-    <div class="footer-copy">© 2026 Telkora. Todos los derechos reservados. · <a href="privacidad.html" style="color:inherit;text-decoration:none;">Política de privacidad</a> · <a href="aviso-legal.html" style="color:inherit;text-decoration:none;">Aviso legal</a></div>
+    <div class="footer-copy">© 2026 Telkora. Todos los derechos reservados. · <a href="/privacidad" style="color:inherit;text-decoration:none;">Política de privacidad</a> · <a href="/aviso-legal" style="color:inherit;text-decoration:none;">Aviso legal</a></div>
     <div class="footer-social">
       <a href="https://www.instagram.com/telkora.ai/" title="Instagram" target="_blank" rel="noopener">
         <img src="https://cdn.simpleicons.org/instagram/ffffff" alt="Instagram" width="16" height="16" style="display:block;filter:opacity(0.7);">
@@ -2404,7 +2401,7 @@ window.addEventListener('scroll', () => {
 <div id="cookie-banner" role="dialog" aria-live="polite" aria-label="Aviso de cookies">
   <p>
     Usamos cookies técnicas necesarias para el funcionamiento del sitio. No usamos cookies de rastreo ni publicidad sin tu consentimiento.
-    Consulta nuestra <a href="privacidad.html">Política de privacidad</a>.
+    Consulta nuestra <a href="/privacidad">Política de privacidad</a>.
   </p>
   <div class="cookie-actions">
     <button class="cookie-btn-reject" id="cookie-reject">Solo esenciales</button>

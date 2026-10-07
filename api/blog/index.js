@@ -116,7 +116,7 @@ module.exports = async (req, res) => {
   const body = `
 <div class="section-wrap">
   <p class="section-eyebrow">Blog</p>
-  <h1 class="section-title">Automatización con IA para empresas</h1>
+  <h1 class="section-title">Blog de automatización con IA</h1>
   <p class="section-sub">Ideas, casos prácticos y guías sobre automatización, chatbots e IA aplicada a negocio. Los artículos se elaboran con ayuda de IA y las imágenes de portada están generadas con IA.</p>
   ${toolbar}
   ${featuredHtml}
@@ -128,16 +128,17 @@ module.exports = async (req, res) => {
     '@type': 'Blog',
     name: 'Blog de Telkora',
     url: 'https://telkora.com/blog',
-    publisher: { '@type': 'Organization', name: 'Telkora', logo: 'https://telkora.com/logo.png' },
+    publisher: { '@type': 'Organization', '@id': 'https://telkora.com/#organization', name: 'Telkora', logo: 'https://telkora.com/logo.png' },
   };
 
   res.statusCode = 200;
   res.setHeader('Content-Type', 'text/html; charset=utf-8');
-  res.setHeader('Cache-Control', isFiltered ? 'no-store' : 's-maxage=300, stale-while-revalidate=600');
+  res.setHeader('Cache-Control', isFiltered ? 'no-store' : 's-maxage=3600, stale-while-revalidate=86400');
   res.end(renderPage({
-    title: isFiltered ? `Búsqueda | Blog | Telkora` : 'Blog | Telkora — Automatización con IA para empresas',
-    description: 'Ideas, casos prácticos y guías sobre automatización, chatbots e IA aplicada a negocio, escritas por el equipo de Telkora.',
+    title: isFiltered ? `Búsqueda | Blog | Telkora` : 'Blog de automatización con IA | Telkora',
+    description: 'Ideas, casos prácticos y guías sobre automatización, chatbots e IA aplicada a negocio. Textos elaborados con ayuda de IA.',
     canonicalPath: '/blog',
+    ogType: 'website',
     activePath: 'blog',
     showParticles: true,
     bodyHtml: body,
