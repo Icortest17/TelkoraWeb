@@ -26,7 +26,7 @@ module.exports = async (req, res) => {
 
   const { data: post, error } = await supabase
     .from('posts')
-    .select('slug, title, excerpt, content_md, cover_image_url, seo_title, seo_description, published_at, updated_at, reading_minutes, categories(slug, name)')
+    .select('slug, title, excerpt, category_id, content_md, cover_image_url, seo_title, seo_description, published_at, updated_at, reading_minutes, categories(slug, name)')
     .eq('slug', slug)
     .eq('status', 'published')
     .lte('published_at', new Date().toISOString())
@@ -41,6 +41,31 @@ module.exports = async (req, res) => {
 
   const contentHtml = marked.parse(post.content_md || '');
 
+  // Enlazado interno: 3 posts de la misma categoría + casos reales de la home
+  let related = [];
+  if (post.category_id) {
+    const { data } = await supabase
+      .from('posts')
+      .select('slug, title, published_at')
+      .eq('status', 'published')
+      .lte('published_at', new Date().toISOString())
+      .eq('category_id', post.category_id)
+      .neq('slug', slug)
+      .order('published_at', { ascending: false })
+      .limit(3);
+    related = data || [];
+  }
+  const relatedHtml = related.length
+    ? `<h2>Sigue leyendo</h2><div class="blog-grid">${related.map((r) => `<a class="blog-card" href="/blog/${escapeHtml(r.slug)}"><h3 class="blog-card-title">${escapeHtml(r.title)}</h3><span class="blog-card-meta">${formatDate(r.published_at)}</span></a>`).join('')}</div>`
+    : '';
+  const casesHtml = `<h2>Proyectos de Telkora</h2>
+    <ul>
+      <li><a href="/blog/caso-de-exito-goala-informes-ads-ia">Goala (Yecla): informes de Google Ads con IA</a></li>
+      <li><a href="/blog/caso-de-exito-indesport-ia-zaragoza">Indesport (Zaragoza): asistente con IA, proyecto propio</a></li>
+      <li><a href="/blog/caso-de-exito-aureviaai-reformas-ia">AureviaAI: asistente de reformas (demostración)</a></li>
+      <li><a href="/automatizacion-ia-zaragoza">Automatización con IA en Zaragoza</a></li>
+    </ul>`;
+
   const body = `
 <div class="section-wrap">
   <a class="blog-back" href="/blog">← Volver al blog</a>
@@ -53,6 +78,7 @@ module.exports = async (req, res) => {
     <span>Redactado con ayuda de IA</span>
   </div>
   <div class="blog-content">${contentHtml}</div>
+  <div class="blog-content blog-more">${relatedHtml}${casesHtml}</div>
 </div>`;
 
   const jsonLd = {

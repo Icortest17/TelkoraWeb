@@ -13,6 +13,10 @@
     {
       "source": "/sitemap-blog.xml",
       "destination": "/api/sitemap-blog"
+    },
+    {
+      "source": "/automatizacion-ia-zaragoza",
+      "destination": "/api/zaragoza"
     }
   ],
   "headers": [
