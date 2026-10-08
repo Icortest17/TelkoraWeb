@@ -37,7 +37,7 @@ module.exports = handler({
     },
     {
       q: '¿Cuánto cuesta automatizar con IA en Yecla?',
-      a: 'Depende del alcance, por eso no publicamos una tarifa única. Tras el diagnóstico gratuito te damos un presupuesto cerrado con lo que incluye. Los plazos orientativos son de 7-10 días hábiles en el plan Starter y de 2-4 semanas en el plan Growth.',
+      a: 'Depende del alcance, por eso no publicamos una tarifa única. Tras el diagnóstico gratuito te damos un presupuesto cerrado con lo que incluye (<a href="/presupuesto-automatizacion-ia">así presupuestamos</a>). Los plazos orientativos son de 7-10 días hábiles en el plan Starter y de 2-4 semanas en el plan Growth.',
     },
     {
       q: '¿Qué pasa con los datos de mi empresa?',
@@ -48,6 +48,8 @@ module.exports = handler({
   related: [
     { href: '/automatizacion-ia-zaragoza', label: 'Automatización con IA en Zaragoza' },
     { href: '/blog/caso-de-exito-goala-informes-ads-ia', label: 'Caso Goala (Yecla)' },
+    { href: '/chatbots-whatsapp-ia', label: 'Chatbots y WhatsApp con IA' },
+    { href: '/sobre-telkora', label: 'Sobre Telkora' },
     { href: '/blog', label: 'Blog de Telkora' },
   ],
   areaServed: [

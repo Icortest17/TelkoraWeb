@@ -24,6 +24,26 @@
     {
       "source": "/automatizacion-ia-yecla",
       "destination": "/api/yecla"
+    },
+    {
+      "source": "/chatbots-whatsapp-ia",
+      "destination": "/api/pagina?page=chatbots-whatsapp-ia"
+    },
+    {
+      "source": "/automatizacion-crm-ia",
+      "destination": "/api/pagina?page=automatizacion-crm-ia"
+    },
+    {
+      "source": "/integraciones-n8n",
+      "destination": "/api/pagina?page=integraciones-n8n"
+    },
+    {
+      "source": "/presupuesto-automatizacion-ia",
+      "destination": "/api/pagina?page=presupuesto-automatizacion-ia"
+    },
+    {
+      "source": "/sobre-telkora",
+      "destination": "/api/pagina?page=sobre-telkora"
     }
   ],
   "headers": [

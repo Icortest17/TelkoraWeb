@@ -33,7 +33,7 @@ module.exports = handler({
     },
     {
       q: '¿Cuánto cuesta automatizar con IA en Zaragoza?',
-      a: 'Depende del alcance, por eso no publicamos una tarifa única. Tras el diagnóstico gratuito te damos un presupuesto cerrado con lo que incluye. Los plazos orientativos son de 7-10 días hábiles en el plan Starter y de 2-4 semanas en el plan Growth.',
+      a: 'Depende del alcance, por eso no publicamos una tarifa única. Tras el diagnóstico gratuito te damos un presupuesto cerrado con lo que incluye (<a href="/presupuesto-automatizacion-ia">así presupuestamos</a>). Los plazos orientativos son de 7-10 días hábiles en el plan Starter y de 2-4 semanas en el plan Growth.',
     },
     {
       q: '¿Trabajáis con empresas de Zaragoza si no estamos en la misma ciudad?',
@@ -48,6 +48,8 @@ module.exports = handler({
   related: [
     { href: '/automatizacion-ia-yecla', label: 'Automatización con IA en Yecla' },
     { href: '/blog/caso-de-exito-indesport-ia-zaragoza', label: 'Proyecto Indesport (Zaragoza)' },
+    { href: '/chatbots-whatsapp-ia', label: 'Chatbots y WhatsApp con IA' },
+    { href: '/sobre-telkora', label: 'Sobre Telkora' },
     { href: '/blog', label: 'Blog de Telkora' },
   ],
   areaServed: [

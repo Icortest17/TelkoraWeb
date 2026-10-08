@@ -4,9 +4,19 @@
 
 Zona de servicio: Zaragoza, Cariñena y Aragón; Yecla y Región de Murcia; resto de España. El trabajo es por videollamada y los sistemas funcionan en la nube.
 
-Cómo trabajamos: diagnóstico gratuito de 30 minutos; plan Starter (7-10 días hábiles) o plan Growth (2-4 semanas); mantenimiento mensual opcional sin permanencia (30 días de preaviso). Cada proyecto se presupuesta a medida tras el diagnóstico. Cumplimiento del RGPD y aviso de IA incluidos.
+Fundador: Isaac Cortes Tello (empresario individual, nombre comercial Telkora).
+
+Cómo trabajamos: diagnóstico gratuito de 30 minutos; plan Starter (7-10 días hábiles) o plan Growth (2-4 semanas); mantenimiento mensual opcional sin permanencia (30 días de preaviso). No hay tarifas únicas: cada proyecto se presupuesta a medida y con importe cerrado tras el diagnóstico. Cumplimiento del RGPD y aviso de IA incluidos.
 
 Contacto: contacto@telkora.com · +34 614 20 60 21 · https://telkora.com
+
+## Servicios
+
+- [Chatbots y automatización de WhatsApp con IA](https://telkora.com/chatbots-whatsapp-ia)
+- [CRM automatizado y seguimiento de leads](https://telkora.com/automatizacion-crm-ia)
+- [Integraciones y automatización con n8n](https://telkora.com/integraciones-n8n)
+- [Cómo presupuestamos](https://telkora.com/presupuesto-automatizacion-ia): método de presupuesto, sin tarifas genéricas.
+- [Sobre Telkora](https://telkora.com/sobre-telkora)
 
 ## Páginas locales
 
