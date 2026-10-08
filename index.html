@@ -1142,8 +1142,9 @@
 </nav>
 
 <!-- HERO -->
+<main>
 <section id="hero"><span id="main-content"></span>
-  <div class="hero-eyebrow">Solo trabajamos con un número limitado de empresas</div>
+  <div class="hero-eyebrow">Empezamos por un diagnóstico gratuito</div>
   <h1 class="hero-h1">Automatiza tu empresa con <span class="accent">IA</span> y gana tiempo, clientes y ventas</h1>
   <p class="hero-sub">Automatizamos procesos, atención al cliente y captación con IA para empresas de Zaragoza, Cariñena, Yecla y el resto de España. Primero entendemos tu caso; después diseñamos el sistema.</p>
   <div class="hero-ctas">
@@ -1670,7 +1671,7 @@
       </div>
       <div class="dif-visual reveal reveal-delay-2">
         <div class="dif-quote">La IA que implementamos trabaja como tu mejor empleado. <span>Sin descanso.</span></div>
-        <div class="dif-sub">No es para todo el mundo. Trabajamos con un número limitado de empresas a la vez para garantizar que cada sistema esté diseñado con la atención que merece. Si encaja contigo, lo construimos juntos.</div>
+        <div class="dif-sub">Cada sistema se diseña a medida y con la atención que merece. Si encaja contigo, lo construimos juntos.</div>
         <div style="margin-top:2rem;display:flex;gap:1.5rem;flex-wrap:wrap;">
           <div style="text-align:center">
             <div style="font-size:1.8rem;font-weight:700;color:var(--vivid-green);font-family:'Space Mono',monospace;">7–10</div>
@@ -1740,7 +1741,7 @@
           <div class="agenda-bullet"><span>Recomendaciones prácticas sin rodeos</span></div>
         </div>
         <div class="exclusivity-box">
-          <p><strong>Solo si encaja contigo.</strong> Trabajamos con un número limitado de clientes para poder dedicar a cada proyecto el tiempo que necesita. Esta llamada es para entender si somos la solución correcta para tu negocio — no para venderte nada.</p>
+          <p><strong>Solo si encaja contigo.</strong> Dedicamos a cada proyecto el tiempo que necesita. Esta llamada es para entender si somos la solución correcta para tu negocio — no para venderte nada.</p>
         </div>
         <div style="margin-top:2rem;display:flex;flex-direction:column;gap:0.6rem;">
           <div style="display:flex;align-items:center;gap:0.6rem;font-size:0.875rem;color:var(--white-dim);">
@@ -1849,7 +1850,7 @@
         style="display:flex;align-items:center;justify-content:center;gap:0.5rem;font-size:1.05rem;padding:16px 32px;margin-bottom:0.6rem;width:100%;text-align:center;"
       >
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-        Reservar diagnóstico gratuito →
+        Reservar en Calendly →
       </a>
       <p style="text-align:center;font-size:0.8rem;color:rgba(255,255,255,0.6);margin-bottom:1.75rem;">No necesitas preparar nada. Solo cuéntanos tu caso.</p>
 
@@ -1937,6 +1938,8 @@
     <button class="exit-dismiss" id="exit-dismiss-btn">No me interesa, seguir navegando</button>
   </div>
 </div>
+
+</main>
 
 <!-- FOOTER -->
 <footer>
@@ -2373,8 +2376,12 @@ document.getElementById('contact-form').addEventListener('submit', async functio
 
 // ─── COOKIE BANNER ───────────────────────────────────────────────────────────
 (function() {
-  if (localStorage.getItem('cookieConsent')) return;
+  function init() {
+  let stored = null;
+  try { stored = localStorage.getItem('cookieConsent'); } catch (e) {}
+  if (stored) return;
   const banner = document.getElementById('cookie-banner');
+  if (!banner) return;
   setTimeout(() => banner.classList.add('show'), 800);
   function accept() {
     localStorage.setItem('cookieConsent', 'accepted');
@@ -2386,6 +2393,8 @@ document.getElementById('contact-form').addEventListener('submit', async functio
   }
   document.getElementById('cookie-accept').addEventListener('click', accept);
   document.getElementById('cookie-reject').addEventListener('click', reject);
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
 })();
 
 // ─── NAV SCROLL ──────────────────────────────────────────────────────────────
