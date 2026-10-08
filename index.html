@@ -511,6 +511,15 @@
   }
   .sol-card:hover .sol-icon { background: rgba(112,182,44,0.2); box-shadow: 0 0 20px var(--green-glow); }
   .sol-title { font-size: 1.05rem; font-weight: 600; margin-bottom: 0.5rem; }
+  .sol-card::before { pointer-events: none; }
+  .sol-card:has(.sol-link) { cursor: pointer; }
+  .sol-link { color: inherit; text-decoration: none; }
+  .sol-link::after { content: ''; position: absolute; inset: 0; z-index: 2; }
+  .sol-link::before { content: '→'; position: absolute; top: 1.75rem; right: 1.75rem; color: var(--vivid-green); opacity: 0; transform: translateX(-6px); transition: 0.3s; z-index: 3; }
+  .sol-card:hover .sol-link::before, .sol-link:focus-visible::before { opacity: 1; transform: none; }
+  .sol-link:focus-visible { outline: none; }
+  .sol-card:has(.sol-link:focus-visible) { border-color: var(--vivid-green); }
+
   .sol-desc { font-size: 0.875rem; color: var(--white-dim); line-height: 1.6; }
 
   /* ── CÓMO FUNCIONA ── */
@@ -1303,18 +1312,18 @@
     <div class="sol-grid">
       <div class="sol-card reveal reveal-delay-1">
         <div class="sol-icon"><svg class="icon-svg" width="22" height="22" aria-hidden="true"><use href="#i-bot"></use></svg></div>
-        <div class="sol-title">Chatbots con IA</div>
-        <div class="sol-desc">Asistentes conversacionales entrenados con el contexto de tu negocio. Responden, cualifican y cierran 24/7. <a href="/chatbots-whatsapp-ia">Ver servicio</a></div>
+        <div class="sol-title"><a class="sol-link" href="/chatbots-whatsapp-ia">Chatbots con IA</a></div>
+        <div class="sol-desc">Asistentes conversacionales entrenados con el contexto de tu negocio. Responden, cualifican y cierran 24/7.</div>
       </div>
       <div class="sol-card reveal reveal-delay-2">
         <div class="sol-icon"><svg class="icon-svg" width="22" height="22" aria-hidden="true"><use href="#i-phone"></use></svg></div>
-        <div class="sol-title">Automatización WhatsApp</div>
-        <div class="sol-desc">Flujos inteligentes en el canal con más apertura del mundo. Captación, seguimiento y cierre automático. <a href="/chatbots-whatsapp-ia">Ver servicio</a></div>
+        <div class="sol-title"><a class="sol-link" href="/chatbots-whatsapp-ia">Automatización WhatsApp</a></div>
+        <div class="sol-desc">Flujos inteligentes en el canal con más apertura del mundo. Captación, seguimiento y cierre automático.</div>
       </div>
       <div class="sol-card reveal reveal-delay-3">
         <div class="sol-icon"><svg class="icon-svg" width="22" height="22" aria-hidden="true"><use href="#i-database"></use></svg></div>
-        <div class="sol-title">CRM automatizado</div>
-        <div class="sol-desc">Tu pipeline de ventas se actualiza solo. Cada lead en el estado correcto, con la acción correcta activada. <a href="/automatizacion-crm-ia">Ver servicio</a></div>
+        <div class="sol-title"><a class="sol-link" href="/automatizacion-crm-ia">CRM automatizado</a></div>
+        <div class="sol-desc">Tu pipeline de ventas se actualiza solo. Cada lead en el estado correcto, con la acción correcta activada.</div>
       </div>
       <div class="sol-card reveal reveal-delay-4">
         <div class="sol-icon"><svg class="icon-svg" width="22" height="22" aria-hidden="true"><use href="#i-mail"></use></svg></div>
@@ -1323,8 +1332,8 @@
       </div>
       <div class="sol-card reveal reveal-delay-5">
         <div class="sol-icon"><svg class="icon-svg" width="22" height="22" aria-hidden="true"><use href="#i-link"></use></svg></div>
-        <div class="sol-title">Integraciones nativas</div>
-        <div class="sol-desc">Conectamos tus herramientas existentes: CRM, ERP, e-commerce, calendarios, pasarelas de pago y más de 500 apps. <a href="/integraciones-n8n">Ver servicio</a></div>
+        <div class="sol-title"><a class="sol-link" href="/integraciones-n8n">Integraciones nativas</a></div>
+        <div class="sol-desc">Conectamos tus herramientas existentes: CRM, ERP, e-commerce, calendarios, pasarelas de pago y más de 500 apps.</div>
       </div>
       <div class="sol-card reveal reveal-delay-1">
         <div class="sol-icon"><svg class="icon-svg" width="22" height="22" aria-hidden="true"><use href="#i-bar-chart"></use></svg></div>
