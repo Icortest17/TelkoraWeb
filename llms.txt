@@ -1,0 +1,25 @@
+# Telkora
+
+> Agencia de automatización con IA para empresas, con base en Aragón y clientes en toda España. Chatbots, automatización de WhatsApp, CRM automatizado, informes con IA e integraciones a medida (n8n, Make, HubSpot, WhatsApp Business, Stripe).
+
+Zona de servicio: Zaragoza, Cariñena y Aragón; Yecla y Región de Murcia; resto de España. El trabajo es por videollamada y los sistemas funcionan en la nube.
+
+Cómo trabajamos: diagnóstico gratuito de 30 minutos; plan Starter (7-10 días hábiles) o plan Growth (2-4 semanas); mantenimiento mensual opcional sin permanencia (30 días de preaviso). Cada proyecto se presupuesta a medida tras el diagnóstico. Cumplimiento del RGPD y aviso de IA incluidos.
+
+Contacto: contacto@telkora.com · +34 614 20 60 21 · https://telkora.com
+
+## Páginas locales
+
+- [Automatización con IA en Zaragoza](https://telkora.com/automatizacion-ia-zaragoza): servicios, proyecto Indesport (proyecto propio de Telkora en Zaragoza) y preguntas frecuentes.
+- [Automatización con IA en Yecla (Murcia)](https://telkora.com/automatizacion-ia-yecla): servicios, caso Goala (cliente en Yecla) y preguntas frecuentes.
+
+## Proyectos
+
+- [Goala (Yecla): informes de Google Ads con IA](https://telkora.com/blog/caso-de-exito-goala-informes-ads-ia): cliente real. Informes mensuales por cuenta; 51 informes en la primera ejecución.
+- [Indesport Fighting Club (Zaragoza)](https://telkora.com/blog/caso-de-exito-indesport-ia-zaragoza): proyecto propio de Telkora, no un cliente externo.
+- [AureviaAI](https://telkora.com/blog/caso-de-exito-aureviaai-reformas-ia): demostración de asistente de reformas.
+
+## Más
+
+- [Blog de Telkora](https://telkora.com/blog)
+- [Política de privacidad](https://telkora.com/privacidad)

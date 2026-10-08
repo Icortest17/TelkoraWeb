@@ -20,6 +20,10 @@
     {
       "source": "/automatizacion-ia-zaragoza",
       "destination": "/api/zaragoza"
+    },
+    {
+      "source": "/automatizacion-ia-yecla",
+      "destination": "/api/yecla"
     }
   ],
   "headers": [
