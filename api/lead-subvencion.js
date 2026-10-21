@@ -97,13 +97,19 @@ async function deliver(lead) {
   const mail = buildEmail(lead);
 
   if (process.env.N8N_LEAD_WEBHOOK_URL) {
-    const r = await fetch(process.env.N8N_LEAD_WEBHOOK_URL, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'X-Webhook-Secret': process.env.N8N_LEAD_WEBHOOK_SECRET || '' },
-      body: JSON.stringify({ to: TO_EMAIL, replyTo: lead.email, ...mail, lead }),
-    });
-    if (!r.ok) throw new Error(`n8n ${r.status}`);
-    return 'n8n';
+    try {
+      const r = await fetch(process.env.N8N_LEAD_WEBHOOK_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'X-Webhook-Secret': process.env.N8N_LEAD_WEBHOOK_SECRET || '' },
+        body: JSON.stringify({ to: TO_EMAIL, replyTo: lead.email, ...mail, lead }),
+        signal: AbortSignal.timeout(8000),
+      });
+      if (!r.ok) throw new Error(`n8n ${r.status}`);
+      return 'n8n';
+    } catch (e) {
+      // Si n8n falla, el lead no se pierde: sigue por Resend/Formspree
+      console.error(`lead-subvencion n8n fallo: ${e.message}`);
+    }
   }
 
   if (process.env.RESEND_API_KEY) {
