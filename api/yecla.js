@@ -48,6 +48,7 @@ module.exports = handler({
   related: [
     { href: '/automatizacion-ia-zaragoza', label: 'Automatización con IA en Zaragoza' },
     { href: '/blog/caso-de-exito-goala-informes-ads-ia', label: 'Caso Goala (Yecla)' },
+    { href: '/subvencion-ia-murcia', label: 'Subvención para implantar IA en Murcia (Cheque TIC)' },
     { href: '/chatbots-whatsapp-ia', label: 'Chatbots y WhatsApp con IA' },
     { href: '/sobre-telkora', label: 'Sobre Telkora' },
     { href: '/blog', label: 'Blog de Telkora' },

@@ -22,6 +22,10 @@
       "destination": "/api/zaragoza"
     },
     {
+      "source": "/subvencion-ia-murcia",
+      "destination": "/api/subvencion"
+    },
+    {
       "source": "/automatizacion-ia-yecla",
       "destination": "/api/yecla"
     },
