@@ -47,6 +47,7 @@ module.exports = handler({
   closing: 'Si tu equipo en Zaragoza repite tareas a mano (responder lo mismo, pasar datos de un sitio a otro, hacer informes), cuéntanoslo.',
   related: [
     { href: '/automatizacion-ia-yecla', label: 'Automatización con IA en Yecla' },
+    { href: '/automatizacion-ia-carinena', label: 'Automatización con IA en Cariñena' },
     { href: '/blog/caso-de-exito-indesport-ia-zaragoza', label: 'Proyecto Indesport (Zaragoza)' },
     { href: '/chatbots-whatsapp-ia', label: 'Chatbots y WhatsApp con IA' },
     { href: '/sobre-telkora', label: 'Sobre Telkora' },

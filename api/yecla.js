@@ -47,6 +47,7 @@ module.exports = handler({
   closing: 'Si tu empresa en Yecla o en la Región de Murcia dedica horas a tareas repetitivas, cuéntanoslo.',
   related: [
     { href: '/automatizacion-ia-zaragoza', label: 'Automatización con IA en Zaragoza' },
+    { href: '/automatizacion-ia-carinena', label: 'Automatización con IA en Cariñena' },
     { href: '/blog/caso-de-exito-goala-informes-ads-ia', label: 'Caso Goala (Yecla)' },
     { href: '/subvencion-ia-murcia', label: 'Subvención para implantar IA en Murcia (Cheque TIC)' },
     { href: '/chatbots-whatsapp-ia', label: 'Chatbots y WhatsApp con IA' },

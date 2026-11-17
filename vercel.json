@@ -30,6 +30,18 @@
       "destination": "/api/yecla"
     },
     {
+      "source": "/automatizacion-ia-carinena",
+      "destination": "/api/carinena"
+    },
+    {
+      "source": "/informes-automaticos-ia",
+      "destination": "/api/pagina?page=informes-automaticos-ia"
+    },
+    {
+      "source": "/asistente-ia-tienda-online",
+      "destination": "/api/pagina?page=asistente-ia-tienda-online"
+    },
+    {
       "source": "/chatbots-whatsapp-ia",
       "destination": "/api/pagina?page=chatbots-whatsapp-ia"
     },

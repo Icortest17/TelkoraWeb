@@ -16,6 +16,8 @@ Contacto: contacto@telkora.com · +34 614 20 60 21 · https://telkora.com
 - [CRM automatizado y seguimiento de leads](https://telkora.com/automatizacion-crm-ia)
 - [Integraciones y automatización con n8n](https://telkora.com/integraciones-n8n)
 - [Cómo presupuestamos](https://telkora.com/presupuesto-automatizacion-ia): método de presupuesto, sin tarifas genéricas.
+- [Informes automáticos con IA](https://telkora.com/informes-automaticos-ia): informes periódicos con análisis redactado por IA; caso real de Goala.
+- [Asistente con IA para tiendas online](https://telkora.com/asistente-ia-tienda-online): catálogo, recomendador y seguimiento de pedidos (WooCommerce).
 - [Sobre Telkora](https://telkora.com/sobre-telkora)
 
 ## Páginas locales
@@ -23,6 +25,7 @@ Contacto: contacto@telkora.com · +34 614 20 60 21 · https://telkora.com
 - [Automatización con IA en Zaragoza](https://telkora.com/automatizacion-ia-zaragoza): servicios, proyecto Indesport (proyecto propio de Telkora en Zaragoza) y preguntas frecuentes.
 - [Automatización con IA en Yecla (Murcia)](https://telkora.com/automatizacion-ia-yecla): servicios, caso Goala (cliente en Yecla) y preguntas frecuentes.
 - [Subvención para implantar IA en la Región de Murcia (Cheque TIC 2026)](https://telkora.com/subvencion-ia-murcia): qué cubre la ayuda del INFO (entre 2.000 y 20.000 € por beneficiario), requisitos, plazo (22 oct – 30 dic 2026) y comprobación de encaje.
+- [Automatización con IA en Cariñena](https://telkora.com/automatizacion-ia-carinena): domicilio fiscal en Cariñena, servicios y ejemplos de uso para el Campo de Cariñena.
 
 ## Proyectos
 
