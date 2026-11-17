@@ -33,7 +33,7 @@ module.exports = handler({
     },
     {
       q: '¿Cuánto cuesta automatizar con IA en Zaragoza?',
-      a: 'Depende del alcance, por eso no publicamos una tarifa única. Tras el diagnóstico gratuito te damos un presupuesto cerrado con lo que incluye (<a href="/presupuesto-automatizacion-ia">así presupuestamos</a>). Los plazos orientativos son de 7-10 días hábiles en el plan Starter y de 2-4 semanas en el plan Growth.',
+      a: 'Depende del alcance; los proyectos más pequeños parten de 1.500 € + IVA. Tras el diagnóstico gratuito te damos un presupuesto cerrado con lo que incluye (<a href="/presupuesto-automatizacion-ia">así presupuestamos</a>). Los plazos orientativos son de 7-10 días hábiles en el plan Starter y de 2-4 semanas en el plan Growth.',
     },
     {
       q: '¿Trabajáis con empresas de Zaragoza si no estamos en la misma ciudad?',

@@ -81,7 +81,7 @@
         {
           "@type": "Question",
           "name": "¿Cuánto cuesta automatizar con IA?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Cada proyecto es a medida, así que no publicamos tarifas sueltas. Tras un diagnóstico gratuito de 30 minutos recibes un presupuesto cerrado y por escrito, con el alcance, el plazo y la forma de pago. Los costes de terceros (IA, WhatsApp, servidores) se cobran a uso real y sin margen de Telkora. Puedes ver el método completo en la página de presupuesto." }
+          "acceptedAnswer": { "@type": "Answer", "text": "Cada proyecto es a medida, pero como referencia los proyectos más pequeños (por ejemplo, informes automáticos con IA) parten de 1.500 € + IVA. Tras un diagnóstico gratuito de 30 minutos recibes un presupuesto cerrado y por escrito, con el alcance, el plazo y la forma de pago. Los costes de terceros (IA, WhatsApp, servidores) se cobran a uso real y sin margen de Telkora. Puedes ver el método completo en la página de presupuesto." }
         },
         {
           "@type": "Question",
@@ -339,8 +339,37 @@
   .hero-ctas {
     display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;
     animation: fadeUp 0.8s 0.5s both;
-    margin-bottom: 4rem;
+    margin-bottom: 1.25rem;
   }
+  .hero-reviews { width: min(980px, 92vw); text-align: left; animation: fadeUp 0.8s 0.6s both; }
+  .hero-reviews .hero-panel-label { flex-wrap: wrap; }
+  .rev-all { margin-left: auto; color: var(--teal); text-decoration: none; font-weight: 700; }
+  .rev-all:hover { text-decoration: underline; }
+  .rev-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; padding: 18px; }
+  .rev { margin: 0; padding: 16px; border-radius: 10px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.07); display: flex; flex-direction: column; gap: 12px; justify-content: space-between; transition: border-color 0.25s, transform 0.25s; }
+  .rev:hover { border-color: rgba(112,182,44,0.4); transform: translateY(-3px); }
+  .rev blockquote { font-size: 0.9rem; line-height: 1.6; color: #fff; }
+  .rev figcaption { font-size: 0.72rem; color: var(--white-dim); }
+  .stars { color: #f5b301; letter-spacing: 0.08em; }
+  .hero-rating { color: #fff !important; font-weight: 600; }
+  @media (max-width: 760px) { .rev-grid { grid-template-columns: 1fr; padding: 12px; } }
+  .btn-wa { display: inline-flex; align-items: center; justify-content: center; gap: 8px; }
+  .btn-wa:hover { border-color: #25d366; color: #25d366; background: rgba(37,211,102,0.06); }
+  .hero-trust {
+    font-size: 0.82rem; color: rgba(255,255,255,0.6); line-height: 1.7;
+    margin: 0 auto 3rem; max-width: 520px;
+    animation: fadeUp 0.8s 0.55s both;
+  }
+  .hero-trust a { color: var(--teal); text-decoration: none; }
+  .hero-trust a:hover { text-decoration: underline; }
+  .section-cta {
+    margin: 3rem auto 0; padding: 1.75rem 1.5rem; max-width: 760px; text-align: center;
+    border: 1px solid rgba(112,182,44,0.25); border-radius: 16px;
+    background: linear-gradient(160deg, rgba(30,54,36,0.45), rgba(8,14,8,0.6));
+  }
+  .section-cta p { font-size: 1.05rem; font-weight: 600; margin-bottom: 1.1rem; }
+  .section-cta .section-cta-row { display: flex; gap: 0.9rem; justify-content: center; flex-wrap: wrap; }
+  @media (max-width: 480px) { .section-cta .section-cta-row a { width: 100%; text-align: center; } }
   .btn-primary {
     padding: 14px 32px; border-radius: 8px;
     background: var(--vivid-green); color: #000;
@@ -1160,36 +1189,24 @@
 <main>
 <section id="hero"><span id="main-content"></span>
   <div class="hero-eyebrow">Empezamos por un diagnóstico gratuito</div>
-  <h1 class="hero-h1">Automatiza tu empresa con <span class="accent">IA</span> y gana tiempo, clientes y ventas</h1>
-  <p class="hero-sub">Automatizamos procesos, atención al cliente y captación con IA para empresas de Zaragoza, Cariñena, Yecla y el resto de España. Primero entendemos tu caso; después diseñamos el sistema.</p>
+  <h1 class="hero-h1">Automatiza la atención a tus clientes y el trabajo repetitivo con <span class="accent">IA</span></h1>
+  <p class="hero-sub">Asistentes de WhatsApp, informes automáticos y conexión entre tus herramientas, para empresas de Zaragoza, Cariñena, Yecla y el resto de España. Primero entendemos tu caso; después diseñamos el sistema.</p>
   <div class="hero-ctas">
     <a href="#agenda" class="btn-primary">Reservar diagnóstico gratuito →</a>
-    <a href="#demo" class="btn-secondary">Ver cómo funciona ↓</a>
+    <a href="https://wa.me/34614206021?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20los%20servicios%20de%20Telkora" class="btn-secondary btn-wa" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="#25d366" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> Prefiero escribir por WhatsApp</a>
   </div>
-  <!-- Mini panel -->
-  <div class="hero-dashboard">
+  <p class="hero-trust"><a class="hero-rating" href="#testimonios"><span class="stars" aria-hidden="true">★★★★★</span> 5,0 en Google · 23 opiniones</a><br>Videollamada de 30 min, gratis y sin compromiso · Proyectos desde 1.500 € + IVA<br><a href="/blog/caso-de-exito-goala-informes-ads-ia">Caso real: 51 informes de Google Ads generados en la primera ejecución →</a></p>
+  <!-- Opiniones reales de Google Maps (ficha de Telkora: 5,0 · 23 opiniones, comprobado 2026-11-17) -->
+  <div class="hero-dashboard hero-reviews" id="testimonios">
     <div class="hero-panel-label">
       <span class="hero-panel-dot" aria-hidden="true"></span>
-      telkora // ai operations · datos de ejemplo
+      Opiniones reales de clientes en Google · 5,0 sobre 5
+      <a class="rev-all" href="https://www.google.com/maps?cid=5191507467404258993" target="_blank" rel="noopener">Ver las 23 →</a>
     </div>
-    <div class="dash-main">
-      <div class="dash-metrics">
-        <div class="dash-metric">
-          <div class="dash-metric-val" id="m1">847</div>
-          <div class="dash-metric-lbl">Leads captados</div>
-        </div>
-        <div class="dash-metric">
-          <div class="dash-metric-val" id="m2">99.2%</div>
-          <div class="dash-metric-lbl">Uptime IA</div>
-        </div>
-        <div class="dash-metric">
-          <div class="dash-metric-val" id="m3">3.4s</div>
-          <div class="dash-metric-lbl">Resp. media</div>
-        </div>
-      </div>
-      <div class="dash-chart" id="dash-chart">
-        <!-- bars injected by JS -->
-      </div>
+    <div class="rev-grid">
+      <figure class="rev"><blockquote>“Muy buen trato y gran profesionalidad. Se nota que saben de tecnología e inteligencia artificial. Totalmente recomendable.”</blockquote><figcaption><span class="stars" aria-hidden="true">★★★★★</span> José Víctor C. · Google Maps</figcaption></figure>
+      <figure class="rev"><blockquote>“Agencia espectacular, trato personalizado y siempre muy atentos. Recomendables para automatizar tu empresa.”</blockquote><figcaption><span class="stars" aria-hidden="true">★★★★★</span> Marce I. · Google Maps</figcaption></figure>
+      <figure class="rev"><blockquote>“Trato muy profesional y agradable. Sin duda merece la pena.”</blockquote><figcaption><span class="stars" aria-hidden="true">★★★★★</span> Juan S. · Google Maps</figcaption></figure>
     </div>
   </div>
 </section>
@@ -1610,6 +1627,13 @@
         <div class="caso-desc">Reservas automáticas, gestión de mesas, reseñas post-visita y fidelización de clientes recurrentes.</div>
       </div>
     </div>
+    <div class="section-cta reveal">
+      <p>¿Tu sector no aparece? Cuéntanos tu caso y te decimos si encaja.</p>
+      <div class="section-cta-row">
+        <a href="#agenda" class="btn-primary">Reservar diagnóstico gratuito →</a>
+        <a href="https://wa.me/34614206021?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20los%20servicios%20de%20Telkora" class="btn-secondary btn-wa" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -1736,6 +1760,13 @@
         <span class="proyecto-link">Leer el caso →</span>
       </a>
     </div>
+    <div class="section-cta reveal">
+      <p>¿Quieres algo parecido en tu empresa? Lo vemos en 30 minutos.</p>
+      <div class="section-cta-row">
+        <a href="#agenda" class="btn-primary">Reservar diagnóstico gratuito →</a>
+        <a href="https://wa.me/34614206021?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20los%20servicios%20de%20Telkora" class="btn-secondary btn-wa" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -1796,7 +1827,7 @@
     <div class="faq-list reveal reveal-delay-1">
       <div class="faq-item">
         <button class="faq-q" aria-expanded="false">¿Cuánto cuesta automatizar con IA? <span class="faq-chevron">▾</span></button>
-        <div class="faq-a"><p>Cada proyecto es a medida, así que no publicamos tarifas sueltas. Tras un diagnóstico gratuito de 30 minutos recibes un presupuesto cerrado y por escrito, con el alcance, el plazo y la forma de pago. Los costes de terceros (IA, WhatsApp, servidores) se cobran a uso real y sin margen de Telkora. Puedes ver el método completo en la página de presupuesto. <a href="/presupuesto-automatizacion-ia">Cómo presupuestamos</a>.</p></div>
+        <div class="faq-a"><p>Cada proyecto es a medida, pero como referencia los proyectos más pequeños (por ejemplo, informes automáticos con IA) parten de 1.500 € + IVA. Tras un diagnóstico gratuito de 30 minutos recibes un presupuesto cerrado y por escrito, con el alcance, el plazo y la forma de pago. Los costes de terceros (IA, WhatsApp, servidores) se cobran a uso real y sin margen de Telkora. Puedes ver el método completo en la página de presupuesto. <a href="/presupuesto-automatizacion-ia">Cómo presupuestamos</a>.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-q" aria-expanded="false">¿Cuánto tiempo tarda en implementarse el sistema? <span class="faq-chevron">▾</span></button>
@@ -1887,6 +1918,10 @@
         method="POST"
         novalidate
       >
+        <input type="hidden" name="pagina_origen" id="f-origen" value="home">
+        <input type="hidden" name="utm_source" id="f-utm_source">
+        <input type="hidden" name="utm_medium" id="f-utm_medium">
+        <input type="hidden" name="utm_campaign" id="f-utm_campaign">
         <div class="form-grid">
           <div class="form-group">
             <label class="form-label" for="nombre">Nombre *</label>
@@ -2098,38 +2133,6 @@ if (!REDUCED_MOTION) (function() {
   });
 })();
 
-// ─── HERO DASHBOARD BARS ──────────────────────────────────────────────────────
-(function() {
-  const chart = document.getElementById('dash-chart');
-  if (!chart) return;
-  const vals = [45, 62, 55, 78, 88, 72, 95, 83, 91, 76, 88, 100];
-  const months = ['E','F','M','A','M','J','J','A','S','O','N','D'];
-  vals.forEach((v, i) => {
-    const wrap = document.createElement('div');
-    wrap.className = 'dash-bar-wrap';
-    const bar = document.createElement('div');
-    bar.className = 'dash-bar-inner';
-    bar.style.height = v + '%';
-    const lbl = document.createElement('div');
-    lbl.className = 'dash-bar-label';
-    lbl.textContent = months[i];
-    wrap.appendChild(bar); wrap.appendChild(lbl);
-    chart.appendChild(wrap);
-  });
-  // Animate metrics (se salta si el usuario prefiere menos movimiento)
-  if (!REDUCED_MOTION) {
-    let tick = 0;
-    setInterval(() => {
-      tick++;
-      document.getElementById('m1').textContent = (847 + tick * 3);
-      if (tick % 5 === 0) {
-        const t = document.getElementById('m3');
-        t.textContent = (Math.random() * 2 + 2.5).toFixed(1) + 's';
-      }
-    }, 3000);
-  }
-})();
-
 // ─── SCROLL REVEAL ────────────────────────────────────────────────────────────
 (function() {
   const obs = new IntersectionObserver(entries => {
@@ -2225,6 +2228,30 @@ document.querySelectorAll('.faq-q').forEach(btn => {
   }
   hamburger.addEventListener('click', () => setOpen(!navLinks.classList.contains('open')));
   navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setOpen(false)));
+})();
+
+// ─── ATRIBUCIÓN: UTM de la visita → Calendly y formulario ───────────────────
+(function() {
+  var KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term'];
+  var q = new URLSearchParams(location.search), got = {};
+  KEYS.forEach(function(k) { var v = q.get(k); if (v) got[k] = v.slice(0, 100); });
+  var hasUtm = Object.keys(got).length > 0;
+  function tag(url, content) {
+    try {
+      var u = new URL(url, location.href);
+      KEYS.forEach(function(k) { if (got[k]) u.searchParams.set(k, got[k]); });
+      if (!hasUtm) { u.searchParams.set('utm_source', 'telkora.com'); u.searchParams.set('utm_medium', 'web'); }
+      u.searchParams.set('utm_content', content);
+      return u.toString();
+    } catch (e) { return url; }
+  }
+  var iframe = document.querySelector('.calendly-wrap iframe');
+  if (iframe) iframe.src = tag(iframe.getAttribute('src'), 'agenda-embed');
+  document.querySelectorAll('a[href*="calendly.com"]').forEach(function(a) {
+    var pos = a.closest('#mobile-bottom-bar') ? 'barra-movil' : a.closest('#exit-overlay') ? 'exit-popup' : a.closest('#contacto') ? 'contacto' : 'enlace';
+    a.href = tag(a.href, pos);
+  });
+  KEYS.slice(0, 3).forEach(function(k) { var el = document.getElementById('f-' + k); if (el && got[k]) el.value = got[k]; });
 })();
 
 // ─── FORM (Formspree) ────────────────────────────────────────────────────────
